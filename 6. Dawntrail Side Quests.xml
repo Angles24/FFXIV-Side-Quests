@@ -5349,13 +5349,35 @@ Dawntrail Side Quests
       </If>
       <If Condition="GetQuestStep(70708) == 2">
 		<GetTo ZoneId="1186" XYZ="-387.01724, 14, 162.72176"/>	
-      <UserDialog DialogText="Chase the damn Cat!" QuestId="70708" StepId="2" QuestRequirementInLog="InLog" IsBotContinueAllowed="True" />
+        <UserDialog DialogText="Chase the damn Cat!" QuestId="70708" StepId="2" QuestRequirementInLog="InLog" IsBotContinueAllowed="True" />
 		<!--<MoveTo XYZ="-387.01724, 14, 162.72176"/>			
         <TalkTo InteractDistance="0.1" NpcId="1051070" XYZ="-403.8646, 14.000002, 157.5873" QuestId="70708" StepId="2"/>-->
       </If>
       <If Condition="GetQuestStep(70708) == 255">
         <GetTo ZoneId="1186" XYZ="-311.5823, 4.690008, -35.47517"/>  
         <TurnIn QuestId="70708" NpcId="1051069" XYZ="-313.43555, 4.6900077, -36.57599"/>
+      </If>
+    </If>
+	
+    <!-- When Death Comes to Dinner -->
+    <If Condition="not IsQuestCompleted(70843) and IsQuestCompleted(70495) and IsQuestCompleted(70709)">
+      <If Condition="not HasQuest(70843)">
+        <GetTo ZoneId="1185" XYZ="151.5666, -17.9645, 93.90087"/>  
+        <If Condition="IsQuestAcceptQualified(70843)">
+          <PickupQuest QuestId="70843" NpcId="1053732"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(70843) == 1">
+        <GetTo ZoneId="1185" XYZ="151.5666, -17.9645, 93.90087"/>  
+        <TalkTo NpcId="1053732" XYZ="153.70398, -17.9645, 95.56726" QuestId="70843" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(70843) == 2">
+        <GetTo ZoneId="1185" XYZ="8.397599, -10.00001, 57.060402"/>  
+        <TalkTo NpcId="1053732" XYZ="10.137741, -10.00001, 57.98144" QuestId="70843" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(70843) == 255">
+        <GetTo ZoneId="1185" XYZ="3.9989974, -10.00001, 56.064777"/>  
+        <TurnIn QuestId="70843" NpcId="1053739" XYZ="2.1514893, -10.00001, 56.137817"/>
       </If>
     </If>
 	
