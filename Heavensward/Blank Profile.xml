@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Side Quests
+-->
+<Profile>
+	<Name>Side Quests</Name>
+	<Order>	 
+		
+
+	
+	</Order>
+	<CodeChunks>	
+	</CodeChunks>
+    <GrindAreas>
+    </GrindAreas>
+	<!-- and GetQuestById().QuestI8A == -->
+</Profile>

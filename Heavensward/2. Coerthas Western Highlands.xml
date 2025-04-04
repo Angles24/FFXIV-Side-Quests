@@ -1,0 +1,1579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Coerthas Western Highlands Side Quests
+
+Contingency Supplies
+Dances with Wolves	
+Grandfather's Belongings
+An Attractive Charm
+Stolen Goods > Memories in the Snow
+Memories in the Snow > A Mystery Illness
+A Mystery Illness > Bad Wine
+Bad Wine > Ancient Wisdom
+Ancient Wisdom
+Flower Mill
+Lonely Vigil
+Winter Is Coming > A Faithful Companion
+Baby Strides > Spring into Action
+A Faithful Companion
+Spring into Action
+Cat on a Cold Stone Roof
+The Secret to Success > Introductory Dragonslaying
+Introductory Dragonslaying > Intermediate Dragonslaying
+Intermediate Dragonslaying > Advanced Dragonslaying
+Advanced Dragonslaying > Expert Dragonslaying
+Expert Dragonslaying > Unknown Ultimatum
+Two Scoops
+A Den of Evil
+The Old Man and the Lake
+When the Ice Melts
+To the Convictor Go the Spoils > Remember the Fallen
+Remember the Fallen
+Supply Lines
+The Mother of Invention
+Unknown Ultimatum > Personal Effects
+Personal Effects > Ayleth Absconds
+Ayleth Absconds > A Missing Tooth
+A Missing Tooth > A Noble Purpose
+A Noble Purpose > A War without End
+A War without End
+-->
+<Profile>
+	<Name>Coerthas Western Highlands Side Quests</Name>
+	<Order>	 
+		
+    <!-- Stolen Goods -->
+    <If Condition="not IsQuestCompleted(67269)">
+      <If Condition="not HasQuest(67269)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="469.70044, 225.0023, 795.1079" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67269)">
+          <PickupQuest QuestId="67269" NpcId="1013709"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67269) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="356.63962, 167.74905, 377.921" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2005992" XYZ="379.65967, 167.86438, 376.85205" QuestId="67269" StepId="1" />
+	  <MoveTo XYZ="356.63962, 167.74905, 377.921"/> 
+    </If>
+    <If Condition="GetQuestStep(67269) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="471.55365, 225.00232, 794.86993" Land="True"/> <!-- ZoneId="397" -->
+      <HandOver ItemId="2001734" NpcId="1013709" XYZ="466.91077, 225.00227, 798.64185" QuestId="67269" StepId="2"/>
+    </If>
+      <If Condition="GetQuestStep(67269) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="408.1827, 199.31294, 686.42487" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67269" NpcId="1014123" XYZ="402.76184, 199.35663, 689.44824"/>
+      </If>
+    </If>
+	
+    <!-- Memories in the Snow -->
+    <If Condition="not IsQuestCompleted(67270)">
+      <If Condition="not HasQuest(67270)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="410.85062, 199.2285, 681.23444" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67270)">
+          <PickupQuest QuestId="67270" NpcId="1014123"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67270) == 1 and GetQuestById(67270).QuestI8A == 0">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="375.10547, 192.73212, 571.6125" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject Condition="GetQuestById(67270).QuestI8A == 0" NpcId="2006042" XYZ="368.21545, 192.0957, 569.9701" QuestId="67270" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67270) == 1 and GetQuestById(67270).QuestI8A == 17">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="382.51828, 179.496, 501.13434" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject Condition="GetQuestById(67270).QuestI8A == 17" NpcId="2006043" XYZ="380.4226, 178.08801, 491.75244" QuestId="67270" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67270) == 1 and GetQuestById(67270).QuestI8A == 33">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="477.0086, 188.62656, 541.22705" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject Condition="GetQuestById(67270).QuestI8A == 33" NpcId="2006041" XYZ="481.1322, 189.53223, 547.5089" QuestId="67270" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67270) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="412.43594, 199.19878, 679.46454" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67270" NpcId="1014123" XYZ="402.76184, 199.35663, 689.44824"/>
+      </If>
+    </If>
+	
+    <!-- A Mystery Illness -->
+    <If Condition="not IsQuestCompleted(67281)">
+      <If Condition="not HasQuest(67281)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="502.74442, 217.95149, 785.2844" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67281)">
+          <PickupQuest QuestId="67281" NpcId="1011231"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67281) == 1 and GetQuestById(67281).QuestI8A == 0">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="504.6991, 217.95148, 786.30334" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1011232" XYZ="506.8589, 217.95148, 792.4772" QuestId="67281" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67281) == 1 and GetQuestById(67281).QuestI8A == 17">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="514.3138, 217.95152, 771.9453" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1011233" XYZ="518.9136, 217.95152, 769.9243" QuestId="67281" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67281) == 1 and GetQuestById(67281).QuestI8A == 33">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="543.4459, 217.90826, 772.15515" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1011234" XYZ="546.1356, 217.90826, 768.06274" QuestId="67281" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67281) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="505.01822, 217.95149, 787.0613" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1011231" XYZ="503.1051, 217.95148, 790.2189" QuestId="67281" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67281) == 3">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="535.0407, 217.90826, 776.0318" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1011238" XYZ="536.2478, 217.90826, 779.69006" QuestId="67281" StepId="3"/>
+		<MoveTo XYZ="515.2106, 217.9515, 773.336"/>
+      </If>
+      <If Condition="GetQuestStep(67281) == 4">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="481.59726, 224.48225, 852.9804" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014124" XYZ="485.3131, 224.48224, 850.30884" QuestId="67281" StepId="4"/>
+      </If>
+    <If Condition="GetQuestStep(67281) == 5">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="470.40222, 224.48224, 850.4686" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2005993" XYZ="467.4906, 224.8722, 850.12573" QuestId="67281" StepId="5" />
+    </If>
+    <If Condition="GetQuestStep(67281) == 6">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="534.70935, 217.90826, 777.02704" Land="True"/> <!-- ZoneId="397" -->
+      <HandOver ItemId="2001737" NpcId="1011238" XYZ="536.2478, 217.90826, 779.69006" QuestId="67281" StepId="6"/>
+    </If>
+      <If Condition="GetQuestStep(67281) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="504.64786, 217.95149, 785.93646" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67281" NpcId="1011231" XYZ="503.1051, 217.95148, 790.2189"/>
+      </If>
+    </If>
+	
+    <!-- Bad Wine -->
+    <If Condition="not IsQuestCompleted(67282)">
+      <If Condition="not HasQuest(67282)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="503.21622, 217.95149, 784.19946" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67282)">
+          <PickupQuest QuestId="67282" NpcId="1011231"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67282) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="470.49692, 225.00229, 798.8358" Land="True"/> <!-- ZoneId="397" -->
+      <HandOver ItemId="2001739" NpcId="1013709" XYZ="466.91077, 225.00227, 798.64185" QuestId="67282" StepId="1"/>
+    </If>
+      <If Condition="GetQuestStep(67282) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="142.71481, 115.27849, 92.97877" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014125" XYZ="132.55505, 116.35205, 90.22656" QuestId="67282" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67282) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="502.38788, 217.95149, 784.1234" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67282" NpcId="1011231" XYZ="503.1051, 217.95148, 790.2189"/>
+      </If>
+    </If>
+	
+    <!-- Ancient Wisdom -->
+    <If Condition="not IsQuestCompleted(67283)">
+      <If Condition="not HasQuest(67283)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="502.38788, 217.95149, 784.1234" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67283)">
+          <PickupQuest QuestId="67283" NpcId="1011231"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67283) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="535.7903, 217.90825, 776.1849" Land="True"/> <!-- ZoneId="397" -->
+      <HandOver ItemId="2001740" NpcId="1011238" XYZ="536.2478, 217.90826, 779.69006" QuestId="67283" StepId="1"/>
+		<MoveTo XYZ="515.2106, 217.9515, 773.336"/>
+    </If>
+    <If Condition="GetQuestStep(67283) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="411.0018, 199.2611, 683.20264" Land="True"/> <!-- ZoneId="397" -->
+      <HandOver ItemId="2001740" NpcId="1014123" XYZ="402.76184, 199.35663, 689.44824" QuestId="67283" StepId="2"/>
+    </If>
+    <If Condition="GetQuestStep(67283) == 3">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="335.33185, 168.76978, -615.8763" Land="True"/> <!-- ZoneId="397" -->
+      <UseItem ItemId="2001741" NpcId="2005995" XYZ="333.88257, 171.09937, -619.8673" QuestId="67283" StepId="3"/>
+    </If>
+    <If Condition="GetQuestStep(67283) == 4">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="334.37982, 168.91956, -618.1799" Land="True"/> <!-- ZoneId="397" -->
+      <UseItem ItemId="2001742" NpcId="2005996" XYZ="333.88257, 171.09937, -619.8673" QuestId="67283" StepId="4"/>
+    </If>
+    <If Condition="GetQuestStep(67283) == 5">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="342.4176, 168.32297, -618.0764" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2005997" XYZ="344.77747, 168.20007, -620.2945" QuestId="67283" StepId="5" />
+    </If>
+      <If Condition="GetQuestStep(67283) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="411.5444, 199.2774, 684.19415" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67283" NpcId="1014123" XYZ="402.76184, 199.35663, 689.44824"/>
+      </If>
+    </If>
+	
+    <!-- Grandfather's Belongings -->
+    <If Condition="not IsQuestCompleted(67272)">
+      <If Condition="not HasQuest(67272)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="489.92636, 200.23769, 657.33136" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67272)">
+          <PickupQuest QuestId="67272" NpcId="1011240"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67272) == 1 and GetQuestById(67272).QuestI8A == 0">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-20.178274, 99.58504, 63.504314" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject Condition="GetQuestById(67272).QuestI8A == 0" NpcId="2005583" XYZ="-25.589417, 99.56506, 64.74402" QuestId="67272" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67272) == 1 and GetQuestById(67272).QuestI8A == 16">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="74.95567, 100.28508, 13.168509" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject Condition="GetQuestById(67272).QuestI8A == 16" NpcId="2005582" XYZ="77.95825, 100.60266, 11.703674" QuestId="67272" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67272) == 1 and GetQuestById(67272).QuestI8A == 32">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="173.4105, 99.65736, 28.763712" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject Condition="GetQuestById(67272).QuestI8A == 32" NpcId="2005581" XYZ="169.78711, 99.65662, 27.115234" QuestId="67272" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67272) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="489.68762, 200.23769, 658.90845" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67272" NpcId="1011240" XYZ="493.15625, 200.2377, 663.01965"/>
+      </If>
+    </If>
+	
+    <!-- Two Scoops -->
+    <If Condition="not IsQuestCompleted(67421)">
+      <If Condition="not HasQuest(67421)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="489.68762, 200.23769, 658.90845" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67421)">
+          <PickupQuest QuestId="67421" NpcId="1011240"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67421) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="503.51675, 217.9515, 781.61914" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1011232" XYZ="506.8589, 217.95148, 792.4772" QuestId="67421" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67421) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-240.3654, 219.98256, 147.91745" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67421" while="GetQuestStep(67421) == 2" />
+    </If>
+      <If Condition="GetQuestStep(67421) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="488.8826, 200.2377, 658.7885" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67421" NpcId="1011240" XYZ="493.15625, 200.2377, 663.01965"/>
+      </If>
+    </If>
+	
+    <!-- Cat on a Cold Stone Roof -->
+    <If Condition="not IsQuestCompleted(67290)">
+      <If Condition="not HasQuest(67290)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="540.77527, 228.37698, 731.6476" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67290)">
+          <PickupQuest QuestId="67290" NpcId="1013360"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67290) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="540.22107, 255.01411, 728.3465" Land="False"/> <!-- ZoneId="397" -->
+        <MoveTo UseMesh="False" XYZ="540.96924, 240.14667, 748.8553"/>
+		<Dismount/>
+        <TalkTo NpcId="1013361" XYZ="541.1306, 238.72218, 742.0309" QuestId="67290" StepId="1"/>
+        <MoveTo UseMesh="False" XYZ="541.6165, 228.37701, 732.1287"/>  
+      </If>
+      <If Condition="GetQuestStep(67290) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="541.6165, 228.37701, 732.1287" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67290" NpcId="1013360" XYZ="543.26685, 228.37701, 734.4929"/>
+      </If>
+    </If>
+	
+    <!-- Flower Mill -->
+    <If Condition="not IsQuestCompleted(67288)">
+      <If Condition="not HasQuest(67288)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="513.3802, 217.95152, 773.4977" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67288)">
+          <PickupQuest QuestId="67288" NpcId="1013346"/>
+          <MoveTo XYZ="513.3802, 217.95152, 773.4977"/>  
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67288) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="545.0194, 175.76515, -542.5687" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject ItemId="2001600" NpcId="2005586" XYZ="541.9547, 176.77563, -544.97595" QuestId="67288" StepId="1"/>
+    </If>
+      <If Condition="GetQuestStep(67288) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="512.86945, 217.95152, 773.6643" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67288" NpcId="1013346" XYZ="540.3677, 217.90826, 772.8236"/>
+          <MoveTo XYZ="513.3802, 217.95152, 773.4977"/>  
+      </If>
+    </If>
+	
+    <!-- Contingency Supplies -->
+    <If Condition="not IsQuestCompleted(67268)">
+      <If Condition="not HasQuest(67268)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="515.13837, 217.95152, 773.4578" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67268)">
+          <PickupQuest QuestId="67268" NpcId="1011238"/>
+          <MoveTo XYZ="513.3802, 217.95152, 773.4977"/>  
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67268) == 1">
+		<If condition="not IsOnMap(397)"> 
+		   <TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="299.51596, 185.8865, 438.34113" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67268" while="GetQuestStep(67268) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67268) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="515.06866, 217.9515, 773.63885" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67268" NpcId="1011238" XYZ="536.2478, 217.90826, 779.69006"/>
+          <MoveTo XYZ="513.3802, 217.95152, 773.4977"/>  
+      </If>
+    </If>
+	
+    <!-- A Den of Evil -->
+    <If Condition="not IsQuestCompleted(67422)">
+      <If Condition="not HasQuest(67422)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="502.67554, 217.95149, 784.6902" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67422)">
+          <PickupQuest QuestId="67422" NpcId="1011231"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67422) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="659.6903, 171.55298, -49.879547" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1013552" XYZ="671.65625, 172.86134, -51.22455" QuestId="67422" StepId="1"/>
+      </If>
+      <While Condition="GetQuestStep(67422) == 2 and GetQuestById(67422).QuestI8A == 0">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="670.96436, 202.4074, -153.99434" Land="True"/> <!-- ZoneId="397" -->
+		<Dismount/>
+      </While>
+      <While Condition="GetQuestStep(67422) == 2 and GetQuestById(67422).QuestI8A == 16">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="650.14825, 202.2878, -163.31624" Land="True"/> <!-- ZoneId="397" -->
+		<Dismount/>
+      </While>
+      <While Condition="GetQuestStep(67422) == 2 and GetQuestById(67422).QuestI8A == 33">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="638.95874, 202.03976, -180.42348" Land="True"/> <!-- ZoneId="397" -->
+		<Dismount/>
+      </While>
+      <While Condition="GetQuestStep(67422) == 2 and GetQuestById(67422).QuestI8A == 49">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="637.40607, 201.96565, -203.02632" Land="True"/> <!-- ZoneId="397" -->
+		<Dismount/>
+      </While>
+      <If Condition="GetQuestStep(67422) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="502.61844, 217.95149, 786.0226" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67422" NpcId="1011231" XYZ="503.1051, 217.95148, 790.2189"/>
+      </If>
+    </If>
+	
+    <!-- The Old Man and the Lake -->
+    <If Condition="not IsQuestCompleted(67423)">
+      <If Condition="not HasQuest(67423)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="474.4497, 217.93881, 762.3996" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67423)">
+          <PickupQuest QuestId="67423" NpcId="1013553"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67423) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="678.8843, 130.79962, -620.9347" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1012280" XYZ="692.3474, 134.8718, -630.12134" QuestId="67423" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67423) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="540.90466, 130.79962, -666.86456" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67423" while="GetQuestStep(67423) == 2" />
+    </If>
+      <If Condition="GetQuestStep(67423) == 3">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="686.0839, 131.50294, -620.7196" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1012280" XYZ="692.3474, 134.8718, -630.12134" QuestId="67423" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67423) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="474.5825, 214.98163, 752.14087" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67423" NpcId="1013553" XYZ="472.09888, 217.93881, 760.3723"/>
+      </If>
+    </If>
+	
+    <!-- Dances with Wolves -->
+    <If Condition="not IsQuestCompleted(67271)">
+      <If Condition="not HasQuest(67271)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="208.50134, 187.78041, 311.2165" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67271)">
+          <PickupQuest QuestId="67271" NpcId="1011903"/>
+          <MoveTo XYZ="208.50134, 187.78041, 311.2165"/> 
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67271) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="149.38913, 115.07871, 99.077896" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67271" while="GetQuestStep(67271) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67271) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="262.0802, 207.97061, 268.68527" Land="False"/> <!-- ZoneId="397" -->
+        <FlyTo AllowedVariance="1" XYZ="208.50134, 187.78041, 311.2165" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67271" NpcId="1011903" XYZ="197.13123, 189.4263, 270.61877"/>
+          <MoveTo XYZ="208.50134, 187.78041, 311.2165"/> 
+      </If>
+    </If>
+	
+    <!-- Baby Strides -->
+    <If Condition="not IsQuestCompleted(67297)">
+      <If Condition="not HasQuest(67297)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-285.97733, 126.774414, 3.6466897" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67297)">
+          <PickupQuest QuestId="67297" NpcId="1011907"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67297) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-237.62, 91.0316, -530.7755" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67297" while="GetQuestStep(67297) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67297) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-284.53314, 126.6294, 0.19383202" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67297" NpcId="1011907" XYZ="-288.8686, 127.06639, 13.199036"/>
+      </If>
+    </If>
+		
+    <!-- Spring into Action -->
+    <If Condition="not IsQuestCompleted(67303)">
+      <If Condition="not HasQuest(67303)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-284.4472, 126.594055, -0.7028467" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67303)">
+          <PickupQuest QuestId="67303" NpcId="1011907"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67303) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-675.03516, 99.29801, -598.6221" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2005591" XYZ="-673.54846, 99.168335, -605.09656" QuestId="67303" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67303) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-285.3471, 126.57591, -1.3574573" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67303" NpcId="1011907" XYZ="-288.8686, 127.06639, 13.199036"/>
+      </If>
+    </If>
+	
+    <!-- To the Convictor Go the Spoils -->
+    <If Condition="not IsQuestCompleted(67431)">
+      <If Condition="not HasQuest(67431)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-286.4085, 126.77866, 3.6678443" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67431)">
+          <PickupQuest QuestId="67431" NpcId="1011907"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67431) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-595.1418, 112.46288, -691.9456" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67431" while="GetQuestStep(67431) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67431) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-286.36752, 126.662094, 0.66123563" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67431" NpcId="1011907" XYZ="-288.8686, 127.06639, 13.199036"/>
+      </If>
+    </If>
+		
+    <!-- Remember the Fallen -->
+    <If Condition="not IsQuestCompleted(67430)">
+      <If Condition="not HasQuest(67430)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-283.64856, 126.732254, 3.036262" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67430)">
+          <PickupQuest QuestId="67430" NpcId="1011908"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67430) == 1 and GetQuestById(67430).QuestI8A == 0">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-454.10992, 172.13809, 90.420685" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject Condition="GetQuestById(67430).QuestI8A == 0" NpcId="2005771" XYZ="-456.9314, 171.52661, 91.90503" QuestId="67430" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67430) == 1 and GetQuestById(67430).QuestI8A == 17">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-522.58044, 165.17825, 63.06071" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject Condition="GetQuestById(67430).QuestI8A == 17" NpcId="2005772" XYZ="-524.4679, 165.08728, 61.509033" QuestId="67430" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67430) == 1 and GetQuestById(67430).QuestI8A == 33">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-481.5297, 162.72942, 11.874094" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject Condition="GetQuestById(67430).QuestI8A == 33" NpcId="2005770" XYZ="-478.59924, 162.3407, 8.621277" QuestId="67430" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67430) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-280.31473, 126.73205, 3.8656087" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67430" NpcId="1011908" XYZ="-285.38953, 127.10649, 14.694336"/>
+      </If>
+    </If>
+
+    <!-- Winter Is Coming -->
+    <If Condition="not IsQuestCompleted(67299)">
+      <If Condition="not HasQuest(67299)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-293.4057, 126.587975, -2.53851" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67299)">
+          <PickupQuest QuestId="67299" NpcId="1011910"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67299) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-111.20742, 94.57426, -368.87845" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67299" while="GetQuestStep(67299) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67299) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-293.38214, 126.43216, -6.039416" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67299" NpcId="1011910" XYZ="-298.26813, 126.67049, -1.4191895"/>
+      </If>
+    </If>
+	
+    <!-- A Faithful Companion -->
+    <If Condition="not IsQuestCompleted(67304)">
+      <If Condition="not HasQuest(67304)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-293.52844, 126.58419, -2.642359" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67304)">
+          <PickupQuest QuestId="67304" NpcId="1011910"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67304) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-48.27053, 99.42669, 85.03301" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1013358" XYZ="-56.748352, 101.32506, 88.70068" QuestId="67304" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67304) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="101.053505, 158.38896, 392.4434" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2005592" XYZ="113.93909, 158.55652, 403.43323" QuestId="67304" StepId="2" />
+    </If>
+      <If Condition="GetQuestStep(67304) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-292.38794, 126.40326, -6.5304227" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67304" NpcId="1013359" XYZ="-300.34338, 126.675224, -1.5717163"/>
+      </If>
+    </If>
+	
+    <!-- Supply Lines -->
+    <If Condition="not IsQuestCompleted(67432)">
+      <If Condition="not HasQuest(67432)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-294.95312, 126.491234, -4.9605703" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67432)">
+          <PickupQuest QuestId="67432" NpcId="1011910"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67432) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="584.7333, 204.38155, -168.8355" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67432" while="GetQuestStep(67432) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67432) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-291.05066, 126.37737, -6.8365" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67432" NpcId="1011910" XYZ="-298.26813, 126.67049, -1.4191895"/>
+      </If>
+    </If>
+	
+    <!-- The Mother of Invention -->
+    <If Condition="not IsQuestCompleted(67433)">
+      <If Condition="not HasQuest(67433)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-307.35785, 126.40679, -8.795788" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67433)">
+          <PickupQuest QuestId="67433" NpcId="1012283"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67433) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-328.06177, 219.25488, 467.34204" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67433" while="GetQuestStep(67433) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67433) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-304.56055, 126.25819, -10.875283" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67433" NpcId="1012283" XYZ="-311.14673, 126.503296, -6.729248"/>
+      </If>
+    </If>
+	
+    <!-- Lonely Vigil -->
+    <If Condition="not IsQuestCompleted(67289)">
+      <If Condition="not HasQuest(67289)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-48.041283, 88.51793, -603.3037" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67289)">
+          <PickupQuest QuestId="67289" NpcId="1013347"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67289) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-76.44814, 87.189, -679.6277" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67289" while="GetQuestStep(67289) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67289) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-49.547985, 88.53556, -602.9955" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67289" NpcId="1013347" XYZ="-46.494324, 88.28323, -606.2257"/>
+      </If>
+    </If>
+	
+    <!-- An Attractive Charm -->
+    <If Condition="not IsQuestCompleted(67273)">
+      <If Condition="not HasQuest(67273)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="427.0436, 164.3083, -548.8237" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67273)">
+          <PickupQuest QuestId="67273" NpcId="1013344"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67273) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="559.1489, 168.53542, -495.99362" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67273" while="GetQuestStep(67273) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67273) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="426.4818, 164.3083, -546.27435" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67273" NpcId="1013344" XYZ="426.80994, 169.3901, -566.0945"/>
+      </If>
+    </If>
+	
+    <!-- When the Ice Melts -->
+    <If Condition="not IsQuestCompleted(67424)">
+      <If Condition="not HasQuest(67424)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="686.74866, 131.89061, -620.0593" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67424)">
+          <PickupQuest QuestId="67424" NpcId="1012280"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67424) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="723.35834, 135.01022, -622.9883" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67424" while="GetQuestStep(67424) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67424) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="687.14026, 132.0925, -619.8281" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67424" NpcId="1012280" XYZ="692.3474, 134.8718, -630.12134"/>
+      </If>
+    </If>
+
+    <!-- The Secret to Success -->
+    <If Condition="not IsQuestCompleted(67298)">
+      <If Condition="not HasQuest(67298)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-290.69528, 126.78599, 2.9737978" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67298)">
+          <PickupQuest QuestId="67298" NpcId="1013710"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67298) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-264.60117, 126.42165, 0.5027177" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014133" XYZ="-259.84595, 126.44779, 1.9073486" QuestId="67298" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67298) == 2 and GetQuestById(67298).QuestI8A == 0">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-346.98517, 116.768394, -89.90777" Land="True"/> <!-- ZoneId="397" -->
+        <UseObject Condition="GetQuestById(67298).QuestI8A == 0" NpcId="2006007" XYZ="-348.10413, 116.50256, -91.93567" QuestId="67298" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67298) == 2 and GetQuestById(67298).QuestI8A == 16">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-229.55902, 112.52678, -127.39673" Land="True"/> <!-- ZoneId="397" -->
+        <UseObject Condition="GetQuestById(67298).QuestI8A == 16" NpcId="2006006" XYZ="-228.25977, 112.47424, -127.55017" QuestId="67298" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67298) == 2 and GetQuestById(67298).QuestI8A == 33">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-159.73943, 110.902985, -53.025974" Land="True"/> <!-- ZoneId="397" -->
+        <UseObject Condition="GetQuestById(67298).QuestI8A == 33" NpcId="2006005" XYZ="-157.70203, 110.73462, -52.414795" QuestId="67298" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67298) == 3">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-264.57706, 126.470634, 1.496449" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014133" XYZ="-259.84595, 126.44779, 1.9073486" QuestId="67298" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67298) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-287.5268, 126.70225, 1.4609034" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67298" NpcId="1013710" XYZ="-294.6975, 126.84874, 4.5318604"/>
+      </If>
+    </If>
+	
+    <!-- Introductory Dragonslaying -->
+    <If Condition="not IsQuestCompleted(67300)">
+      <If Condition="not HasQuest(67300)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-292.4803, 126.749916, 1.6729186" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67300)">
+          <PickupQuest QuestId="67300" NpcId="1013710"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67300) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-292.4803, 126.749916, 1.6729186" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014134" XYZ="-293.23267, 126.85495, 5.2643433" QuestId="67300" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67300) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="278.16846, 132.39125, -255.48785" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014136" XYZ="292.74426, 132.44626, -244.73944" QuestId="67300" StepId="2"/>
+		<WaitWhile Condition="not GetQuestStep(67300) == 3"/>
+      </If>
+      <If Condition="GetQuestStep(67300) == 3">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="290.1702, 132.44753, -247.05531" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014136" XYZ="292.74426, 132.44626, -244.73944" QuestId="67300" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67300) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-286.61536, 126.51715, -3.0106063" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67300" NpcId="1013710" XYZ="-294.6975, 126.84874, 4.5318604"/>
+      </If>
+    </If>
+
+    <!-- Intermediate Dragonslaying -->
+    <If Condition="not IsQuestCompleted(67301)">
+      <If Condition="not HasQuest(67301)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-293.43372, 126.75019, 1.4590012" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67301)">
+          <PickupQuest QuestId="67301" NpcId="1013710"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67301) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-217.8331, 112.427025, -239.18074" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014138" XYZ="-219.19586, 112.21238, -244.1596" QuestId="67301" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67301) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-441.8909, 105.619736, -519.6059" Land="False"/> <!-- ZoneId="397" -->
+        <MoveTo UseMesh="False" XYZ="-470.75638, 93.77456, -503.00897"/>
+		<Dismount/>
+        <WaitWhile Condition="not GetQuestStep(67301) == 3"/>
+      </If>
+      <If Condition="GetQuestStep(67301) == 3">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-222.26917, 112.12975, -236.03374" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014138" XYZ="-219.19586, 112.21238, -244.1596" QuestId="67301" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67301) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-292.54163, 126.73192, 1.177102" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67301" NpcId="1013710" XYZ="-294.6975, 126.84874, 4.5318604"/>
+      </If>
+    </If>
+	
+    <!-- Advanced Dragonslaying -->
+    <If Condition="not IsQuestCompleted(67302)">
+      <If Condition="not HasQuest(67302)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-292.59225, 126.73868, 1.3478473" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67302)">
+          <PickupQuest QuestId="67302" NpcId="1013710"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67302) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-219.19936, 112.36689, -236.98476" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014138" XYZ="-219.19586, 112.21238, -244.1596" QuestId="67302" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67302) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-445.17117, 91.79261, -520.5054" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014140" XYZ="-472.19043, 93.87282, -503.7156" QuestId="67302" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67302) == 3">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-700.41815, 100.16081, -603.3632" Land="True"/> <!-- ZoneId="397" -->
+		<Dismount/>
+		<WaitWhile COndition="not GetQuestStep(67302) == 4"/>
+      </If>
+      <If Condition="GetQuestStep(67302) == 4">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-481.82303, 94.369865, -511.36142" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014140" XYZ="-472.19043, 93.87282, -503.7156" QuestId="67302" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67302) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-290.28033, 126.57365, -2.3480008" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67302" NpcId="1013710" XYZ="-294.6975, 126.84874, 4.5318604"/>
+      </If>
+    </If>
+	
+    <!-- Expert Dragonslaying -->
+    <If Condition="not IsQuestCompleted(67305)">
+      <If Condition="not HasQuest(67305)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-292.66855, 126.70783, 0.49464244" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67305)">
+          <PickupQuest QuestId="67305" NpcId="1013710"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67305) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-291.622, 76.98336, -263.31113" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014142" XYZ="-290.33344, 76.98337, -259.93744" QuestId="67305" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67305) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-288.806, 76.98337, -275.3799" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2006013" XYZ="-287.76996, 77.74463, -278.00415" QuestId="67305" StepId="2" />
+    </If>
+      <If Condition="GetQuestStep(67305) == 3">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-289.41583, 76.98337, -264.06165" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014142" XYZ="-290.33344, 76.98337, -259.93744" QuestId="67305" StepId="3"/>
+      </If>
+    <If Condition="GetQuestStep(67305) == 4">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-289.41583, 76.98337, -264.06165" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2006014" XYZ="-291.8593, 76.98169, -261.0056" QuestId="67305" StepId="4" />
+    </If>
+      <If Condition="GetQuestStep(67305) == 5">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-289.41583, 76.98337, -264.06165" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014142" XYZ="-290.33344, 76.98337, -259.93744" QuestId="67305" StepId="5"/>
+      </If>
+      <If Condition="GetQuestStep(67305) == 6">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-290.83444, 126.62464, -1.3075" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1013710" XYZ="-294.6975, 126.84874, 4.5318604" QuestId="67305" StepId="6"/>
+      </If>
+      <If Condition="GetQuestStep(67305) == 7">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-258.7262, 126.79569, 8.432537" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014144" XYZ="-258.16742, 126.98671, 12.77179" QuestId="67305" StepId="7"/>
+      </If>
+    <If Condition="GetQuestStep(67305) == 8">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-256.47446, 126.8697, 9.893787" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2006015" XYZ="-252.33844, 127.00073, 11.093262" QuestId="67305" StepId="8" />
+    </If>
+    <If Condition="GetQuestStep(67305) == 9">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-256.47446, 126.8697, 9.893787" Land="True"/> <!-- ZoneId="397" -->
+      <HandOver ItemIds="2001746,2001747" NpcId="1014144" XYZ="-258.16742, 126.98671, 12.77179" QuestId="67305" StepId="9"/>
+    </If>
+      <If Condition="GetQuestStep(67305) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-289.8872, 126.6932, 0.7404674" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn ItemIds="0,0" QuestId="67305" NpcId="1013710" XYZ="-294.6975, 126.84874, 4.5318604"/>
+      </If>
+    </If>
+	
+    <!-- Unknown Ultimatum -->
+    <If Condition="not IsQuestCompleted(67425)">
+      <If Condition="not HasQuest(67425)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-258.2227, 126.81076, 8.667949" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67425)">
+          <PickupQuest QuestId="67425" NpcId="1014146"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67425) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-258.2227, 126.81076, 8.667949" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014147" XYZ="-256.97723, 126.99508, 13.168518" QuestId="67425" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67425) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-298.6084, 221.66283, 545.984" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014149" XYZ="-294.5144, 221.58685, 545.922" QuestId="67425" StepId="2"/>
+      </If>
+    <If Condition="GetQuestStep(67425) == 3">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-255.39095, 221.40218, 528.1201" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2006017" XYZ="-253.34558, 221.36255, 528.92346" QuestId="67425" StepId="3" />
+    </If>
+      <If Condition="GetQuestStep(67425) == 4">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-294.36227, 221.68256, 548.79364" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014149" XYZ="-294.5144, 221.58685, 545.922" QuestId="67425" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67425) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-261.08313, 126.6793, 6.242372" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67425" NpcId="1014146" XYZ="-258.74725, 126.98546, 12.649658"/>
+      </If>
+    </If>
+	
+    <!-- Personal Effects -->
+    <If Condition="not IsQuestCompleted(67426)">
+      <If Condition="not HasQuest(67426)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-259.07285, 126.87301, 9.514898" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67426)">
+          <PickupQuest QuestId="67426" NpcId="1014146"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67426) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-311.4614, 219.1568, 303.3842" Land="True"/> <!-- ZoneId="397" -->
+		<Grind grindRef="67426" while="GetQuestStep(67426) == 1" />
+    </If>
+    <If Condition="GetQuestStep(67426) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="505.61145, 217.95149, 787.4587" Land="True"/> <!-- ZoneId="397" -->
+      <HandOver ItemId="2001749" NpcId="1014150" XYZ="507.13354, 217.95148, 791.37854" QuestId="67426" StepId="2"/>
+    </If>
+      <If Condition="GetQuestStep(67426) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-259.3995, 126.81811, 8.670643" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67426" NpcId="1014146" XYZ="-258.74725, 126.98546, 12.649658"/>
+      </If>
+    </If>
+	
+    <!-- Ayleth Absconds -->
+    <If Condition="not IsQuestCompleted(67427)">
+      <If Condition="not HasQuest(67427)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-259.3995, 126.81811, 8.670643" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67427)">
+          <PickupQuest QuestId="67427" NpcId="1014146"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67427) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-153.90852, 219.03856, 669.624" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014151" XYZ="-156.08453, 219.14235, 669.7031" QuestId="67427" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67427) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-154.01642, 218.97874, 668.6458" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014151" XYZ="-156.08453, 219.14235, 669.7031" QuestId="67427" StepId="2"/>
+      </If>
+    <If Condition="GetQuestStep(67427) == 3">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-154.01642, 218.97874, 668.6458" Land="True"/> <!-- ZoneId="397" -->
+      <HandOver ItemId="2001750" NpcId="1014151" XYZ="-156.08453, 219.14235, 669.7031" QuestId="67427" StepId="3"/>
+    </If>
+      <If Condition="GetQuestStep(67427) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-259.3995, 126.81811, 8.670643" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67427" NpcId="1014146" XYZ="-258.74725, 126.98546, 12.649658"/>
+      </If>
+    </If>
+	
+    <!-- A Missing Tooth -->
+    <If Condition="not IsQuestCompleted(67428)">
+      <If Condition="not HasQuest(67428)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-260.52017, 126.794754, 8.187536" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67428)">
+          <PickupQuest QuestId="67428" NpcId="1014146"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67428) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-157.10994, 219.29268, 671.5108" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2006019" XYZ="-152.42242, 219.62305, 669.94727" QuestId="67428" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67428) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-154.85538, 219.07889, 669.57416" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2006181" XYZ="-152.42242, 219.62305, 669.94727" QuestId="67428" StepId="2" />
+    </If>
+      <If Condition="GetQuestStep(67428) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-254.6539, 126.65035, 6.8157606" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67428" NpcId="1014146" XYZ="-258.74725, 126.98546, 12.649658"/>
+      </If>
+    </If>
+	
+    <!-- A Noble Purpose -->
+    <If Condition="not IsQuestCompleted(67429)">
+      <If Condition="not HasQuest(67429)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-257.83563, 126.77041, 8.17421" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67429)">
+          <PickupQuest QuestId="67429" NpcId="1014146"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67429) == 1 and GetQuestById(67429).QuestI8A == 0">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-261.41125, 126.593315, 4.557866" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014133" XYZ="-259.84595, 126.44779, 1.9073486" QuestId="67429" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67429) == 1 and GetQuestById(67429).QuestI8A == 16">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-284.75174, 126.888695, 7.914799" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1011907" XYZ="-288.8686, 127.06639, 13.199036" QuestId="67429" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67429) == 1 and GetQuestById(67429).QuestI8A == 32">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-293.12473, 126.68013, -0.36404854" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1011910" XYZ="-298.26813, 126.67049, -1.4191895" QuestId="67429" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67429) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="492.20374, 133.58249, -855.8378" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014152" XYZ="496.1776, 133.93082, -862.2416" QuestId="67429" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67429) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-291.4536, 126.712074, 0.8990334" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67429" NpcId="1014153" XYZ="-295.82666, 126.83744, 3.829956"/>
+      </If>
+    </If>
+	
+    <!-- A War without End -->
+    <If Condition="not IsQuestCompleted(67434)">
+      <If Condition="not HasQuest(67434)">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-291.4536, 126.712074, 0.8990334" Land="True"/> <!-- ZoneId="397" -->
+        <If Condition="IsQuestAcceptQualified(67434)">
+          <PickupQuest QuestId="67434" NpcId="1013710"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67434) == 1">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-291.4536, 126.712074, 0.8990334" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014153" XYZ="-295.82666, 126.83744, 3.829956" QuestId="67434" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67434) == 2">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-291.4536, 126.712074, 0.8990334" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1013710" XYZ="-294.6975, 126.84874, 4.5318604" QuestId="67434" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67434) == 3">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-516.4309, 119.555504, -159.07143" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014154" XYZ="-519.1577, 119.39417, -161.24213" QuestId="67434" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67434) == 4">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-523.6067, 118.947, -161.8334" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014155" XYZ="-527.245, 118.94699, -163.13422" QuestId="67434" StepId="4"/>
+      </If>
+    <If Condition="GetQuestStep(67434) == 5">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-523.6067, 118.947, -161.8334" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2006026" XYZ="-525.7191, 119.06604, -165.72827" QuestId="67434" StepId="5" />
+    </If>
+      <If Condition="GetQuestStep(67434) == 6">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-291.52283, 126.54101, -3.2738461" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1013710" XYZ="-294.6975, 126.84874, 4.5318604" QuestId="67434" StepId="6"/>
+      </If>
+    <If Condition="GetQuestStep(67434) == 7">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-91.82096, 95.85869, -641.9914" Land="True"/> <!-- ZoneId="397" -->
+      <UseItem ItemId="2001751" NpcId="2006027" XYZ="-92.57648, 96.33008, -645.1057" QuestId="67434" StepId="7"/>
+    </If>
+    <If Condition="GetQuestStep(67434) == 8">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-92.638435, 93.67259, -624.51807" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2006028" XYZ="-92.5155, 93.52246, -623.621" QuestId="67434" StepId="8" />
+    </If>
+    <If Condition="GetQuestStep(67434) == 9">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-91.60539, 96.013435, -644.546" Land="True"/> <!-- ZoneId="397" -->
+      <UseObject NpcId="2006460" XYZ="-92.57648, 96.33008, -645.1057" QuestId="67434" StepId="9" />
+    </If>
+    <If Condition="GetQuestStep(67434) == 10">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-291.4622, 126.746414, 1.7921478" Land="True"/> <!-- ZoneId="397" -->
+      <HandOver ItemId="2001751" NpcId="1013710" XYZ="-294.6975, 126.84874, 4.5318604" QuestId="67434" StepId="10"/>
+    </If>
+      <If Condition="GetQuestStep(67434) == 11">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-258.07483, 126.84975, 9.186144" Land="True"/> <!-- ZoneId="397" -->
+        <TalkTo NpcId="1014147" XYZ="-256.97723, 126.99508, 13.168518" QuestId="67434" StepId="11"/>
+      </If>
+      <If Condition="GetQuestStep(67434) == 255">
+		<If condition="not IsOnMap(397)">
+			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-291.713, 126.80585, 3.325041" Land="True"/> <!-- ZoneId="397" -->
+        <TurnIn QuestId="67434" NpcId="1013710" XYZ="-294.6975, 126.84874, 4.5318604"/>
+      </If>
+    </If>
+	
+	</Order>
+	<CodeChunks>	
+	</CodeChunks>
+    <GrindAreas>
+    <GrindArea name="67421">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-240.3654, 219.98256, 147.91745"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3491" Weight="1"/> <!-- Sorbet -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67268">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="299.51596, 185.8865, 438.34113"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3470" Weight="1"/> <!-- Steinbock -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67423">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="540.90466, 130.79962, -666.86456"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3487" Weight="1"/> <!-- Inland Tursus -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67271">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="149.38913, 115.07871, 99.077896"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3473" Weight="1"/> <!-- Silver Wolf -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67297">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-237.62, 91.0316, -530.7755"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3481" Weight="1"/> <!-- Archaeornis -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67431">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-595.1418, 112.46288, -691.9456"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3493" Weight="1"/> <!-- Vindthurs -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67299">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-111.20742, 94.57426, -368.87845"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3479" Weight="1"/> <!-- Wooly Yak -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67432">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="584.7333, 204.38155, -168.8355"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3489" Weight="1"/> <!-- Grand Archaeornis -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67433">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-328.06177, 219.25488, 467.34204"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3492" Weight="1"/> <!-- Ice Zoblyn -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67289">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-76.44814, 87.189, -679.6277"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3480" Weight="1"/> <!-- Gelato -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67273">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="559.1489, 168.53542, -495.99362"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3476" Weight="1"/> <!-- Frost Grenade -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67424">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="723.35834, 135.01022, -622.9883"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3488" Weight="1"/> <!-- Sleet Trap -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67426">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-311.4614, 219.1568, 303.3842"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3490" Weight="1"/> <!-- Slate Yeti -->
+      </TargetMobs>
+    </GrindArea>
+    </GrindAreas>
+	<!-- and GetQuestById().QuestI8A == -->
+</Profile>

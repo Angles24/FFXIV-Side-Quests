@@ -1,0 +1,2399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The Dravanian Forelands Side Quests
+
+Something's Bugging the Chocobos
+Why Does the Caged Bird Sing
+Saving the Bait
+Clever Chicks > A Trap to Yawn For	
+A Trap to Yawn For	
+Needs More Salt > Uninvited Guests |Wet Strings Attached
+Wet Strings Attached
+Uninvited Guests > What Remaclon Saw
+What Remaclon Saw > Getting a Legtrap Up
+I Wanna Be the Hunter > A Natural Instinct
+A Natural Instinct > First Impressions Last
+First Impressions Last > The Man Who Slew Too Much
+The Man Who Slew Too Much > A Budding Partnership
+A Budding Partnership > Persistence Makes Perfect
+Persistence Makes Perfect > Getting a Legtrap Up
+To Each His Own > Aggressive Pruning|Freedom of Choice
+Low-hanging Fruit > Aggressive Pruning|Freedom of Choice
+Freedom of Choice
+Aggressive Pruning
+Feat of Clay > Yellow Stones
+Natural Repellent > Vindictive Vath Vendetta
+Chocobo's Last Stand
+Treason and Plot
+Yellow Stones
+Vindictive Vath Vendetta
+A Curious Herb
+Awakened > Advanced Vathematics|It's the Thought That Counts
+It's the Thought That Counts
+Advanced Vathematics
+Something Worth Protecting > Nipped in the Bud
+Nipped in the Bud
+How to Feed Your Dragon > Hungry for Seconds
+Hungry for Seconds > A Taste of the Peculiar
+A Taste of the Peculiar
+Back in the Game > Blunders in Dragonsitting|Where Dragons Lie
+Where Dragons Lie
+No Smoking Allowed > Like Gnaths to a Flame
+Like Gnaths to a Flame > Fit to Be Tied
+Fit to Be Tied
+Blunders in Dragonsitting
+When Mother Calls > A Dragon and His Boy
+A Dragon and His Boy > Between Friends and Family
+Between Friends and Family > The Heart of a Dragon
+The Heart of a Dragon > Let Bygones Be Bygones
+Let Bygones Be Bygones
+Smarter than the Average Beast
+Getting a Legtrap Up > Garbage Duty|A Step in the Right Direction|Pest Control
+Pest Control > A Hunter's True Nature
+A Step in the Right Direction > A Hunter's True Nature
+Garbage Duty > A Hunter's True Nature
+A Hunter's True Nature > Smells Like Team Spirit
+Smells Like Team Spirit
+The Best Defense
+From the Jaws of Hunger
+-->
+<Profile>
+	<Name>The Dravanian Forelands Side Quests</Name>
+	<Order>	 
+			
+    <!-- I Wanna Be the Hunter -->
+    <If Condition="not IsQuestCompleted(67311)">
+      <If Condition="not HasQuest(67311)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="535.0729, -51.354248, 60.75133" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67311)">
+          <PickupQuest QuestId="67311" NpcId="1011917"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67311) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="535.0729, -51.354248, 60.75133" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014480" XYZ="536.3087, -51.325233, 64.98816" QuestId="67311" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67311) == 2 and GetQuestById(67311).QuestI8A == 0">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="869.0264, -21.111317, 195.93295" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67311).QuestI8A == 0" NpcId="2006127" XYZ="871.88513, -20.615051, 193.59119" QuestId="67311" StepId="2" />
+    </If>
+    <If Condition="GetQuestStep(67311) == 2 and GetQuestById(67311).QuestI8A == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="872.6901, -17.159859, 212.6631" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67311).QuestI8A == 1" NpcId="2006128" XYZ="872.6481, -16.434021, 216.7544" QuestId="67311" StepId="2" />
+    </If>
+    <If Condition="GetQuestStep(67311) == 2 and GetQuestById(67311).QuestI8A == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="862.8386, -4.7357254, 215.9748" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67311).QuestI8A == 2" NpcId="2006457" XYZ="870.3898, -4.715088, 216.23547" QuestId="67311" StepId="2" />
+    </If>
+    <If Condition="GetQuestStep(67311) == 2 and GetQuestById(67311).QuestI8A == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="844.6077, -6.486664, 210.08109" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67311).QuestI8A == 3" NpcId="2006129" XYZ="841.0924, -5.2339478, 216.26611" QuestId="67311" StepId="2" />
+    </If>
+    <If Condition="GetQuestStep(67311) == 2 and GetQuestById(67311).QuestI8A == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="835.5266, -7.005725, 225.28578" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67311).QuestI8A == 4" NpcId="2006456" XYZ="832.4863, -7.370178, 222.70532" QuestId="67311" StepId="2" />
+    </If>
+    <If Condition="GetQuestStep(67311) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="538.7197, -51.29143, 62.997562" Land="True"/> <!-- ZoneId="398" -->
+      <HandOver ItemId="2001789" NpcId="1014480" XYZ="536.3087, -51.325233, 64.98816" QuestId="67311" StepId="3"/>
+    </If>
+      <If Condition="GetQuestStep(67311) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="536.20825, -51.332325, 63.06184" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn ItemId="0" QuestId="67311" NpcId="1011917" XYZ="535.30164, -51.340645, 65.293335"/>
+      </If>
+    </If>
+	
+    <!-- A Natural Instinct -->
+    <If Condition="not IsQuestCompleted(67312)">
+      <If Condition="not HasQuest(67312)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="536.2234, -51.331497, 63.456985" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67312)">
+          <PickupQuest QuestId="67312" NpcId="1011917"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67312) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="536.2234, -51.331497, 63.456985" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014480" XYZ="536.3087, -51.325233, 64.98816" QuestId="67312" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67312) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="381.26242, -42.62497, -372.03387" Land="True"/> <!-- ZoneId="398" -->
+      <UseItem ItemId="2001790" NpcId="2006130" XYZ="378.74414, -42.557434, -373.0984" QuestId="67312" StepId="2"/>
+    </If>
+      <If Condition="GetQuestStep(67312) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="346.842, -30.108076, -412.37454" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014481" XYZ="352.01025, -30.069403, -413.10748" QuestId="67312" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67312) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="384.84366, -42.825214, -369.21423" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014482" XYZ="380.7583, -42.602375, -371.63348" QuestId="67312" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67312) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="535.6335, -51.347885, 55.812687" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67312" NpcId="1011917" XYZ="535.30164, -51.340645, 65.293335"/>
+      </If>
+    </If>
+	
+    <!-- First Impressions Last -->
+    <If Condition="not IsQuestCompleted(67313)">
+      <If Condition="not HasQuest(67313)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="536.10284, -51.33701, 61.042904" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67313)">
+          <PickupQuest QuestId="67313" NpcId="1011917"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67313) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="824.1873, -22.755705, 209.03557" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014486" XYZ="831.08264, -22.251318, 213.61096" QuestId="67313" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67313) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="536.75, -51.32501, 62.023586" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1011917" XYZ="535.30164, -51.340645, 65.293335" QuestId="67313" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67313) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="536.75, -51.32501, 62.023586" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014484" XYZ="533.2263, -51.380444, 63.43164" QuestId="67313" StepId="3"/>
+      </If>
+    <If Condition="GetQuestStep(67313) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="314.71286, -46.998608, -258.22336" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67313).QuestI8A == 0" NpcId="2006132" XYZ="312.79468, -47.16565, -256.27533" QuestId="67313" StepId="4" />
+      <UseObject Condition="GetQuestById(67313).QuestI8A == 16" NpcId="2006134" XYZ="319.11182, -48.20331, -318.07434" QuestId="67313" StepId="4" />
+      <UseObject Condition="GetQuestById(67313).QuestI8A == 32" NpcId="2006133" XYZ="360.0365, -44.449524, -284.01617" QuestId="67313" StepId="4" />
+    </If>
+      <If Condition="GetQuestStep(67313) == 5">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="537.0618, -51.321278, 61.09972" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014480" XYZ="536.3087, -51.325233, 64.98816" QuestId="67313" StepId="5"/>
+      </If>
+      <If Condition="GetQuestStep(67313) == 6">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="826.7627, -22.396315, 214.54333" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014485" XYZ="832.7915, -22.160456, 214.3739" QuestId="67313" StepId="6"/>
+      </If>
+      <If Condition="GetQuestStep(67313) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="535.2863, -51.353138, 58.64335" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67313" NpcId="1011917" XYZ="535.30164, -51.340645, 65.293335"/>
+      </If>
+    </If>
+
+    <!-- The Man Who Slew Too Much -->
+    <If Condition="not IsQuestCompleted(67317)">
+      <If Condition="not HasQuest(67317)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="534.7661, -51.35778, 61.753372" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67317)">
+          <PickupQuest QuestId="67317" NpcId="1011917"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67317) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="447.80835, -51.141403, 102.89111" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014490" XYZ="440.8789, -51.077488, 107.499756" QuestId="67317" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67317) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="350.1624, -30.158342, -408.3877" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014481" XYZ="352.01025, -30.069403, -413.10748" QuestId="67317" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67317) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="793.9202, -34.063126, -263.86853" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014491" XYZ="794.70496, -33.55555, -271.62585" QuestId="67317" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67317) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="351.45926, -30.182522, -410.64536" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014481" XYZ="352.01025, -30.069403, -413.10748" QuestId="67317" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67317) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="534.8603, -51.356903, 61.30489" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67317" NpcId="1011917" XYZ="535.30164, -51.340645, 65.293335"/>
+      </If>
+    </If>
+	
+    <!-- A Budding Partnership -->
+    <If Condition="not IsQuestCompleted(67318)">
+      <If Condition="not HasQuest(67318)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="534.8553, -51.357002, 61.29184" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67318)">
+          <PickupQuest QuestId="67318" NpcId="1011917"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67318) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="479.69965, -51.041122, -1.8464484" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014496" XYZ="481.8036, -50.857147, -5.2339478" QuestId="67318" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67318) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="479.69965, -51.041122, -1.8464484" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014494" XYZ="479.7893, -50.83053, -5.722229" QuestId="67318" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67318) == 3 and GetQuestById(67318).QuestI8A == 0">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="495.3422, -48.822372, 10.888586" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1011919" XYZ="497.82556, -49.790283, 11.825684" QuestId="67318" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67318) == 3 and GetQuestById(67318).QuestI8A == 16">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="533.7434, -51.37314, 62.66127" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1011917" XYZ="535.30164, -51.340645, 65.293335" QuestId="67318" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67318) == 3 and GetQuestById(67318).QuestI8A == 32">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="473.0173, -51.141403, 36.550636" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1011916" XYZ="470.02356, -49.89133, 20.370789" QuestId="67318" StepId="3"/>
+		<MoveTo XYZ="473.0173, -51.141403, 36.550636"/>
+      </If>
+      <If Condition="GetQuestStep(67318) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="479.2481, -50.986935, -2.8436284" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014494" XYZ="479.7893, -50.83053, -5.722229" QuestId="67318" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67318) == 5">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="672.75525, -24.339933, -290.92255" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014495" XYZ="665.8884, -24.489628, -289.17377" QuestId="67318" StepId="5"/>
+      </If>
+    <If Condition="GetQuestStep(67318) == 6">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="668.2191, -24.39035, -291.45245" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2006141" XYZ="664.57605, -24.27716, -289.02118" QuestId="67318" StepId="6" />
+    </If>
+    <If Condition="GetQuestStep(67318) == 7">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="668.2191, -24.39035, -291.45245" Land="True"/> <!-- ZoneId="398" -->
+      <HandOver ItemId="2001791" NpcId="1014495" XYZ="665.8884, -24.489628, -289.17377" QuestId="67318" StepId="7"/>
+    </If>
+      <If Condition="GetQuestStep(67318) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="476.9652, -50.98409, -2.2055929" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67318" NpcId="1014494" XYZ="479.7893, -50.83053, -5.722229"/>
+      </If>
+    </If>
+	
+    <!-- Persistence Makes Perfect -->
+    <If Condition="not IsQuestCompleted(67319)">
+      <If Condition="not HasQuest(67319)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="476.88364, -50.99032, -2.082167" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67319)">
+          <PickupQuest QuestId="67319" NpcId="1014494"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67319) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="671.5332, -24.367855, -290.839" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014495" XYZ="665.8884, -24.489628, -289.17377" QuestId="67319" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67319) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="530.251, -34.137714, -392.8026" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014498" XYZ="527.9773, -34.534286, -389.1814" QuestId="67319" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67319) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="348.58713, -30.253183, -428.93704" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014499" XYZ="346.66968, -30.197964, -424.91803" QuestId="67319" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67319) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="166.63942, -18.146557, -562.6428" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014500" XYZ="164.69055, -18.146557, -566.2471" QuestId="67319" StepId="4"/>
+      </If>
+    <If Condition="GetQuestStep(67319) == 5">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="166.63942, -18.146557, -562.6428" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2006143" XYZ="162.43225, -17.95996, -566.70483" QuestId="67319" StepId="5" />
+    </If>
+      <If Condition="GetQuestStep(67319) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="533.6816, -51.37772, 59.6149" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67319" NpcId="1011917" XYZ="535.30164, -51.340645, 65.293335"/>
+      </If>
+    </If>
+
+    <!-- Clever Chicks -->
+    <If Condition="not IsQuestCompleted(67306)">
+      <If Condition="not HasQuest(67306)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="485.51825, -51.141403, 25.689512" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67306)">
+          <PickupQuest QuestId="67306" NpcId="1011918"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67306) == 1 and GetQuestById(67306).QuestI8A == 0">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="675.1839, -53.805264, 69.670006" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67306).QuestI8A == 0" NpcId="2005593" XYZ="671.3817, -53.818604, 66.33093" QuestId="67306" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67306) == 1 and GetQuestById(67306).QuestI8A == 16">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="443.2707, -43.770107, -191.1551" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67306).QuestI8A == 16" NpcId="2005594" XYZ="441.9165, -43.289856, -189.22723" QuestId="67306" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67306) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="485.39737, -51.1414, 27.053566" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67306" NpcId="1011918" XYZ="483.2379, -51.14141, 25.284058"/>
+      </If>
+    </If>
+		
+    <!-- A Trap to Yawn For -->
+    <If Condition="not IsQuestCompleted(67314)">
+      <If Condition="not HasQuest(67314)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="485.45337, -51.141403, 27.862827" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67314)">
+          <PickupQuest QuestId="67314" NpcId="1011918"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67314) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="609.6662, -30.5132, 329.71713" Land="False"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="626.65137, -35.46007, 389.64835" Land="False"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="604.61127, -37.459614, 449.81335" Land="False"/> <!-- ZoneId="398" -->
+        <MoveTo UseMesh="False" XYZ="577.44855, -34.64555, 492.3004" Distance="0.1"/>
+		<Dismount/>
+      <UseObject NpcId="2005599" XYZ="577.63025, -34.500732, 492.729" QuestId="67314" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67314) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="487.4124, -51.1414, 28.694283" Land="True"/> <!-- ZoneId="398" -->
+        <GetTo ZoneId="398" XYZ="487.4124, -51.1414, 28.694283"/>  
+      <HandOver ItemId="2001607" NpcId="1011918" XYZ="483.2379, -51.14141, 25.284058" QuestId="67314" StepId="2"/>
+    </If>
+    <If Condition="GetQuestStep(67314) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="443.3324, -43.72676, -190.3354" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2005600" XYZ="441.9165, -43.289856, -189.22723" QuestId="67314" StepId="3"/>
+    </If>
+      <If Condition="GetQuestStep(67314) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="487.30725, -51.1414, 30.525757" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67314" NpcId="1011918" XYZ="483.2379, -51.14141, 25.284058"/>
+      </If>
+    </If>
+	
+    <!-- Needs More Salt -->
+    <If Condition="not IsQuestCompleted(67315)">
+      <If Condition="not HasQuest(67315)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="472.89682, -51.141403, 39.594124" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67315)">
+          <PickupQuest QuestId="67315" NpcId="1011916"/>
+		  <MoveTo XYZ="472.89682, -51.141403, 39.594124"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67315) == 1 and GetQuestById(67315).QuestI8A == 0">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="663.82007, -31.474293, 335.85745" Land="True"/> <!-- ZoneId="398" -->
+      <UseItem Condition="GetQuestById(67315).QuestI8A == 0" ItemId="2001609" NpcId="2005604" XYZ="665.3695, -30.71643, 340.6881" QuestId="67315" StepId="1"/>
+    </If>
+    <If Condition="GetQuestStep(67315) == 1 and GetQuestById(67315).QuestI8A == 17">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="662.52686, -32.438873, 325.09772" Land="True"/> <!-- ZoneId="398" -->
+      <UseItem Condition="GetQuestById(67315).QuestI8A == 17" ItemId="2001609" NpcId="2005605" XYZ="663.4164, -32.48651, 321.37012" QuestId="67315" StepId="1"/>
+    </If>
+    <If Condition="GetQuestStep(67315) == 1 and GetQuestById(67315).QuestI8A == 33">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="646.0494, -33.979897, 329.6924" Land="True"/> <!-- ZoneId="398" -->
+      <UseItem Condition="GetQuestById(67315).QuestI8A == 33" ItemId="2001609" NpcId="2005603" XYZ="641.90125, -34.13446, 332.0515" QuestId="67315" StepId="1"/>
+    </If>
+      <If Condition="GetQuestStep(67315) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="472.86298, -51.141403, 37.897144" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67315" NpcId="1011916" XYZ="470.02356, -49.89133, 20.370789"/>
+		  <MoveTo XYZ="472.89682, -51.141403, 39.594124"/>
+      </If>
+    </If>
+	
+    <!-- Uninvited Guests -->
+    <If Condition="not IsQuestCompleted(67316)">
+      <If Condition="not HasQuest(67316)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="346.09525, -30.12075, -415.72372" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67316)">
+          <PickupQuest QuestId="67316" NpcId="1013364"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67316) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="280.626, -19.856318, -527.2731" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67316" while="GetQuestStep(67316) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67316) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="345.70828, -30.182526, -424.9153" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67316" NpcId="1013364" XYZ="344.93018, -30.12832, -419.21112"/>
+      </If>
+    </If>
+		
+    <!-- What Remaclon Saw -->
+    <If Condition="not IsQuestCompleted(67321)">
+      <If Condition="not HasQuest(67321)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="500.3257, -49.95955, 12.367949" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67321)">
+          <PickupQuest QuestId="67321" NpcId="1011919"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67321) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="45.634533, -37, -312.11765" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2005609" XYZ="44.47998, -37.003174, -309.65137" QuestId="67321" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67321) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="501.29752, -50.082592, 12.023244" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67321" NpcId="1011919" XYZ="497.82556, -49.790283, 11.825684"/>
+      </If>
+    </If>
+		
+    <!-- Getting a Legtrap Up -->
+    <If Condition="not IsQuestCompleted(67458)">
+      <If Condition="not HasQuest(67458)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="453.09, -51.141407, 17.847754" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67458)">
+          <PickupQuest QuestId="67458" NpcId="1014502"/>
+        </If>
+      </If>
+      <While Condition="GetQuestStep(67458) == 1 and GetQuestById(67458).QuestI8A == 0">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="837.8336, -6.6087036, 238.01633" Land="True"/> <!-- ZoneId="398" -->
+        <Dismount/>
+      </While>
+      <While Condition="GetQuestStep(67458) == 1 and GetQuestById(67458).QuestI8A == 17">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="867.0342, -3.691479, 242.94777" Land="True"/> <!-- ZoneId="398" -->
+        <Dismount/>
+      </While>
+      <While Condition="GetQuestStep(67458) == 1 and GetQuestById(67458).QuestI8A == 33">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="846.46796, -4.9773397, 276.16388" Land="True"/> <!-- ZoneId="398" -->
+        <Dismount/>
+      </While>
+      <If Condition="GetQuestStep(67458) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="455.07974, -51.141407, 17.09886" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014502" XYZ="455.5581, -51.141403, 21.591492" QuestId="67458" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67458) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="457.53516, -53.158554, 123.99733" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014504" XYZ="460.53247, -53.537544, 132.24988" QuestId="67458" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67458) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="451.19086, -51.125866, 15.632411" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67458" NpcId="1014502" XYZ="455.5581, -51.141403, 21.591492"/>
+      </If>
+    </If>
+	
+    <!-- Smarter than the Average Beast -->
+    <If Condition="not IsQuestCompleted(67464)">
+      <If Condition="not HasQuest(67464)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="471.5267, -51.141403, 36.833218" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67464)">
+          <PickupQuest QuestId="67464" NpcId="1011916"/>
+		  <MoveTo XYZ="472.89682, -51.141403, 39.594124"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67464) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="226.89302, -22.427387, -497.0876" Land="True"/> <!-- ZoneId="398" -->
+      <UseItem ItemId="2001674" NpcId="2005833" XYZ="227.28308, -22.263, -499.10736" QuestId="67464" StepId="1"/>
+    </If>
+    <If Condition="GetQuestStep(67464) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="217.4105, -21.982107, -501.42026" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2005834" XYZ="215.93042, -22.049316, -500.3281" QuestId="67464" StepId="2" />
+    </If>
+      <If Condition="GetQuestStep(67464) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="472.28992, -51.141403, 38.159824" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67464" NpcId="1011916" XYZ="470.02356, -49.89133, 20.370789"/>
+		  <MoveTo XYZ="472.89682, -51.141403, 39.594124"/>
+      </If>
+    </If>
+	
+    <!-- Chocobo's Last Stand -->
+    <If Condition="not IsQuestCompleted(67334)">
+      <If Condition="not HasQuest(67334)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="472.28992, -51.141403, 38.159824" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67334)">
+          <PickupQuest QuestId="67334" NpcId="1011916"/>
+		  <MoveTo XYZ="472.89682, -51.141403, 39.594124"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67334) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="473.46515, -45.479923, -169.10936" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013401" XYZ="472.06824, -45.434788, -170.73322" QuestId="67334" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67334) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="710.79144, -20.244421, -641.0981" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013404" XYZ="713.13025, -20.461674, -641.1689" QuestId="67334" StepId="2"/>
+		<WaitWhile Condition="not GetQuestStep(67334) == 3"/>
+      </If>
+      <If Condition="GetQuestStep(67334) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="713.7294, -20.499475, -636.1112" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013402" XYZ="715.51074, -20.651361, -633.3868" QuestId="67334" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67334) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="471.72745, -51.141403, 37.804646" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67334" NpcId="1011916" XYZ="470.02356, -49.89133, 20.370789"/>
+		  <MoveTo XYZ="472.89682, -51.141403, 39.594124"/>
+      </If>
+    </If>
+	
+    <!-- Something's Bugging the Chocobos -->
+    <If Condition="not IsQuestCompleted(67308)">
+      <If Condition="not HasQuest(67308)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="707.9376, -36.41957, 196.67363" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67308)">
+          <PickupQuest QuestId="67308" NpcId="1011923"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67308) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="817.5823, -16.309174, 316.30392" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67308" while="GetQuestStep(67308) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67308) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="712.13135, -35.479656, 213.97272" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67308" NpcId="1011923" XYZ="711.1161, -36.390835, 198.10791"/>
+      </If>
+    </If>
+	
+    <!-- Why Does the Caged Bird Sing -->
+    <If Condition="not IsQuestCompleted(67309)">
+      <If Condition="not HasQuest(67309)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="843.1701, -37.63828, -37.866497" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67309)">
+          <PickupQuest QuestId="67309" NpcId="1011924"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67309) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="658.8375, -48.456127, -118.71529" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2005597" XYZ="645.4718, -46.433228, -119.76807" QuestId="67309" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67309) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="841.29315, -37.552814, -42.5464" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67309" NpcId="1011924" XYZ="849.0576, -37.669926, -39.56665"/>
+      </If>
+    </If>
+	
+    <!-- Saving the Bait -->
+    <If Condition="not IsQuestCompleted(67310)">
+      <If Condition="not HasQuest(67310)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="684.8215, -24.47768, -263.7374" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67310)">
+          <PickupQuest QuestId="67310" NpcId="1011932"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67310) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="519.2602, -41.597157, -336.49078" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67310" while="GetQuestStep(67310) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67310) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="682.9288, -24.476717, -266.241" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67310" NpcId="1011932" XYZ="685.96924, -24.382862, -269.06238"/>
+      </If>
+    </If>
+
+    <!-- Wet Strings Attached -->
+    <If Condition="not IsQuestCompleted(67320)">
+      <If Condition="not HasQuest(67320)">
+		<If condition="not IsOnMap(398)"> 
+		   <TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="517.03326, -22.450354, -538.5981" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67320)">
+          <PickupQuest QuestId="67320" NpcId="1013365"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67320) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="421.07864, -26.56282, -511.91995" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2005607" XYZ="419.6383, -26.3219, -507.59137" QuestId="67320" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67320) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="514.81006, -22.094378, -536.8371" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67320" NpcId="1013365" XYZ="517.35706, -24.317568, -541.0392"/>
+      </If>
+    </If>
+
+    <!-- Garbage Duty -->
+    <If Condition="not IsQuestCompleted(67461)">
+      <If Condition="not HasQuest(67461)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="454.585, -51.141403, 19.074982" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67461)">
+          <PickupQuest QuestId="67461" NpcId="1014502"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67461) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="690.36957, -24.375662, -265.22116" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1011932" XYZ="685.96924, -24.382862, -269.06238" QuestId="67461" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67461) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="654.7841, -24.256306, -474.37775" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014505" XYZ="661.3717, -24.312466, -472.1599" QuestId="67461" StepId="2"/>
+		<WaitWhile Condition="not GetQuestStep(67461) == 3"/>
+      </If>
+      <If Condition="GetQuestStep(67461) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="658.6918, -24.3072, -472.33762" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014505" XYZ="661.3717, -24.312466, -472.1599" QuestId="67461" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67461) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="453.26935, -51.10925, 15.236574" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67461" NpcId="1014502" XYZ="455.5581, -51.141403, 21.591492"/>
+      </If>
+    </If>
+	
+    <!-- Pest Control -->
+    <If Condition="not IsQuestCompleted(67459)">
+      <If Condition="not HasQuest(67459)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="453.28583, -51.141407, 16.838877" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67459)">
+          <PickupQuest QuestId="67459" NpcId="1014502"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67459) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="841.20746, -37.564198, -40.64313" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1011924" XYZ="849.0576, -37.669926, -39.56665" QuestId="67459" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67459) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="839.42474, -31.632982, -318.9703" Land="True"/> <!-- ZoneId="398" -->
+		<Dismount/>
+		<WaitWhile Condition="not GetQuestStep(67459) == 255"/>
+      </If>
+      <If Condition="GetQuestStep(67459) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="453.41614, -51.10991, 15.25242" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67459" NpcId="1014502" XYZ="455.5581, -51.141403, 21.591492"/>
+      </If>
+    </If>
+		
+    <!-- A Step in the Right Direction -->
+    <If Condition="not IsQuestCompleted(67460)">
+      <If Condition="not HasQuest(67460)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="453.25845, -51.141403, 17.776735" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67460)">
+          <PickupQuest QuestId="67460" NpcId="1014502"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67460) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="347.71457, -30.130924, -413.54617" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013364" XYZ="344.93018, -30.12832, -419.21112" QuestId="67460" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67460) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="434.00018, -38.801754, -414.0809" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67460).QuestI8A == 0" NpcId="2006149" XYZ="431.26562, -39.35309, -413.65686" QuestId="67460" StepId="2" />
+      <UseObject Condition="GetQuestById(67460).QuestI8A == 16" NpcId="2006151" XYZ="439.44446, -34.989014, -444.11383" QuestId="67460" StepId="2" />
+      <UseObject Condition="GetQuestById(67460).QuestI8A == 32" NpcId="2006150" XYZ="465.5984, -34.77533, -417.71576" QuestId="67460" StepId="2" />
+    </If>
+      <If Condition="GetQuestStep(67460) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="454.39252, -51.097588, 14.958585" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67460" NpcId="1014502" XYZ="455.5581, -51.141403, 21.591492"/>
+      </If>
+    </If>
+	
+    <!-- A Hunter's True Nature -->
+    <If Condition="not IsQuestCompleted(67462)">
+      <If Condition="not HasQuest(67462)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="454.4538, -51.141403, 16.090328" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67462)">
+          <PickupQuest QuestId="67462" NpcId="1014502"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67462) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="457.6832, -52.646893, 120.673454" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014504" XYZ="460.53247, -53.537544, 132.24988" QuestId="67462" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67462) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="186.37064, -27.88158, -443.2635" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014506" XYZ="184.67993, -27.767006, -443.28986" QuestId="67462" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67462) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="99.47285, -2.4634733, -489.77045" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67462" NpcId="1014508" XYZ="98.527466, -2.2554777, -493.12582"/>
+      </If>
+    </If>
+
+    <!-- Smells Like Team Spirit -->
+    <If Condition="not IsQuestCompleted(67463)">
+      <If Condition="not HasQuest(67463)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="99.1839, -2.4516222, -489.91013" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67463)">
+          <PickupQuest QuestId="67463" NpcId="1014507"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67463) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="166.64906, -18.146559, -563.4126" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014500" XYZ="164.69055, -18.146557, -566.2471" QuestId="67463" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67463) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="533.719, -51.374596, 61.940098" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014514" XYZ="534.08093, -51.36134, 65.049194" QuestId="67463" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67463) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="534.7618, -51.357174, 62.21508" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1011917" XYZ="535.30164, -51.340645, 65.293335" QuestId="67463" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67463) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="495.29114, -49.000965, -55.842037" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014521" XYZ="496.42163, -48.96616, -56.595703" QuestId="67463" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67463) == 5">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="496.01276, -48.861523, -58.587994" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014521" XYZ="496.42163, -48.96616, -56.595703" QuestId="67463" StepId="5"/>
+      </If>
+      <If Condition="GetQuestStep(67463) == 6">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="352.48422, -30.200148, -410.4126" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014518" XYZ="354.3297, -30.132763, -414.4198" QuestId="67463" StepId="6"/>
+      </If>
+      <If Condition="GetQuestStep(67463) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="535.5524, -51.344433, 62.10452" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67463" NpcId="1011917" XYZ="535.30164, -51.340645, 65.293335"/>
+      </If>
+    </If>
+	
+    <!-- Awakened -->
+    <If Condition="not IsQuestCompleted(67340)">
+      <If Condition="not HasQuest(67340)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If> 
+       <FlyTo AllowedVariance="1" XYZ="377.51422, -96.54907, 750.84546" Land="True"/> <!-- ZoneId="398" -->
+        <MoveTo XYZ="459.24338, -100.29158, 803.4481"/>
+        <If Condition="IsQuestAcceptQualified(67340)">
+          <PickupQuest QuestId="67340" NpcId="1013409"/>
+        <MoveTo XYZ="377.51422, -96.54907, 750.84546"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67340) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="72.905235, -49.42734, -147.6056" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1011928" XYZ="73.19751, -49.19563, -139.05548" QuestId="67340" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67340) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="377.51422, -96.54907, 750.84546" Land="True"/> <!-- ZoneId="398" -->
+        <MoveTo XYZ="459.24338, -100.29158, 803.4481"/>
+        <TurnIn QuestId="67340" NpcId="1013409" XYZ="462.54663, -100.2958, 804.37915"/>
+        <MoveTo XYZ="377.51422, -96.54907, 750.84546"/>
+      </If>
+    </If>
+	
+    <!-- A Curious Herb -->
+    <If Condition="not IsQuestCompleted(67330)">
+      <If Condition="not HasQuest(67330)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="73.09673, -49.19626, -157.61417" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67330)">
+          <PickupQuest QuestId="67330" NpcId="1013398"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67330) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-45.623745, -120.90651, 603.80365" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2005641" XYZ="-44.75476, -120.86676, 603.05164" QuestId="67330" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67330) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="73.91661, -49.213432, -154.82834" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67330" NpcId="1013398" XYZ="75.638916, -49.1249, -161.48627"/>
+      </If>
+    </If>
+	
+    <!-- Low-hanging Fruit -->
+    <If Condition="not IsQuestCompleted(67323)">
+      <If Condition="not HasQuest(67323)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="77.075745, -49.188377, -153.7449" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67323)">
+          <PickupQuest QuestId="67323" NpcId="1012282"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67323) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="192.26698, -19.437458, -387.048" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67323).QuestI8A == 0" NpcId="2005612" XYZ="195.11707, -19.180664, -389.57812" QuestId="67323" StepId="1" />
+      <UseObject Condition="GetQuestById(67323).QuestI8A == 16" NpcId="2005610" XYZ="171.4961, -19.668945, -385.33612" QuestId="67323" StepId="1" />
+      <UseObject Condition="GetQuestById(67323).QuestI8A == 32" NpcId="2005611" XYZ="175.70752, -15.640564, -398.5199" QuestId="67323" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67323) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="78.47458, -49.16746, -154.30914" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67323" NpcId="1012282" XYZ="82.04773, -49.18931, -152.14777"/>
+      </If>
+    </If>
+	
+    <!-- To Each His Own -->
+    <If Condition="not IsQuestCompleted(67322)">
+      <If Condition="not HasQuest(67322)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="78.47458, -49.16746, -154.30914" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67322)">
+          <PickupQuest QuestId="67322" NpcId="1011930"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67322) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="247.7221, -79.8223, 136.63084" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67322" while="GetQuestStep(67322) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67322) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="75.751816, -49.210575, -152.95583" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67322" NpcId="1011930" XYZ="81.49841, -49.21252, -150.04199"/>
+      </If>
+    </If>
+	
+    <!-- It's the Thought That Counts -->
+    <If Condition="not IsQuestCompleted(67341)">
+      <If Condition="not HasQuest(67341)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="72.9179, -49.4339, -147.34135" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67341)">
+          <PickupQuest QuestId="67341" NpcId="1013410"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67341) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-80.85453, -34.443176, -103.36118" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67341" while="GetQuestStep(67341) == 1" />
+    </If>
+    <If Condition="GetQuestStep(67341) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="72.82879, -49.42403, -147.82678" Land="True"/> <!-- ZoneId="398" -->
+      <HandOver ItemId="2001627" NpcId="1013410" XYZ="74.387695, -49.114643, -141.89368" QuestId="67341" StepId="2"/>
+    </If>
+      <If Condition="GetQuestStep(67341) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="73.23285, -48.924335, -145.16891" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67341" NpcId="1011928" XYZ="73.19751, -49.19563, -139.05548"/>
+      </If>
+    </If>
+	
+    <!-- Treason and Plot -->
+    <If Condition="not IsQuestCompleted(67331)">
+      <If Condition="not HasQuest(67331)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="73.23285, -48.924335, -145.16891" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67331)">
+          <PickupQuest QuestId="67331" NpcId="1011929"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67331) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="376.69226, -96.40161, 749.7569" Land="True"/> <!-- ZoneId="398" -->
+        <GetTo ZoneId="398" XYZ="467.57092, -102.079796, 838.25006"/>  
+      <UseObject Condition="GetQuestById(67331).QuestI8A == 0" NpcId="2005645" XYZ="462.97388, -101.1521, 841.5807" QuestId="67331" StepId="1" />
+      <UseObject Condition="GetQuestById(67331).QuestI8A == 16" NpcId="2005644" XYZ="475.48633, -99.74829, 818.7228" QuestId="67331" StepId="1" />
+      <UseObject Condition="GetQuestById(67331).QuestI8A == 33" NpcId="2005643" XYZ="500.1754, -98.98535, 819.4857" QuestId="67331" StepId="1" />
+        <GetTo ZoneId="398" XYZ="377.17944, -96.519485, 750.878"/>  
+    </If>
+      <If Condition="GetQuestStep(67331) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="69.37347, -49.569477, -147.54912" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67331" NpcId="1011929" XYZ="70.81714, -49.2083, -141.55798"/>
+      </If>
+    </If>
+	
+    <!-- Something Worth Protecting -->
+    <If Condition="not IsQuestCompleted(67343)">
+      <If Condition="not HasQuest(67343)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="71.87518, -48.961994, -144.92915" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67343)">
+          <PickupQuest QuestId="67343" NpcId="1011929"/>
+        </If>
+      </If>
+      <While Condition="GetQuestStep(67343) == 1 and GetQuestById(67343).QuestI8A == 0">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="174.60284, -60.995346, -33.17264" Land="True"/> <!-- ZoneId="398" -->
+        <Dismount/>
+      </While>
+      <While Condition="GetQuestStep(67343) == 1 and GetQuestById(67343).QuestI8A == 17">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="137.08447, -68.1981, 11.239128" Land="True"/> <!-- ZoneId="398" -->
+        <Dismount/>
+      </While>
+      <While Condition="GetQuestStep(67343) == 1 and GetQuestById(67343).QuestI8A == 33">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="189.17316, -64.70452, 17.341612" Land="True"/> <!-- ZoneId="398" -->
+        <Dismount/>
+      </While>
+      <If Condition="GetQuestStep(67343) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="71.97062, -49.444088, -148.14288" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67343" NpcId="1011929" XYZ="70.81714, -49.2083, -141.55798"/>
+      </If>
+    </If>
+
+    <!-- Nipped in the Bud -->
+    <If Condition="not IsQuestCompleted(67344)">
+      <If Condition="not HasQuest(67344)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="70.33048, -49.555855, -145.96625" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67344)">
+          <PickupQuest QuestId="67344" NpcId="1011929"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67344) == 1 and GetQuestById(67344).QuestI8A == 0">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="188.81412, -94.61955, 292.96628" Land="True"/> <!-- ZoneId="398" -->
+      <UseItem Condition="GetQuestById(67344).QuestI8A == 0" ItemId="2001628" NpcId="2005667" XYZ="188.6167, -95.262146, 296.16235" QuestId="67344" StepId="1"/>
+    </If>
+    <If Condition="GetQuestStep(67344) == 1 and GetQuestById(67344).QuestI8A == 16">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="258.7863, -91.698326, 267.77264" Land="True"/> <!-- ZoneId="398" -->
+      <UseItem Condition="GetQuestById(67344).QuestI8A == 16" ItemId="2001628" NpcId="2005668" XYZ="261.58533, -90.74542, 267.20068" QuestId="67344" StepId="1"/>
+    </If>
+    <If Condition="GetQuestStep(67344) == 1 and GetQuestById(67344).QuestI8A == 32">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="265.31393, -79.70579, 225.19666" Land="True"/> <!-- ZoneId="398" -->
+      <UseItem Condition="GetQuestById(67344).QuestI8A == 32" ItemId="2001628" NpcId="2005669" XYZ="266.80396, -78.8739, 221.69824" QuestId="67344" StepId="1"/>
+    </If>
+      <If Condition="GetQuestStep(67344) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="70.808, -49.508213, -147.1718" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67344" NpcId="1011929" XYZ="70.81714, -49.2083, -141.55798"/>
+      </If>
+    </If>
+		
+    <!-- The Best Defense -->
+    <If Condition="not IsQuestCompleted(67466)">
+      <If Condition="not HasQuest(67466)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="72.26643, -48.952427, -144.9278" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67466)">
+          <PickupQuest QuestId="67466" NpcId="1011929"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67466) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="331.55338, -116.74, 660.1575" Land="True"/> <!-- ZoneId="398" -->
+	<Grind grindRef="67466" while="GetQuestStep(67466) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67466) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="69.4059, -49.543392, -148.74333" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67466" NpcId="1011929" XYZ="70.81714, -49.2083, -141.55798"/>
+      </If>
+    </If>
+	
+    <!-- Feat of Clay -->
+    <If Condition="not IsQuestCompleted(67327)">
+      <If Condition="not HasQuest(67327)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="60.004723, -50.443386, -139.59464" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67327)">
+          <PickupQuest QuestId="67327" NpcId="1011931"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67327) == 1 and GetQuestById(67327).QuestI8A == 0">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="285.62076, -95.8413, 606.31665" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67327).QuestI8A == 0" NpcId="2005618" XYZ="287.64783, -94.10242, 597.9553" QuestId="67327" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67327) == 1 and GetQuestById(67327).QuestI8A == 17">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="193.09778, -100.87436, 641.7975" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67327).QuestI8A == 17" NpcId="2005617" XYZ="197.22278, -99.931335, 644.4646" QuestId="67327" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67327) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="55.84879, -50.604046, -142.12346" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67327" NpcId="1011931" XYZ="56.839844, -49.92323, -135.91211"/>
+      </If>
+    </If>
+		
+    <!-- Yellow Stones -->
+    <If Condition="not IsQuestCompleted(67329)">
+      <If Condition="not HasQuest(67329)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="58.900665, -50.437878, -140.5406" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67329)">
+          <PickupQuest QuestId="67329" NpcId="1011931"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67329) == 1 and GetQuestById(67329).QuestI8A == 0">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-190.659, -84.70474, 733.47046" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67329).QuestI8A == 0" NpcId="2005635" XYZ="-187.24353, -84.85547, 733.51636" QuestId="67329" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67329) == 1 and GetQuestById(67329).QuestI8A == 16">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-245.74664, -78.1476, 818.16113" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67329).QuestI8A == 16" NpcId="2005636" XYZ="-247.21143, -77.62268, 819.4857" QuestId="67329" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67329) == 1 and GetQuestById(67329).QuestI8A == 32">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-305.01807, -80.35197, 665.81335" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67329).QuestI8A == 32" NpcId="2005634" XYZ="-307.3015, -80.1557, 665.6748" QuestId="67329" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67329) == 1 and GetQuestById(67329).QuestI8A == 49">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-276.67395, -82.4387, 645.8297" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67329).QuestI8A == 49" NpcId="2005633" XYZ="-273.518, -82.47504, 644.6478" QuestId="67329" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67329) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="59.75779, -50.392452, -141.7565" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67329" NpcId="1011931" XYZ="56.839844, -49.92323, -135.91211"/>
+      </If>
+    </If>
+	
+    <!-- Advanced Vathematics -->
+    <If Condition="not IsQuestCompleted(67342)">
+      <If Condition="not HasQuest(67342)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="68.507866, -50.92785, -122.01818" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67342)">
+          <PickupQuest QuestId="67342" NpcId="1013411"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67342) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-596.70984, -97.984665, 473.5289" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013412" XYZ="-597.0398, -99.265045, 483.5431" QuestId="67342" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67342) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-591.16095, -91.44494, 439.49054" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67342" while="GetQuestStep(67342) == 2" />
+    </If>
+      <If Condition="GetQuestStep(67342) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-597.12683, -98.573, 476.7777" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013412" XYZ="-597.0398, -99.265045, 483.5431" QuestId="67342" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67342) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="68.80909, -50.88666, -122.12476" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013411" XYZ="70.05408, -50.9607, -120.22589" QuestId="67342" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67342) == 5">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="130.6007, -123.85405, 503.28833" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013413" XYZ="128.34363, -123.98697, 504.69214" QuestId="67342" StepId="5"/>
+      </If>
+      <If Condition="GetQuestStep(67342) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="66.59935, -50.842136, -124.24771" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67342" NpcId="1013411" XYZ="70.05408, -50.9607, -120.22589"/>
+      </If>
+    </If>
+
+    <!-- Freedom of Choice -->
+    <If Condition="not IsQuestCompleted(67324)">
+      <If Condition="not HasQuest(67324)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="78.636665, -49.200603, -150.84631" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67324)">
+          <PickupQuest QuestId="67324" NpcId="1011930"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67324) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="261.79333, -95.721176, 280.6199" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67324" while="GetQuestStep(67324) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67324) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="76.40215, -49.233078, -150.62291" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67324" NpcId="1011930" XYZ="81.49841, -49.21252, -150.04199"/>
+      </If>
+    </If>
+	
+    <!-- Natural Repellent -->
+    <If Condition="not IsQuestCompleted(67328)">
+      <If Condition="not HasQuest(67328)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="72.48956, -49.117474, -144.28766" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67328)">
+          <PickupQuest QuestId="67328" NpcId="1011928"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67328) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="412.13037, -51.06643, 39.674114" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67328).QuestI8A == 0" NpcId="2005623" XYZ="414.4807, -51.010986, 35.812866" QuestId="67328" StepId="1" />
+      <UseObject Condition="GetQuestById(67328).QuestI8A == 16" NpcId="2005622" XYZ="435.41602, -51.163513, 56.26001" QuestId="67328" StepId="1" />
+      <UseObject Condition="GetQuestById(67328).QuestI8A == 32" NpcId="2005624" XYZ="437.64392, -51.163513, 80.094604" QuestId="67328" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67328) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="73.6454, -49.40994, -147.33675" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67328" NpcId="1011928" XYZ="73.19751, -49.19563, -139.05548"/>
+      </If>
+    </If>
+	
+    <!-- Vindictive Vath Vendetta -->
+    <If Condition="not IsQuestCompleted(67332)">
+      <If Condition="not HasQuest(67332)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="73.574745, -48.922546, -144.80763" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67332)">
+          <PickupQuest QuestId="67332" NpcId="1011928"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67332) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="375.83325, -91.88814, 668.7521" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67332" while="GetQuestStep(67332) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67332) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="73.933716, -49.400482, -147.33351" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67332" NpcId="1011928" XYZ="73.19751, -49.19563, -139.05548"/>
+      </If>
+    </If>
+	
+    <!-- Aggressive Pruning -->
+    <If Condition="not IsQuestCompleted(67325)">
+      <If Condition="not HasQuest(67325)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="78.17616, -49.193947, -151.84842" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67325)">
+          <PickupQuest QuestId="67325" NpcId="1012282"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67325) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="55.326115, -73.42429, 169.05368" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67325" while="GetQuestStep(67325) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67325) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="76.54011, -49.197876, -153.37053" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67325" NpcId="1012282" XYZ="82.04773, -49.18931, -152.14777"/>
+      </If>
+    </If>
+	
+    <!-- How to Feed Your Dragon -->
+    <If Condition="not IsQuestCompleted(67335)">
+      <If Condition="not HasQuest(67335)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-223.63795, -30.093971, 106.2565" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67335)">
+          <PickupQuest QuestId="67335" NpcId="1011940"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67335) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-143.91576, -67.1591, 328.84335" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67335" while="GetQuestStep(67335) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67335) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-227.55649, -30.06525, 107.23308" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67335" NpcId="1011940" XYZ="-225.72675, -30.065247, 104.02063"/>
+      </If>
+    </If>
+	
+    <!-- Hungry for Seconds -->
+    <If Condition="not IsQuestCompleted(67336)">
+      <If Condition="not HasQuest(67336)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-227.6312, -30.092081, 105.47616" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67336)">
+          <PickupQuest QuestId="67336" NpcId="1011940"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67336) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-325.93433, 133.68379, -184.38821" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67336).QuestI8A == 0" NpcId="2005650" XYZ="-330.31207, 133.59265, -185.22931" QuestId="67336" StepId="1" />
+      <UseObject Condition="GetQuestById(67336).QuestI8A == 1" NpcId="2005651" XYZ="-327.3518, 142.77869, -209.97949" QuestId="67336" StepId="1" />
+      <UseObject Condition="GetQuestById(67336).QuestI8A == 2" NpcId="2005657" XYZ="-302.41858, 151.7815, -245.92969" QuestId="67336" StepId="1" />
+      <UseObject Condition="GetQuestById(67336).QuestI8A == 3" NpcId="2005652" XYZ="-271.5343, 151.81189, -237.07947" QuestId="67336" StepId="1" />
+      <UseObject Condition="GetQuestById(67336).QuestI8A == 4" NpcId="2005653" XYZ="-273.8537, 156.2981, -311.72656" QuestId="67336" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67336) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-226.81935, -30.065247, 107.161026" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67336" NpcId="1011940" XYZ="-225.72675, -30.065247, 104.02063"/>
+      </If>
+    </If>
+	
+    <!-- A Taste of the Peculiar -->
+    <If Condition="not IsQuestCompleted(67337)">
+      <If Condition="not HasQuest(67337)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-228.02725, -30.091938, 105.52106" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67337)">
+          <PickupQuest QuestId="67337" NpcId="1011940"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67337) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="716.0214, -36.53041, 196.94884" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1011923" XYZ="711.1161, -36.390835, 198.10791" QuestId="67337" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67337) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="799.5947, -38.790554, 157.81905" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67337" while="GetQuestStep(67337) == 2" />
+    </If>
+    <If Condition="GetQuestStep(67337) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="715.6001, -36.51086, 197.17654" Land="True"/> <!-- ZoneId="398" -->
+      <HandOver ItemId="2001625" NpcId="1011923" XYZ="711.1161, -36.390835, 198.10791" QuestId="67337" StepId="3"/>
+    </If>
+    <If Condition="GetQuestStep(67337) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="706.56036, -36.26695, 198.88649" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2005701" XYZ="706.75195, -35.233154, 202.53296" QuestId="67337" StepId="4" />
+    </If>
+      <If Condition="GetQuestStep(67337) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-229.26335, -30.065247, 107.98243" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67337" NpcId="1011940" XYZ="-225.72675, -30.065247, 104.02063"/>
+      </If>
+    </If>
+	
+    <!-- Back in the Game -->
+    <If Condition="not IsQuestCompleted(67348)">
+      <If Condition="not HasQuest(67348)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-250.91281, -30.093325, 130.6678" Land="False"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="0" XYZ="-268.73105, 0.17672443, 98.17006" Land="False"/> <!-- ZoneId="398" --> 
+        <MoveTo UseMesh="False" XYZ="-289.28735, -3.311333, 59.66634" Distance="0.1"/> 
+        <MoveTo UseMesh="False" XYZ="-329.5236, 19.83151, 35.777077" Distance="0.1"/> 
+        <MoveTo UseMesh="False" XYZ="-326.42917, 47.846012, 27.699621" Distance="0.1"/> 
+        <MoveTo UseMesh="False" XYZ="-308.4379, 39.04307, 18.848215" Distance="0.1"/> 
+        <If Condition="IsQuestAcceptQualified(67348)">
+          <PickupQuest QuestId="67348" NpcId="1011937"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67348) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-413.10086, -34.3938, 235.70718" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013408" XYZ="-409.87262, -34.650936, 234.88208" QuestId="67348" StepId="1"/>
+		<WaitWhile Condition="not GetQuestStep(67348) == 2"/>
+      </If>
+      <If Condition="GetQuestStep(67348) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-411.9139, -34.46449, 235.56299" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013408" XYZ="-409.87262, -34.650936, 234.88208" QuestId="67348" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67348) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-250.91281, -30.093325, 130.6678" Land="False"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="0" XYZ="-268.73105, 0.17672443, 98.17006" Land="False"/> <!-- ZoneId="398" --> 
+        <MoveTo UseMesh="False" XYZ="-289.28735, -3.311333, 59.66634" Distance="0.1"/> 
+        <MoveTo UseMesh="False" XYZ="-329.5236, 19.83151, 35.777077" Distance="0.1"/> 
+        <MoveTo UseMesh="False" XYZ="-326.42917, 47.846012, 27.699621" Distance="0.1"/> 
+        <MoveTo UseMesh="False" XYZ="-308.4379, 39.04307, 18.848215" Distance="0.1"/> 
+        <TurnIn QuestId="67348" NpcId="1011937" XYZ="-305.56195, 39.04307, 22.9953"/>
+      </If>
+    </If>
+	
+    <!-- Where Dragons Lie -->
+    <If Condition="not IsQuestCompleted(67349)">
+      <If Condition="not HasQuest(67349)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-309.04965, 39.043068, 20.151924" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67349)">
+          <PickupQuest QuestId="67349" NpcId="1011937"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67349) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <GetTo ZoneId="398" XYZ="-434.0294, -8.834128, -337.11203"/>
+		<Grind grindRef="67349" while="GetQuestStep(67349) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67349) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <GetTo ZoneId="398" XYZ="-310.56757, 39.04307, 17.333944"/>
+        <TurnIn QuestId="67349" NpcId="1011937" XYZ="-305.56195, 39.04307, 22.9953"/>
+      </If>
+    </If>
+	
+    <!-- Blunders in Dragonsitting -->
+    <If Condition="not IsQuestCompleted(67347)">
+      <If Condition="not HasQuest(67347)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <GetTo ZoneId="398" XYZ="-344.5219, 31.199253, -34.78503"/>
+        <If Condition="IsQuestAcceptQualified(67347)">
+          <PickupQuest QuestId="67347" NpcId="1013417"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67347) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <GetTo ZoneId="398" XYZ="-472.42206, -11.088768, -506.20718"/>
+        <TalkTo NpcId="1013418" XYZ="-469.0166, -11.343507, -504.66165" QuestId="67347" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67347) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <GetTo ZoneId="398" XYZ="-342.80527, 32.026745, -33.1897" Land="True"/>
+        <TurnIn QuestId="67347" NpcId="1013417" XYZ="-346.7918, 30.976194, -34.28705"/>
+      </If>
+    </If>
+	
+    <!-- No Smoking Allowed -->
+    <If Condition="not IsQuestCompleted(67339)">
+      <If Condition="not HasQuest(67339)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-313.46994, 96.03792, 24.714008" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67339)">
+          <PickupQuest QuestId="67339" NpcId="1011938"/>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67339) == 1 and GetQuestById(67339).QuestI8A == 0">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-243.50742, -97.75481, 534.9302" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67339).QuestI8A == 0" NpcId="2005659" XYZ="-245.65503, -96.75751, 537.52954" QuestId="67339" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67339) == 1 and GetQuestById(67339).QuestI8A == 17">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-352.44138, -91.05527, 518.9026" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67339).QuestI8A == 17" NpcId="2005658" XYZ="-354.42133, -90.74542, 520.1953" QuestId="67339" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67339) == 1 and GetQuestById(67339).QuestI8A == 33">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-244.64352, -79.73206, 434.44803" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject Condition="GetQuestById(67339).QuestI8A == 33" NpcId="2005660" XYZ="-242.45062, -79.209656, 431.96765" QuestId="67339" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67339) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-311.4947, 96.060295, 33.91256" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67339" NpcId="1011938" XYZ="-310.53644, 96.060295, 41.763916"/>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+      </If>
+    </If>
+	
+    <!-- Like Gnaths to a Flame -->
+    <If Condition="not IsQuestCompleted(67345)">
+      <If Condition="not HasQuest(67345)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If> 
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+       <FlyTo AllowedVariance="1" XYZ="-312.0715, 96.06029, 37.87174" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67345)">
+          <PickupQuest QuestId="67345" NpcId="1011938"/>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67345) == 1 and GetQuestById(67345).QuestI8A == 0">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-371.5573, -30.1, 30.564972" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013414" XYZ="-367.8188, -30.1, 26.993164" QuestId="67345" StepId="1"/>
+		<WaitTimer WaitTime="5"/>
+	  <WaitWhile Condition="Core.Player.InCombat"/>
+		<WaitTimer WaitTime="5"/>
+      </If>
+      <If Condition="GetQuestStep(67345) == 1 and GetQuestById(67345).QuestI8A == 16">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-403.67438, -29.990612, 85.289185" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013416" XYZ="-405.11182, -30.095291, 92.332275" QuestId="67345" StepId="1"/>
+		<WaitTimer WaitTime="5"/>
+	  <WaitWhile Condition="Core.Player.InCombat"/>
+		<WaitTimer WaitTime="5"/>
+      </If>
+      <If Condition="GetQuestStep(67345) == 1 and GetQuestById(67345).QuestI8A == 32">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-359.57706, -30.0982, 140.08333" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1013415" XYZ="-363.88196, -30.09788, 141.1001" QuestId="67345" StepId="1"/>
+		<WaitTimer WaitTime="5"/>
+	  <WaitWhile Condition="Core.Player.InCombat"/>
+		<WaitTimer WaitTime="5"/>
+      </If>
+      <If Condition="GetQuestStep(67345) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-310.3047, 96.060295, 36.606663" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67345" NpcId="1011938" XYZ="-310.53644, 96.060295, 41.763916"/>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+      </If>
+    </If>
+	
+    <!-- Fit to Be Tied -->
+    <If Condition="not IsQuestCompleted(67346)">
+      <If Condition="not HasQuest(67346)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-310.91702, 96.06029, 38.44166" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67346)">
+          <PickupQuest QuestId="67346" NpcId="1011938"/>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67346) == 1">
+		<FlyTo AllowedVariance="1" XYZ="-231.30124, 163.00346, -352.06174" Land="True"/> <!-- ZoneId="398" -->
+        <GetTo ZoneId="398" XYZ="-113.782616, 130.73325, -554.7294"/>  
+      <UseObject NpcId="2005673" XYZ="-114.18329, 130.2052, -558.1293" QuestId="67346" StepId="1" />
+        <GetTo ZoneId="398" XYZ="-231.30124, 163.00346, -352.06174"/>  
+    </If>
+      <If Condition="GetQuestStep(67346) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-311.35913, 96.060295, 36.24463" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67346" NpcId="1011938" XYZ="-310.53644, 96.060295, 41.763916"/>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+      </If>
+    </If>
+		
+    <!-- From the Jaws of Hunger -->
+    <If Condition="not IsQuestCompleted(67465)">
+      <If Condition="not HasQuest(67465)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-311.51944, 96.060295, 33.805367" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67465)">
+          <PickupQuest QuestId="67465" NpcId="1011938"/>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67465) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="221.27118, 52.20215, -727.61487" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67465" while="GetQuestStep(67465) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67465) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-310.64346, 96.060295, 36.29177" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67465" NpcId="1011938" XYZ="-310.53644, 96.060295, 41.763916"/>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+      </If>
+    </If>
+
+    <!-- When Mother Calls -->
+    <If Condition="not IsQuestCompleted(67350)">
+      <If Condition="not HasQuest(67350)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-310.64346, 96.060295, 36.29177" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67350)">
+          <PickupQuest QuestId="67350" NpcId="1011938"/>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67350) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-104.92011, -34.45324, -175.08925" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014156" XYZ="-107.1947, -34.45324, -170.24493" QuestId="67350" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67350) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-231.9707, -30.681147, -138.78442" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014157" XYZ="-233.81403, -30.495764, -136.67511" QuestId="67350" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67350) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-95.256935, -35.408485, -34.275837" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014158" XYZ="-105.119446, -33.946033, -49.82074" QuestId="67350" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67350) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-111.68613, -35.408485, 127.74953" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014159" XYZ="-120.19531, -35.408485, 126.97034" QuestId="67350" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67350) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-215.89742, -37.4282, 186.10588" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67350" NpcId="1014160" XYZ="-213.51953, -36.5583, 177.56921"/>
+      </If>
+    </If>
+	
+    <!-- A Dragon and His Boy -->
+    <If Condition="not IsQuestCompleted(67351)">
+      <If Condition="not HasQuest(67351)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-213.43605, -36.86985, 181.69017" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67351)">
+          <PickupQuest QuestId="67351" NpcId="1014160"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67351) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-4.3715115, -131.59131, 700.4028" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014161" XYZ="0.77819824, -132.35927, 705.2567" QuestId="67351" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67351) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="17.69456, -137.49396, 671.4426" Land="True"/> <!-- ZoneId="398" -->
+		<Grind grindRef="67351" while="GetQuestStep(67351) == 2" />
+    </If>
+    <If Condition="GetQuestStep(67351) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="25.370333, -138.75534, 712.8321" Land="True"/> <!-- ZoneId="398" -->
+      <UseItem ItemId="2001752" NpcId="2006029" XYZ="26.993164, -138.50616, 718.65405" QuestId="67351" StepId="3"/>
+    </If>
+      <If Condition="GetQuestStep(67351) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-0.31746083, -131.78697, 707.3086" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014161" XYZ="0.77819824, -132.35927, 705.2567" QuestId="67351" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67351) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-311.08817, 96.060295, 36.042774" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67351" NpcId="1011938" XYZ="-310.53644, 96.060295, 41.763916"/>
+        <FlyTo AllowedVariance="0" XYZ="-337.34344, 93.99836, -34.079266" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="0" XYZ="-374.66553, 104.42996, -10.776462" Land="False"/> <!-- ZoneId="398" -->
+      </If>
+    </If>
+	
+    <!-- Between Friends and Family -->
+    <If Condition="not IsQuestCompleted(67352)">
+      <If Condition="not HasQuest(67352)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-214.97911, -36.76892, 180.81897" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67352)">
+          <PickupQuest QuestId="67352" NpcId="1014160"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67352) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-5.089744, -130.93288, 704.7417" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014161" XYZ="0.77819824, -132.35927, 705.2567" QuestId="67352" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67352) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="117.42063, -113.3598, 308.25903" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2006030" XYZ="125.23071, -111.192505, 300.74" QuestId="67352" StepId="2" />
+    </If>
+      <If Condition="GetQuestStep(67352) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-2.8309941, -131.79387, 701.4969" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014161" XYZ="0.77819824, -132.35927, 705.2567" QuestId="67352" StepId="3"/>
+        <FlyTo AllowedVariance="0" XYZ="-353.34036, 53.6639, -19.742159" Land="False"/> <!-- ZoneId="398" -->
+      </If>
+      <If Condition="GetQuestStep(67352) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-342.67978, 29.347042, -41.73226" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-385.8471, 15.863674, -98.36734" Land="True"/> <!-- ZoneId="398" -->
+      <HandOver ItemId="2001754" NpcId="1014162" XYZ="-389.3645, 15.152788, -97.00165" QuestId="67352" StepId="4"/>
+        <FlyTo AllowedVariance="1" XYZ="-342.67978, 29.347042, -41.73226" Land="True"/> <!-- ZoneId="398" -->
+      </If>
+      <If Condition="GetQuestStep(67352) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-216.15797, -36.842964, 182.92596" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn QuestId="67352" NpcId="1014160" XYZ="-213.51953, -36.5583, 177.56921"/>
+      </If>
+    </If>
+	
+    <!-- The Heart of a Dragon -->
+    <If Condition="not IsQuestCompleted(67353)">
+      <If Condition="not HasQuest(67353)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-215.67441, -36.916004, 183.07101" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67353)">
+          <PickupQuest QuestId="67353" NpcId="1014160"/>
+        </If>
+      </If>
+    <While Condition="GetQuestStep(67353) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-215.67441, -36.916004, 183.07101" Land="True"/> <!-- ZoneId="398" -->
+      <LLSendChat Emote="soothe" NpcId="1014160" XYZ="-213.51953, -36.5583, 177.56921"/>
+    </While>
+      <If Condition="GetQuestStep(67353) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-336.662, 93.99835, -30.541277" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-310.64566, 96.06029, 37.20054" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1011938" XYZ="-310.53644, 96.060295, 41.763916" QuestId="67353" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67353) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-310.64566, 96.06029, 37.20054" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014164" XYZ="-313.34406, 96.060295, 39.841187" QuestId="67353" StepId="3"/>
+		<FlyTo AllowedVariance="1" XYZ="-336.662, 93.99835, -30.541277" Land="True"/> <!-- ZoneId="398" -->
+      </If>
+      <If Condition="GetQuestStep(67353) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-283.64346, 153.75002, -281.81174" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014165" XYZ="-285.42004, 154.23569, -285.78625" QuestId="67353" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67353) == 5">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-397.6787, 314.55283, -363.19516" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014166" XYZ="-401.84637, 314.72314, -358.75488" QuestId="67353" StepId="5"/>
+      </If>
+      <If Condition="GetQuestStep(67353) == 6">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-342.69608, 357.7817, -495.00583" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014167" XYZ="-343.77057, 359.31467, -497.18472" QuestId="67353" StepId="6"/>
+      </If>
+      <If Condition="GetQuestStep(67353) == 7">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-54.44848, 270.86258, -785.0143" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014168" XYZ="-47.837036, 271.5533, -787.7775" QuestId="67353" StepId="7"/>
+      </If>
+    <If Condition="GetQuestStep(67353) == 8">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-46.484318, 273.8316, -809.6243" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2006031" XYZ="-43.86969, 272.60242, -812.55817" QuestId="67353" StepId="8" />
+    </If>
+    <If Condition="GetQuestStep(67353) == 9">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-49.43694, 271.2286, -785.6258" Land="True"/> <!-- ZoneId="398" -->
+      <TalkTo NpcId="1014168" XYZ="-47.837036, 271.5533, -787.7775" QuestId="67353" StepId="9"/>
+    </If>
+      <If Condition="GetQuestStep(67353) == 255">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-336.662, 93.99835, -30.541277" Land="True"/> <!-- ZoneId="398" -->
+        <FlyTo AllowedVariance="1" XYZ="-311.17838, 96.060295, 34.40045" Land="True"/> <!-- ZoneId="398" -->
+        <TurnIn ItemId="2001755" QuestId="67353" NpcId="1011938" XYZ="-310.53644, 96.060295, 41.763916"/>
+		<FlyTo AllowedVariance="1" XYZ="-336.662, 93.99835, -30.541277" Land="True"/> <!-- ZoneId="398" -->
+      </If>
+    </If>
+	
+    <!-- Let Bygones Be Bygones -->
+    <If Condition="not IsQuestCompleted(67354)">
+      <If Condition="not HasQuest(67354)">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-310.42188, 96.06029, 38.183895" Land="True"/> <!-- ZoneId="398" -->
+        <If Condition="IsQuestAcceptQualified(67354)">
+          <PickupQuest QuestId="67354" NpcId="1011938"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67354) == 1">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-310.42188, 96.06029, 38.183895" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014164" XYZ="-313.34406, 96.060295, 39.841187" QuestId="67354" StepId="1"/>
+		<FlyTo AllowedVariance="1" XYZ="-336.662, 93.99835, -30.541277" Land="True"/> <!-- ZoneId="398" -->
+      </If>
+    <If Condition="GetQuestStep(67354) == 2">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="382.16537, 28.014183, -633.87964" Land="True"/> <!-- ZoneId="398" -->
+      <UseObject NpcId="2006032" XYZ="377.6454, 25.223145, -624.59753" QuestId="67354" StepId="2" />
+		<FlyTo AllowedVariance="1" XYZ="-336.662, 93.99835, -30.541277" Land="True"/> <!-- ZoneId="398" -->
+    </If>
+      <If Condition="GetQuestStep(67354) == 3">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-313.15115, 96.060295, 37.287453" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014164" XYZ="-313.34406, 96.060295, 39.841187" QuestId="67354" StepId="3"/>
+		<FlyTo AllowedVariance="1" XYZ="-336.662, 93.99835, -30.541277" Land="True"/> <!-- ZoneId="398" -->
+      </If>
+    <If Condition="GetQuestStep(67354) == 4">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Tailfeather" AetheryteId="76"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="716.8498, -36.57506, 196.39586" Land="True"/> <!-- ZoneId="398" -->
+      <HandOver ItemId="2001757" NpcId="1011923" XYZ="711.1161, -36.390835, 198.10791" QuestId="67354" StepId="4"/>
+		<FlyTo AllowedVariance="1" XYZ="-336.662, 93.99835, -30.541277" Land="True"/> <!-- ZoneId="398" -->
+    </If>
+      <If Condition="GetQuestStep(67354) == 5">
+		<If condition="not IsOnMap(398)">
+			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-313.41022, 96.06029, 35.48904" Land="True"/> <!-- ZoneId="398" -->
+        <TalkTo NpcId="1014164" XYZ="-313.34406, 96.060295, 39.841187" QuestId="67354" StepId="5"/>
+      </If>
+      <If Condition="GetQuestStep(67354) == 6">
+        <GetTo ZoneId="398" XYZ="-385.6289, 15.793495, -95.482346"/>  
+        <TalkTo NpcId="1014162" XYZ="-389.3645, 15.152788, -97.00165" QuestId="67354" StepId="6"/>
+      </If>
+    <If Condition="GetQuestStep(67354) == 7">
+        <GetTo ZoneId="398" XYZ="-385.7316, 16.121103, -92.83643"/>  
+      <UseItem ItemId="2001758" NpcId="1014169" XYZ="-388.60156, 16.017307, -90.65393" QuestId="67354" StepId="7"/>
+		<FlyTo AllowedVariance="1" XYZ="-336.662, 93.99835, -30.541277" Land="True"/> <!-- ZoneId="398" -->
+    </If>
+      <If Condition="GetQuestStep(67354) == 255">
+        <GetTo ZoneId="398" XYZ="-311.13034, 96.060295, 33.639828"/>
+        <TurnIn QuestId="67354" NpcId="1011938" XYZ="-310.53644, 96.060295, 41.763916"/>
+      </If>
+    </If>
+	
+	</Order>
+	<CodeChunks>	
+	</CodeChunks>
+    <GrindAreas>
+    <GrindArea name="67308">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="817.5823, -16.309174, 316.30392"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3563" Weight="1"/> <!-- Feather Flea -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67310">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="519.2602, -41.597157, -336.49078"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3565" Weight="1"/> <!-- Bandersnatch -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67316">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="280.626, -19.856318, -527.2731"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3566" Weight="1"/> <!-- Brown Bear -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67322">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="247.7221, -79.8223, 136.63084"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3569" Weight="1"/> <!-- Clearwater Ninki Nanka -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67341">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-80.85453, -34.443176, -103.36118"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3578" Weight="1"/> <!-- Forelands Hippocerf -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67466">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="331.55338, -116.74, 660.1575"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3591" Weight="1"/> <!-- Loth Steeldrone -->
+        <TargetMob Id="3590" Weight="1"/> <!-- Loth Firedrone -->
+        <TargetMob Id="3592" Weight="1"/> <!-- Loth Cultivator -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67342">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-591.16095, -91.44494, 439.49054"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3576" Weight="1"/> <!-- Dravanian Wyvern -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67324">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="261.79333, -95.721176, 280.6199"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3571" Weight="1"/> <!-- Loaghtan -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67325">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="55.326115, -73.42429, 169.05368"/>
+        <Hotspot Radius="200" XYZ="161.20293, -83.29688, 131.62286"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3568" Weight="1"/> <!-- Melia -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67335">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-143.91576, -67.1591, 328.84335"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3577" Weight="1"/> <!-- Miacid -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67349">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-434.0294, -8.834128, -337.11203"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3582" Weight="1"/> <!-- Tyrannosaur -->
+        <TargetMob Id="3581" Weight="1"/> <!-- Vinegaroon -->
+        <TargetMob Id="3555" Weight="1"/> <!-- Syricta -->
+        <TargetMob Id="3579" Weight="1"/> <!-- Gallimimus -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67337">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="799.5947, -38.790554, 157.81905"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3564" Weight="1"/> <!-- Wild Chocobo -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67465">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="221.27118, 52.20215, -727.61487"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3588" Weight="1"/> <!-- Golden Bandersnatch -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67351">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="17.69456, -137.49396, 671.4426"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3570" Weight="1"/> <!-- Clearwater Nanka -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67332">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="375.83325, -91.88814, 668.7521"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3583" Weight="1"/> <!-- Gnath Haildrone -->
+        <TargetMob Id="3585" Weight="1"/> <!-- Gnath Forager -->
+        <TargetMob Id="3584" Weight="1"/> <!-- Gnath Irondrone -->
+      </TargetMobs>
+    </GrindArea>
+    </GrindAreas>
+	<!-- and GetQuestById().QuestI8A == -->
+</Profile>
