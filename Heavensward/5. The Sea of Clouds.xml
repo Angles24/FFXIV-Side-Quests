@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The Sea of Clouds Side Quests
+
+The Way of the Dodo
+Made to Order
+Bargaining Chip
+Dragons in the Mist
+Unclear Motives
+Featherbrained Schemes
+Behind Enemy Lines
+Calling Back the Troops
+A Hasty Recovery
+Crying over Spilled Food
+A Tall Order to Fill
+Beefing Up the Reserves
+Hatching Ideas
+Search and Rescue
+A Cropper's Duty
+Nutritious and Delicious
+The Feast Must Go On
+Returning What's Ours
+One Flew Over the Vundu's Nest
+Winds of Ill Omen
+For Your Spies Only
+Not Free as a Bird
+On Wings of Vanu
+An Awkward Situation
+Growing Pains
+Ok' Zundu's Got Talent
+Lazing Saddles
+The Black Storm
+A Tale of Two Moogles
+Birds of a Feather (Quest)
+An Eggcellent Disguise
+The Skies That Bind
+-->
+<Profile>
+	<Name>The Sea of Clouds Side Quests</Name>
+	<Order>	 
+		
+
+	
+	</Order>
+	<CodeChunks>	
+	</CodeChunks>
+    <GrindAreas>
+    <GrindArea name="67436">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-411.87808, -151.68562, 274.62625"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3504" Weight="1"/> <!-- Wisent -->
+      </TargetMobs>
+    </GrindArea>
+    </GrindAreas>
+	<!-- and GetQuestById().QuestI8A == -->
+</Profile>
+    <!-- Beefing Up the Reserves -->
+    <If Condition="not IsQuestCompleted(67436)">
+      <If Condition="not HasQuest(67436)">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-641.5552, -119.44221, 473.40985" Land="True"/> <!-- ZoneId="401" -->
+        <If Condition="IsQuestAcceptQualified(67436)">
+          <PickupQuest QuestId="67436" NpcId="1012054"/>
+        </If>
+      </If>
+    </If>
+    <If Condition="GetQuestStep(67436) == 1">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-411.87808, -151.68562, 274.62625" Land="True"/> <!-- ZoneId="401" -->
+		<Grind grindRef="67436" while="GetQuestStep(67436) == 1" />
+    </If>
+      <If Condition="GetQuestStep(67436) == 255">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-642.384, -119.331566, 471.36356" Land="True"/> <!-- ZoneId="401" -->
+        <TurnIn QuestId="67436" NpcId="1012054" XYZ="-640.1007, -119.56208, 469.5963"/>
+      </If>
+    <!-- A Cropper's Duty -->
+    <If Condition="not IsQuestCompleted(67438)">
+      <If Condition="not HasQuest(67438)">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-656.4605, -127.12519, 619.79846" Land="True"/> <!-- ZoneId="401" -->
+        <If Condition="IsQuestAcceptQualified(67438)">
+          <PickupQuest QuestId="67438" NpcId="1012056"/>
+        </If>
+      </If>
+    </If>
