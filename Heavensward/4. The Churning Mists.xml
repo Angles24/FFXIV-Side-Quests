@@ -47,21 +47,21 @@ Save the Pomguard > An Urgent Message
 An Urgent Message > An Uneasy Feeling|A Moogle's Intuition
 An Uneasy Feeling > Trouble at Zenith
 A Moogle's Intuition > Trouble at Zenith
-Trouble at Zenith > Into the Mists (Another Zone Quest)
-
-~~ Unlocked Later ~~
+Trouble at Zenith > Into the Mists 
 Respecting the Sheave
 Spring Cleaning
 No Nests Allowed
 Bitter Is the Night
-Cleaning House
 Finders Keepers
 These Things Take Time
 An Unwelcome Surprise
+Scouting and Maiming
 A Meter Too Far
 Thar Be Dragons
 Laying the First Brick
 Classic Misdirection
+
+~~ Unlocked Later ~~
 A Moogle by Any Other Name
 -->
 <Profile>
@@ -280,7 +280,7 @@ A Moogle by Any Other Name
 		</If>
         <FlyTo AllowedVariance="0" XYZ="-473.09073, 42.973747, 359.68048" Land="True"/> <!-- ZoneId="400" -->
 		<Dismount/>
-		<WaitTimer WaitTimer="1"/>
+		<WaitTimer WaitTime="1"/>
       </If>
       <If Condition="GetQuestStep(67367) == 4">
 		<If condition="not IsOnMap(400)">
@@ -295,7 +295,7 @@ A Moogle by Any Other Name
 		</If>
         <FlyTo AllowedVariance="0" XYZ="-177.83665, -20.889277, 266.1988" Land="True"/> <!-- ZoneId="400" -->
 		<Dismount/>
-		<WaitTimer WaitTimer="1"/>
+		<WaitTimer WaitTime="1"/>
       </If>
       <If Condition="GetQuestStep(67367) == 6">
 		<If condition="not IsOnMap(400)">
@@ -1850,6 +1850,628 @@ A Moogle by Any Other Name
         <TurnIn QuestId="67404" NpcId="1012082" XYZ="381.70435, -69.41491, 691.5541"/>
       </If>
     </If>
+	
+    <!-- Into the Mists -->
+    <If Condition="not IsQuestCompleted(67408)">
+      <If Condition="not HasQuest(67408)">
+        <GetTo ZoneId="419" XYZ="10.042015, 15.96505, -10.066546"/>  
+        <If Condition="IsQuestAcceptQualified(67408)">
+          <PickupQuest QuestId="67408" NpcId="1013557"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67408) == 1">
+        <GetTo ZoneId="418" XYZ="126.08826, 24.458834, -3.299137"/>  
+        <TalkTo NpcId="1012163" XYZ="128.25195, 24.458832, -0.6867676" QuestId="67408" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67408) == 2">
+        <GetTo ZoneId="418" XYZ="126.08826, 24.458834, -3.299137"/>  
+        <TalkTo NpcId="1013559" XYZ="129.22852, 24.397108, -1.9379272" QuestId="67408" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67408) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="13.979588, 81.8406, -315.31506" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67408" NpcId="1013560" XYZ="15.609924, 81.84059, -317.37244"/>
+      </If>
+    </If>
+	
+    <!-- Bitter Is the Night -->
+    <If Condition="not IsQuestCompleted(67414)">
+      <If Condition="not HasQuest(67414)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="13.979588, 81.8406, -315.31506" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67414)">
+          <PickupQuest QuestId="67414" NpcId="1013560"/>
+        </If>
+      </If>
+      <While Condition="GetQuestStep(67414) == 1 and GetQuestById(67414).QuestI8A == 0">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-48.748768, 76.75615, -350.68292" Land="True"/> <!-- ZoneId="400" -->
+        <Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+      <While Condition="GetQuestStep(67414) == 1 and GetQuestById(67414).QuestI8A == 16">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-38.04557, 62.87995, -294.58" Land="True"/> <!-- ZoneId="400" -->
+        <Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+      <While Condition="GetQuestStep(67414) == 1 and GetQuestById(67414).QuestI8A == 32">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-9.338615, 76.75615, -249.19598" Land="True"/> <!-- ZoneId="400" -->
+        <Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+      <If Condition="GetQuestStep(67414) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="13.390544, 81.8406, -314.63107" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67414" NpcId="1013560" XYZ="15.609924, 81.84059, -317.37244"/>
+      </If>
+    </If>
+	
+    <!-- Scouting and Maiming -->
+    <If Condition="not IsQuestCompleted(67417)">
+      <If Condition="not HasQuest(67417)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="13.390544, 81.8406, -314.63107" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67417)">
+          <PickupQuest QuestId="67417" NpcId="1013560"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67417) == 1">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="333.69736, 223.01537, -484.51785" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1013569" XYZ="330.73914, 223.01535, -480.36932" QuestId="67417" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67417) == 2">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="288.44162, 223.0008, -570.629" Land="True"/> <!-- ZoneId="400" -->
+		<Grind grindRef="67417" while="GetQuestStep(67417) == 2" />
+    </If>
+      <If Condition="GetQuestStep(67417) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="333.06726, 223.01537, -485.05832" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67417" NpcId="1013569" XYZ="330.73914, 223.01535, -480.36932"/>
+      </If>
+    </If>
+	
+    <!-- Finders Keepers -->
+    <If Condition="not IsQuestCompleted(67418)">
+      <If Condition="not HasQuest(67418)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="333.06726, 223.01537, -485.05832" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67418)">
+          <PickupQuest QuestId="67418" NpcId="1013569"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67418) == 1 and GetQuestById(67418).QuestI8A == 0">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="157.17906, 212.647, -735.9244" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject Condition="GetQuestById(67418).QuestI8A == 0" NpcId="2005805" XYZ="161.39453, 212.6344, -733.7301" QuestId="67418" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67418) == 1 and GetQuestById(67418).QuestI8A == 16">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="111.758835, 212.4711, -779.98553" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject Condition="GetQuestById(67418).QuestI8A == 16" NpcId="2005806" XYZ="110.52112, 212.6344, -785.15295" QuestId="67418" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67418) == 2">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="333.5633, 223.01535, -482.57965" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1013569" XYZ="330.73914, 223.01535, -480.36932" QuestId="67418" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67418) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="9.774593, 81.8406, -315.04276" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67418" NpcId="1013560" XYZ="15.609924, 81.84059, -317.37244"/>
+      </If>
+    </If>
+	
+    <!-- These Things Take Time -->
+    <If Condition="not IsQuestCompleted(67415)">
+      <If Condition="not HasQuest(67415)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="9.774593, 81.8406, -315.04276" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67415)">
+          <PickupQuest QuestId="67415" NpcId="1013560"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67415) == 1">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-736.998, 297.04376, -181.4893" Land="False"/> <!-- ZoneId="400" -->
+        <MoveTo UseMesh="False" XYZ="-752.58105, 285.65662, -167.72974" Distance="0.1"/>
+		<Dismount/>
+        <TalkTo NpcId="1013566" XYZ="-753.59735, 285.65656, -168.65796" QuestId="67415" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67415) == 2">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-717.10065, 258.38458, -204.45085" Land="True"/> <!-- ZoneId="400" -->
+		<Grind grindRef="67415" while="GetQuestStep(67415) == 2" />
+        <FlyTo AllowedVariance="1" XYZ="-736.998, 297.04376, -181.4893" Land="False"/> <!-- ZoneId="400" -->
+        <MoveTo UseMesh="False" XYZ="-752.58105, 285.65662, -167.72974" Distance="0.1"/>
+		<Dismount/>
+    </If>
+      <If Condition="GetQuestStep(67415) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-752.23834, 285.3776, -167.98375" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67415" NpcId="1013566" XYZ="-753.59735, 285.65656, -168.65796"/>
+      </If>
+    </If>
+	
+    <!-- An Unwelcome Surprise -->
+    <If Condition="not IsQuestCompleted(67419)">
+      <If Condition="not HasQuest(67419)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-752.23834, 285.3776, -167.98375" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67419)">
+          <PickupQuest QuestId="67419" NpcId="1013566"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67419) == 1">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-554.0533, 266.03583, -674.22034" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1013570" XYZ="-556.4203, 266.003, -673.7926" QuestId="67419" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67419) == 2">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-569.35754, 257.87762, -641.5007" Land="True"/> <!-- ZoneId="400" -->
+		<Grind grindRef="67419" while="GetQuestStep(67419) == 2" />
+    </If>
+      <If Condition="GetQuestStep(67419) == 255">
+		<If condition="not IsOnMap(400)">
+		   <TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-553.9575, 266.03372, -673.91907" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67419" NpcId="1013570" XYZ="-556.4203, 266.003, -673.7926"/>
+      </If>
+    </If>
+	
+    <!-- A Meter Too Far -->
+    <If Condition="not IsQuestCompleted(67420)">
+      <If Condition="not HasQuest(67420)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-553.9575, 266.03372, -673.91907" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67420)">
+          <PickupQuest QuestId="67420" NpcId="1013570"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67420) == 1 and GetQuestById(67420).QuestI8A == 0">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-783.9054, 257.70654, -647.65894" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject Condition="GetQuestById(67420).QuestI8A == 0" NpcId="2005813" XYZ="-788.0522, 257.67908, -644.1901" QuestId="67420" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67420) == 1 and GetQuestById(67420).QuestI8A == 16">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-813.94855, 258.10318, -674.45465" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject Condition="GetQuestById(67420).QuestI8A == 16" NpcId="2005811" XYZ="-815.4879, 258.0758, -674.9218" QuestId="67420" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67420) == 1 and GetQuestById(67420).QuestI8A == 32">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-760.49286, 257.51443, -700.5368" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject Condition="GetQuestById(67420).QuestI8A == 32" NpcId="2005812" XYZ="-757.4121, 257.49585, -702.57117" QuestId="67420" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67420) == 2">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-554.56445, 266.0277, -674.0317" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1013570" XYZ="-556.4203, 266.003, -673.7926" QuestId="67420" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67420) == 3">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-736.998, 297.04376, -181.4893" Land="False"/> <!-- ZoneId="400" -->
+        <MoveTo UseMesh="False" XYZ="-752.58105, 285.65662, -167.72974" Distance="0.1"/>
+		<Dismount/>
+        <TalkTo NpcId="1013566" XYZ="-753.59735, 285.65656, -168.65796" QuestId="67420" StepId="3"/>
+      </If>
+    <If Condition="GetQuestStep(67420) == 3 and GetQuestById(67420).QuestI8A == 0">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-754.5459, 259.60077, -205.1193" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject Condition="GetQuestById(67420).QuestI8A == 0" NpcId="2005814" XYZ="-755.9472, 258.80823, -207.72113" QuestId="67420" StepId="3" />
+    </If>
+    <If Condition="GetQuestStep(67420) == 3 and GetQuestById(67420).QuestI8A == 16">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-700.9512, 258.26923, -222.77298" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject Condition="GetQuestById(67420).QuestI8A == 16" NpcId="2005816" XYZ="-698.024, 258.28943, -221.66785" QuestId="67420" StepId="3" />
+    </If>
+    <If Condition="GetQuestStep(67420) == 3 and GetQuestById(67420).QuestI8A == 32">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-704.7887, 258.56573, -168.78804" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject Condition="GetQuestById(67420).QuestI8A == 32" NpcId="2005815" XYZ="-701.83875, 258.53357, -165.23999" QuestId="67420" StepId="3" />
+    </If>
+      <If Condition="GetQuestStep(67420) == 5">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-736.998, 297.04376, -181.4893" Land="False"/> <!-- ZoneId="400" -->
+        <MoveTo UseMesh="False" XYZ="-752.58105, 285.65662, -167.72974" Distance="0.1"/>
+		<Dismount/>
+        <TalkTo NpcId="1013566" XYZ="-753.59735, 285.65656, -168.65796" QuestId="67420" StepId="5"/>
+      </If>
+      <If Condition="GetQuestStep(67420) == 6">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="14.1460285, 81.84059, -315.93253" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1013567" XYZ="15.609924, 81.84059, -317.37244" QuestId="67420" StepId="6"/>
+      </If>
+    <If Condition="GetQuestStep(67420) == 7">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="15.438638, 81.840576, -319.6798" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject NpcId="2005817" XYZ="16.159302, 82.1698, -322.89618" QuestId="67420" StepId="7" />
+    </If>
+      <If Condition="GetQuestStep(67420) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="14.1460285, 81.84059, -315.93253" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67420" NpcId="1013567" XYZ="15.609924, 81.84059, -317.37244"/>
+      </If>
+    </If>
+	
+    <!-- Thar Be Dragons -->
+    <If Condition="not IsQuestCompleted(67416)">
+      <If Condition="not HasQuest(67416)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="14.1460285, 81.84059, -315.93253" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67416)">
+          <PickupQuest QuestId="67416" NpcId="1013567"/>
+        </If>
+      </If>
+      <While Condition="GetQuestStep(67416) == 1">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-129.56946, -64.875885, -317.33582" Land="True"/> <!-- ZoneId="400" -->
+        <Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+      <If Condition="GetQuestStep(67416) == 1">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="56.334854, 100.84005, -313.53485" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="0" XYZ="56.334854, 100.84005, -313.53485" QuestId="67416" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67416) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="0" XYZ="56.334854, 100.84005, -313.53485" Land="False"/> <!-- ZoneId="400" -->
+        <FlyTo AllowedVariance="1" XYZ="11.2363405, 81.8406, -315.10907" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67416" NpcId="1013560" XYZ="15.609924, 81.84059, -317.37244"/>
+      </If>
+    </If>
+	
+    <!-- Laying the First Brick -->
+    <If Condition="not IsQuestCompleted(67407)">
+      <If Condition="not HasQuest(67407)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="12.559046, 81.8406, -316.1046" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67407)">
+          <PickupQuest QuestId="67407" NpcId="1013560"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67407) == 1">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="14.696105, 81.84059, -319.80075" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject NpcId="2005821" XYZ="16.159302, 82.1698, -322.89618" QuestId="67407" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67407) == 2">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="332.62067, 223.01535, -483.97046" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1013569" XYZ="330.73914, 223.01535, -480.36932" QuestId="67407" StepId="2"/>
+      </If>
+    <If Condition="GetQuestStep(67407) == 3">
+        <GetTo ZoneId="418" XYZ="126.41153, 24.458836, -3.4114397"/>  
+        <HandOver ItemIds="2001663,2001662" NpcId="1012163" XYZ="128.25195, 24.458832, -0.6867676" QuestId="67407" StepId="3"/>
+    </If>
+      <If Condition="GetQuestStep(67407) == 4">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="380.12808, -69.429596, 693.94354" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1012077" XYZ="381.70435, -66.84979, 700.86194" QuestId="67407" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67407) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="9.803485, 81.8406, -316.52145" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67407" NpcId="1014314" XYZ="12.100342, 81.8406, -318.0133"/>
+      </If>
+    </If>
+	
+    <!-- Respecting the Sheave -->
+    <If Condition="not IsQuestCompleted(67411)">
+      <If Condition="not HasQuest(67411)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-212.13206, 81.84055, -233.2284" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67411)">
+          <PickupQuest QuestId="67411" NpcId="1013529"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67411) == 1">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-659.332, 208.97653, 619.88965" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1012286" XYZ="-658.6251, 209.18947, 622.8579" QuestId="67411" StepId="1"/>
+      </If>
+    <If Condition="GetQuestStep(67411) == 2">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-625.225, 180.5343, 711.1524" Land="True"/> <!-- ZoneId="400" -->
+		<Grind grindRef="67411" while="GetQuestStep(67411) == 2" />
+    </If>
+      <If Condition="GetQuestStep(67411) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-659.58014, 208.9606, 619.857" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67411" NpcId="1012286" XYZ="-658.6251, 209.18947, 622.8579"/>
+      </If>
+    </If>
+	
+    <!-- Spring Cleaning -->
+    <If Condition="not IsQuestCompleted(67412)">
+      <If Condition="not HasQuest(67412)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-659.58014, 208.9606, 619.857" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67412)">
+          <PickupQuest QuestId="67412" NpcId="1012286"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67412) == 1 and GetQuestById(67412).QuestI8A == 0">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-401.77005, 79.279785, 573.9552" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1013565" XYZ="-398.0011, 79.27968, 565.57556" QuestId="67412" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67412) == 1 and GetQuestById(67412).QuestI8A == 16">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-397.99655, 82.41681, 641.9494" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1013563" XYZ="-398.6725, 82.41681, 650.9956" QuestId="67412" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67412) == 1 and GetQuestById(67412).QuestI8A == 33">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-369.1316, 81.39463, 620.2405" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1013562" XYZ="-364.95007, 80.07662, 618.55493" QuestId="67412" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67412) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-662.0219, 208.80423, 619.5423" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67412" NpcId="1012286" XYZ="-658.6251, 209.18947, 622.8579"/>
+      </If>
+    </If>
+	
+    <!-- No Nests Allowed -->
+    <If Condition="not IsQuestCompleted(67413)">
+      <If Condition="not HasQuest(67413)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-662.0219, 208.80423, 619.5423" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67413)">
+          <PickupQuest QuestId="67413" NpcId="1012286"/>
+        </If>
+      </If>
+    <If Condition="GetQuestStep(67413) == 1 and GetQuestById(67413).QuestI8A == 0">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-162.07468, -33.508408, 690.7481" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject Condition="GetQuestById(67413).QuestI8A == 0" NpcId="2005789" XYZ="-160.02142, -33.52411, 688.1056" QuestId="67413" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67413) == 1 and GetQuestById(67413).QuestI8A == 16">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-227.02449, -28.922956, 739.826" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject Condition="GetQuestById(67413).QuestI8A == 16" NpcId="2005787" XYZ="-230.09082, -28.885437, 743.1295" QuestId="67413" StepId="1" />
+    </If>
+    <If Condition="GetQuestStep(67413) == 1 and GetQuestById(67413).QuestI8A == ">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-282.4245, -30.276775, 700.31793" Land="True"/> <!-- ZoneId="400" -->
+      <UseObject Condition="GetQuestById(67413).QuestI8A == " NpcId="2005788" XYZ="-287.52582, -30.441833, 698.1765" QuestId="67413" StepId="1" />
+    </If>
+      <If Condition="GetQuestStep(67413) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Zenith" AetheryteId="79"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-660.38434, 208.87277, 619.13" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67413" NpcId="1012286" XYZ="-658.6251, 209.18947, 622.8579"/>
+      </If>
+    </If>
+	
+    <!-- Moogles in the Sky -->
+    <If Condition="not IsQuestCompleted(67508)">
+      <If Condition="not HasQuest(67508)">
+        <GetTo ZoneId="419" XYZ="14.718387, 16.015245, -12.569871"/>  
+        <If Condition="IsQuestAcceptQualified(67508)">
+          <PickupQuest QuestId="67508" NpcId="1014448"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67508) == 1">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="341.91272, 0.5815401, 555.6897" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1013712" XYZ="344.89966, 0.3596452, 555.35205" QuestId="67508" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67508) == 2">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="379.68637, -69.42963, 693.8" Land="True"/> <!-- ZoneId="400" -->
+        <TalkTo NpcId="1012077" XYZ="381.70435, -66.84979, 700.86194" QuestId="67508" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67508) == 255">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="345.9685, 0.31653666, 559.11426" Land="True"/> <!-- ZoneId="400" -->
+        <TurnIn QuestId="67508" NpcId="1013712" XYZ="344.89966, 0.3596452, 555.35205"/>
+      </If>
+    </If>
+	
+    <!-- Classic Misdirection -->
+    <If Condition="not IsQuestCompleted(67509)">
+      <If Condition="not HasQuest(67509)">
+		<If condition="not IsOnMap(400)">
+			<TeleportTo Name="Moghome" AetheryteId="78"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="345.9685, 0.31653672, 559.11426" Land="True"/> <!-- ZoneId="400" -->
+        <If Condition="IsQuestAcceptQualified(67509)">
+          <PickupQuest QuestId="67509" NpcId="1013712"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67509) == 1 and GetQuestById(67509).QuestI8A == 0">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-603.37317, -122.5, 559.95386" Land="True"/> <!-- ZoneId="401" -->
+        <TalkTo NpcId="1012057" XYZ="-599.0845, -122.5, 559.50244" QuestId="67509" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67509) == 1 and GetQuestById(67509).QuestI8A == 16">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-656.03314, -127.06533, 620.4951" Land="True"/> <!-- ZoneId="401" -->
+        <TalkTo NpcId="1012056" XYZ="-658.89984, -127.78361, 622.98" QuestId="67509" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67509) == 1 and GetQuestById(67509).QuestI8A == 32">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-641.6091, -119.41913, 472.75848" Land="True"/> <!-- ZoneId="401" -->
+        <TalkTo NpcId="1012054" XYZ="-640.1007, -119.56208, 469.5963" QuestId="67509" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67509) == 2">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-347.69598, -164.6396, 831.98175" Land="True"/> <!-- ZoneId="401" -->
+        <TalkTo NpcId="1012059" XYZ="-344.96075, -164.64145, 836.33167" QuestId="67509" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67509) == 3 and GetQuestById(67509).QuestI8A == 0">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-644.5623, -51.05392, -415.94095" Land="True"/> <!-- ZoneId="401" -->
+        <TalkTo NpcId="1012069" XYZ="-647.0283, -51.05719, -417.74628" QuestId="67509" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67509) == 3 and GetQuestById(67509).QuestI8A == 16">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-502.43008, -37.3804, -405.3369" Land="True"/> <!-- ZoneId="401" -->
+        <TalkTo NpcId="1012067" XYZ="-498.00873, -37.442852, -403.6164" QuestId="67509" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67509) == 3 and GetQuestById(67509).QuestI8A == 33">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-553.4967, -57.588623, -544.66113" Land="True"/> <!-- ZoneId="401" -->
+        <TalkTo NpcId="1012070" XYZ="-554.0704, -57.62821, -547.4174" QuestId="67509" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67509) == 4">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-597.8706, -51.051853, -390.1774" Land="True"/> <!-- ZoneId="401" -->
+        <TalkTo NpcId="1012068" XYZ="-597.0398, -51.05185, -387.0451" QuestId="67509" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67509) == 255">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-332.56332, -34.63925, -599.24493" Land="True"/> <!-- ZoneId="401" -->
+        <TurnIn QuestId="67509" NpcId="1014449" XYZ="-337.4533, -34.63925, -609.4606"/>
+      </If>
+    </If>
 
 	
 	</Order>
@@ -1960,6 +2582,38 @@ A Moogle by Any Other Name
       </Hotspots>
       <TargetMobs>
         <TargetMob Id="3668" Weight="1"/> <!-- Gnarled Melia -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67417">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="288.44162, 223.0008, -570.629"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3630" Weight="1"/> <!-- Blood Dragon -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67415">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-717.10065, 258.38458, -204.45085"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3629" Weight="1"/> <!-- Diresaur -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67419">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-569.35754, 257.87762, -641.5007"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3629" Weight="1"/> <!-- Diresaur -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67411">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-625.225, 180.5343, 711.1524"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3631" Weight="1"/> <!-- Cloud Aevis -->
       </TargetMobs>
     </GrindArea>
     </GrindAreas>
