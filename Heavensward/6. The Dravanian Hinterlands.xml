@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The Dravanian Hinterlands Side Quests
+
+A Bum Rap
+Feltsmox Needs Bait
+Feltsmox's Reel Problems
+Feltsmox Can't Bear It
+Feltsmox Tackles the Morbols
+A Slimier Stymier
+Mission Unpossible
+What the Boat Brought In
+Over My Dead Gobbie
+Uncoordinated Defense
+The Missing Logbook
+-->
+<Profile>
+	<Name>The Dravanian Hinterlands Side Quests</Name>
+	<Order>	 
+		
+
+	
+	</Order>
+	<CodeChunks>	
+	</CodeChunks>
+    <GrindAreas>
+    </GrindAreas>
+</Profile>
+    <!-- What the Boat Brought In -->
+    <If Condition="not IsQuestCompleted(67500)">
+      <If Condition="not HasQuest(67500)">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-472.00937, 155.8879, -212.37492" Land="True"/> <!-- ZoneId="399" -->
+        <If Condition="IsQuestAcceptQualified(67500)">
+          <PickupQuest QuestId="67500" NpcId="1013651"/>
+        </If>
+      </If>
+    </If>
+	  <If Condition="GetQuestStep(67500) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-668.0053, 154.30957, 198.79001" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1013655" XYZ="-669.9169, 154.30952, 191.08862" QuestId="67500" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67500) == 2">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-894.5652, 215.22183, 155.57602" Land="True"/> <!-- ZoneId="399" -->
+		<Dismount/>
+		<WaitWhile Condition="GetQuestStep(67500) == 2"/>
+      </If>
+      <If Condition="GetQuestStep(67500) == 255">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-667.88666, 154.30957, 197.33" Land="True"/> <!-- ZoneId="399" -->
+        <TurnIn QuestId="67500" NpcId="1013655" XYZ="-669.9169, 154.30952, 191.08862"/>
+      </If>
+    <!-- Over My Dead Gobbie -->
+    <If Condition="not IsQuestCompleted(67501)">
+      <If Condition="not HasQuest(67501)">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-668.1497, 154.30957, 196.08374" Land="True"/> <!-- ZoneId="399" -->
+        <If Condition="IsQuestAcceptQualified(67501)">
+          <PickupQuest QuestId="67501" NpcId="1013655"/>
+        </If>
+      </If>
+    </If>
