@@ -13,19 +13,121 @@ What the Boat Brought In
 Over My Dead Gobbie
 Uncoordinated Defense
 The Missing Logbook
+
+Stop Bugging Me
+Community Service
+Cry Havoc
+Sacking the Foe
+Can You Hear Me Now
+A New Leaf
+Feltsmox Switches Bait
+The Vangob Job
+Many Hands Make Light Checkwork
+Watchcogs
+The Pick of the Bunch
+Administrative Difficulties
+Red Tape
+
+The Golden Rule
+The New Arrivals
+Notched Bone's Suspicions
+Dedean's Doubts
+Lean and Hungry Gentlemen
+Private Investigations
+Ancient Goblin Secrets
+Cityfriends
+
+A Straightforward Fancy
+A Statuesque Interest
+A Self-possessed Pastime
+The Magic Word
+Have I Toad You Lately
 -->
 <Profile>
 	<Name>The Dravanian Hinterlands Side Quests</Name>
 	<Order>	 
-		
-
 	
-	</Order>
-	<CodeChunks>	
-	</CodeChunks>
-    <GrindAreas>
-    </GrindAreas>
-</Profile>
+    <!-- Feltsmox Needs Bait -->
+    <If Condition="not IsQuestCompleted(67469)">
+      <If Condition="not HasQuest(67469)">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="802.15765, 149.96939, 164.84871" Land="True"/> <!-- ZoneId="399" -->
+        <If Condition="IsQuestAcceptQualified(67469)">
+          <PickupQuest QuestId="67469" NpcId="1013643"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67469) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="746.25836, 135.02817, 0.52806824" Land="True"/> <!-- ZoneId="399" -->
+		<Grind grindRef="67469" while="GetQuestStep(67469) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(67469) == 255">
+		<If condition="not IsOnMap(399)">
+
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="802.03033, 150.02744, 164.11496" Land="True"/> <!-- ZoneId="399" -->
+        <TurnIn QuestId="67469" NpcId="1013643" XYZ="803.952, 150.13538, 164.72107"/>
+      </If>
+    </If>
+	
+    <!-- Feltsmox's Reel Problems -->
+    <If Condition="not IsQuestCompleted(67470)">
+      <If Condition="not HasQuest(67470)">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="93.46377, 65.09036, -182.3705" Land="True"/> <!-- ZoneId="399" -->
+        <If Condition="IsQuestAcceptQualified(67470)">
+          <PickupQuest QuestId="67470" NpcId="1013644"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67470) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="94.39228, 70.757385, 55.260216" Land="True"/> <!-- ZoneId="399" -->
+		<Grind grindRef="67470" while="GetQuestStep(67470) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(67470) == 255">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="93.56804, 65.08884, -181.85156" Land="True"/> <!-- ZoneId="399" -->
+        <TurnIn QuestId="67470" NpcId="1013644" XYZ="91.17261, 65.057884, -184.68"/>
+      </If>
+    </If>
+	
+    <!-- A Bum Rap -->
+    <If Condition="not IsQuestCompleted(67483)">
+      <If Condition="not HasQuest(67483)">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-30.115456, 100.969696, -188.68512" Land="True"/> <!-- ZoneId="399" -->
+        <If Condition="IsQuestAcceptQualified(67483)">
+          <PickupQuest QuestId="67483" NpcId="1012287"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67483) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="300.72357, 76.13545, 175.07999" Land="True"/> <!-- ZoneId="399" -->
+		<Grind grindRef="67483" while="GetQuestStep(67483) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(67483) == 255">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-32.715637, 100.96971, -190.10674" Land="True"/> <!-- ZoneId="399" -->
+        <TurnIn QuestId="67483" NpcId="1012287" XYZ="-28.397034, 100.969696, -186.4195"/>
+      </If>
+    </If>
+	
     <!-- What the Boat Brought In -->
     <If Condition="not IsQuestCompleted(67500)">
       <If Condition="not HasQuest(67500)">
@@ -37,7 +139,6 @@ The Missing Logbook
           <PickupQuest QuestId="67500" NpcId="1013651"/>
         </If>
       </If>
-    </If>
 	  <If Condition="GetQuestStep(67500) == 1">
 		<If condition="not IsOnMap(399)">
           <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
@@ -60,6 +161,8 @@ The Missing Logbook
 		<FlyTo AllowedVariance="1" XYZ="-667.88666, 154.30957, 197.33" Land="True"/> <!-- ZoneId="399" -->
         <TurnIn QuestId="67500" NpcId="1013655" XYZ="-669.9169, 154.30952, 191.08862"/>
       </If>
+    </If>
+	
     <!-- Over My Dead Gobbie -->
     <If Condition="not IsQuestCompleted(67501)">
       <If Condition="not HasQuest(67501)">
@@ -71,4 +174,734 @@ The Missing Logbook
           <PickupQuest QuestId="67501" NpcId="1013655"/>
         </If>
       </If>
+	  <If Condition="GetQuestStep(67501) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-618.644, 150.38771, 329.1753" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1013656" XYZ="-617.8836, 150.38008, 327.19922" QuestId="67501" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(67501) == 2">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-617.56616, 153.8528, 346.5165" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1013659" XYZ="-617.76154, 153.8528, 349.35522" QuestId="67501" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(67501) == 3">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-618.21594, 153.8528, 345.84033" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1013659" XYZ="-617.76154, 153.8528, 349.35522" QuestId="67501" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(67501) == 4">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>  
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-617.74725, 150.3497, 330.09064" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1013656" XYZ="-617.8836, 150.38008, 327.19922" QuestId="67501" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(67501) == 255">
+        <GetTo ZoneId="478" XYZ="-24.811281, 206.49944, 27.74762"/>  
+        <TurnIn QuestId="67501" NpcId="1012133" XYZ="-26.840637, 206.49944, 28.67163"/>
+      </If>
     </If>
+	
+    <!-- Community Service -->
+    <If Condition="not IsQuestCompleted(67468)">
+      <If Condition="not HasQuest(67468)">
+        <GetTo ZoneId="478" XYZ="-24.811281, 206.49944, 27.74762"/>  
+        <If Condition="IsQuestAcceptQualified(67468)">
+          <PickupQuest QuestId="67468" NpcId="1012133"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(67468) == 1">
+        <GetTo ZoneId="478" XYZ="13.593145, 206.84251, 51.77495"/>  
+        <TalkTo NpcId="1013640" XYZ="13.199036, 206.8575, 53.45227" QuestId="67468" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(67468) == 2 and GetQuestById(67468).QuestI8A == 0">
+        <GetTo ZoneId="478" XYZ="16.274237, 206.7776, 53.493847"/>  
+        <UseObject Condition="GetQuestById(67468).QuestI8A == 0" NpcId="2005864" XYZ="16.189758, 206.71387, 55.893677" QuestId="67468" StepId="2" />
+      </If>
+	  <If Condition="GetQuestStep(67468) == 2 and GetQuestById(67468).QuestI8A == 16">
+        <GetTo ZoneId="478" XYZ="22.762644, 206.26685, 53.114918"/>  
+        <UseObject Condition="GetQuestById(67468).QuestI8A == 16" NpcId="2005865" XYZ="25.009521, 206.34766, 55.039307" QuestId="67468" StepId="2" />
+      </If>
+	  <If Condition="GetQuestStep(67468) == 2 and GetQuestById(67468).QuestI8A == 32">
+        <GetTo ZoneId="478" XYZ="32.13395, 205.35684, 40.55017"/>  
+        <UseObject Condition="GetQuestById(67468).QuestI8A == 32" NpcId="2005866" XYZ="33.49353, 205.27954, 39.352905" QuestId="67468" StepId="2" />
+      </If>
+	  <If Condition="GetQuestStep(67468) == 2 and GetQuestById(67468).QuestI8A == 48">
+        <GetTo ZoneId="478" XYZ="28.575577, 205.38194, 40.90009"/>  
+        <TalkTo NpcId="1013641" XYZ="25.009521, 205.30936, 40.42102" QuestId="67468" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(67468) == 2 and GetQuestById(67468).QuestI8A == 65">
+        <GetTo ZoneId="478" XYZ="37.31383, 205.71419, 49.908894"/>  
+        <TalkTo NpcId="1013642" XYZ="38.28479, 205.87589, 53.147095" QuestId="67468" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67468) == 3">
+        <GetTo ZoneId="478" XYZ="17.336977, 206.69276, 52.171368"/>  
+		<HandOver ItemId="2001690" NpcId="1013640" XYZ="13.199036, 206.8575, 53.45227" QuestId="67468" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67468) == 255">
+        <GetTo ZoneId="478" XYZ="-23.606863, 206.49944, 28.366867"/>  
+        <TurnIn QuestId="67468" NpcId="1012133" XYZ="-26.840637, 206.49944, 28.67163"/>
+      </If>
+    </If>
+	
+    <!-- The Pick of the Bunch -->
+    <If Condition="not IsQuestCompleted(67471)">
+      <If Condition="not HasQuest(67471)">
+        <GetTo ZoneId="478" XYZ="70.741425, 205.71132, 23.301777"/>  
+        <If Condition="IsQuestAcceptQualified(67471)">
+          <PickupQuest QuestId="67471" NpcId="1012097"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(67471) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="263.66125, 65.657455, -293.73135" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1014323" XYZ="263.35535, 65.64187, -293.50726" QuestId="67471" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(67471) == 2">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="263.66125, 65.657455, -293.73135" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1014323" XYZ="263.35535, 65.64187, -293.50726" QuestId="67471" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67471) == 255">
+        <GetTo ZoneId="478" XYZ="69.348885, 205.52594, 25.848835"/>  
+        <TurnIn QuestId="67471" NpcId="1012097" XYZ="73.3501, 205.88956, 23.483582"/>
+      </If>
+    </If>
+	
+    <!-- Can You Hear Me Now -->
+    <If Condition="not IsQuestCompleted(67476)">
+      <If Condition="not HasQuest(67476)">
+        <GetTo ZoneId="478" XYZ="70.48527, 205.55971, 27.087193"/>  
+        <If Condition="IsQuestAcceptQualified(67476)">
+          <PickupQuest QuestId="67476" NpcId="1012102"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67476) == 1 and GetQuestById(67476).QuestI8A == 0">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="341.90448, 74.49172, -117.55933" Land="True"/> <!-- ZoneId="399" -->
+		<UseItem Condition="GetQuestById(67476).QuestI8A == 0" ItemId="2001712" NpcId="2005876" XYZ="342.0614, 74.75391, -115.03784" QuestId="67476" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67476) == 1 and GetQuestById(67476).QuestI8A == 16">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="237.89468, 78.44783, -68.563484" Land="True"/> <!-- ZoneId="399" -->
+		<UseItem Condition="GetQuestById(67476).QuestI8A == 16" ItemId="2001712" NpcId="2005875" XYZ="238.97144, 78.3855, -66.331055" QuestId="67476" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67476) == 1 and GetQuestById(67476).QuestI8A == 33">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="244.95358, 76.59014, 65.17513" Land="True"/> <!-- ZoneId="399" -->
+		<UseItem Condition="GetQuestById(67476).QuestI8A == 33" ItemId="2001712" NpcId="2005874" XYZ="245.34973, 76.58496, 66.33093" QuestId="67476" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67476) == 255">
+        <GetTo ZoneId="478" XYZ="69.50673, 205.50642, 32.074196"/>  
+        <TurnIn ItemId="0" QuestId="67476" NpcId="1012102" XYZ="72.40405, 205.6815, 31.631958"/>
+      </If>
+    </If>
+	
+    <!-- The Vangob Job -->
+    <If Condition="not IsQuestCompleted(67482)">
+      <If Condition="not HasQuest(67482)">
+        <GetTo ZoneId="478" XYZ="69.50673, 205.50642, 32.074196"/>  
+        <If Condition="IsQuestAcceptQualified(67482)">
+          <PickupQuest QuestId="67482" NpcId="1012101"/>
+        </If>
+      </If>
+	  <While Condition="GetQuestStep(67482) == 1 and GetQuestById(67482).QuestI8A == 0">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="535.4368, 77.95614, -104.254875" Land="True"/> <!-- ZoneId="399" -->
+        <Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <While Condition="GetQuestStep(67482) == 1 and GetQuestById(67482).QuestI8A == 16">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="561.145, 77.52239, 58.01509" Land="True"/> <!-- ZoneId="399" -->
+        <Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <While Condition="GetQuestStep(67482) == 1 and GetQuestById(67482).QuestI8A == 33">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="429.37796, 77.94758, 123.00168" Land="True"/> <!-- ZoneId="399" -->
+        <Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+      <If Condition="GetQuestStep(67482) == 255">
+        <GetTo ZoneId="478" XYZ="70.17416, 205.54752, 32.076538"/>  
+        <TurnIn QuestId="67482" NpcId="1012101" XYZ="72.373535, 205.7479, 33.554565"/>
+      </If>
+    </If>
+	
+    <!-- Cry Havoc -->
+    <If Condition="not IsQuestCompleted(67474)">
+      <If Condition="not HasQuest(67474)">
+        <GetTo ZoneId="478" XYZ="70.17416, 205.54752, 32.076538"/>  
+        <If Condition="IsQuestAcceptQualified(67474)">
+          <PickupQuest QuestId="67474" NpcId="1012101"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67474) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="314.7645, 75.083015, -96.45706" Land="True"/> <!-- ZoneId="399" -->
+		<Grind grindRef="67474" while="GetQuestStep(67474) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(67474) == 255">
+        <GetTo ZoneId="478" XYZ="69.49041, 205.5062, 32.092457"/>  
+        <TurnIn QuestId="67474" NpcId="1012101" XYZ="72.373535, 205.7479, 33.554565"/>
+      </If>
+    </If>
+	
+    <!-- A New Leaf -->
+    <If Condition="not IsQuestCompleted(67477)">
+      <If Condition="not HasQuest(67477)">
+        <GetTo ZoneId="478" XYZ="48.255375, 206.03236, 55.625248"/>  
+        <If Condition="IsQuestAcceptQualified(67477)">
+          <PickupQuest QuestId="67477" NpcId="1012099"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67477) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="753.7064, 139.75, 129.88503" Land="True"/> <!-- ZoneId="399" -->
+		<Grind grindRef="67477" while="GetQuestStep(67477) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(67477) == 255">
+        <GetTo ZoneId="478" XYZ="48.8182, 206.01562, 54.74496"/>  
+        <TurnIn QuestId="67477" NpcId="1012099" XYZ="50.278442, 206.04715, 57.75537"/>
+      </If>
+    </If>
+	
+    <!-- Sacking the Foe -->
+    <If Condition="not IsQuestCompleted(67475)">
+      <If Condition="not HasQuest(67475)">
+        <GetTo ZoneId="478" XYZ="45.280197, 205.99094, 54.1976"/>  
+        <If Condition="IsQuestAcceptQualified(67475)">
+          <PickupQuest QuestId="67475" NpcId="1012132"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(67475) == 1 and GetQuestById(67475).QuestI8A == 0">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="298.15347, 81.70183, -92.93181" Land="True"/> <!-- ZoneId="399" -->
+        <UseObject Condition="GetQuestById(67475).QuestI8A == 0" NpcId="2005870" XYZ="295.30774, 81.68152, -91.11163" QuestId="67475" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(67475) == 1 and GetQuestById(67475).QuestI8A == 16">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="347.6045, 89.98299, -72.01581" Land="True"/> <!-- ZoneId="399" -->
+        <UseObject Condition="GetQuestById(67475).QuestI8A == 16" NpcId="2005871" XYZ="345.17432, 89.98242, -65.445984" QuestId="67475" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(67475) == 1 and GetQuestById(67475).QuestI8A == 32">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="302.15665, 89.04843, 38.788853" Land="True"/> <!-- ZoneId="399" -->
+        <UseObject Condition="GetQuestById(67475).QuestI8A == 32" NpcId="2005873" XYZ="302.05237, 89.036255, 35.62976" QuestId="67475" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(67475) == 1 and GetQuestById(67475).QuestI8A == 49">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="281.39288, 89.36025, -10.085627" Land="True"/> <!-- ZoneId="399" -->
+        <UseObject Condition="GetQuestById(67475).QuestI8A == 49" NpcId="2005872" XYZ="282.063, 89.34155, -12.497192" QuestId="67475" StepId="1" />
+      </If>
+1      <If Condition="GetQuestStep(67475) == 255">
+        <GetTo ZoneId="478" XYZ="44.89778, 205.94821, 53.218815"/>  
+        <TurnIn QuestId="67475" NpcId="1012132" XYZ="43.015137, 206.04718, 56.50415"/>
+      </If>
+    </If>
+	
+    <!-- Many Hands Make Light Checkwork -->
+    <If Condition="not IsQuestCompleted(67493)">
+      <If Condition="not HasQuest(67493)">
+        <GetTo ZoneId="478" XYZ="44.89778, 205.94821, 53.218815"/>  
+        <If Condition="IsQuestAcceptQualified(67493)">
+          <PickupQuest QuestId="67493" NpcId="1012132"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(67493) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-489.17975, 156.26855, -236.14662" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1013646" XYZ="-491.26422, 156.25494, -238.30017" QuestId="67493" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67493) == 2">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-499.83347, 142.22607, -296.67133" Land="True"/> <!-- ZoneId="399" -->
+		<Grind grindRef="67493" while="GetQuestStep(67493) == 2"/>
+      </If>
+      <If Condition="GetQuestStep(67493) == 255">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-489.09842, 156.3394, -238.60915" Land="True"/> <!-- ZoneId="399" -->
+        <TurnIn QuestId="67493" NpcId="1013646" XYZ="-491.26422, 156.25494, -238.30017"/>
+      </If>
+    </If>
+	
+    <!-- A Slimier Stymier -->
+    <If Condition="not IsQuestCompleted(67494)">
+      <If Condition="not HasQuest(67494)">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-489.09842, 156.3394, -238.60915" Land="True"/> <!-- ZoneId="399" -->
+        <If Condition="IsQuestAcceptQualified(67494)">
+          <PickupQuest QuestId="67494" NpcId="1013646"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67494) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-552.599, 146.86841, 73.62965" Land="True"/> <!-- ZoneId="399" -->
+		<Grind grindRef="67494" while="GetQuestStep(67494) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(67494) == 255">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-492.09348, 156.63994, -232.98949" Land="True"/> <!-- ZoneId="399" -->
+        <TurnIn QuestId="67494" NpcId="1013646" XYZ="-491.26422, 156.25494, -238.30017"/>
+      </If>
+    </If>
+	
+    <!-- Mission Unpossible -->
+    <If Condition="not IsQuestCompleted(67495)">
+      <If Condition="not HasQuest(67495)">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-491.93796, 156.6242, -233.97133" Land="True"/> <!-- ZoneId="399" -->
+        <If Condition="IsQuestAcceptQualified(67495)">
+          <PickupQuest QuestId="67495" NpcId="1013646"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67495) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-372.10413, 153.29063, 155.78662" Land="True"/> <!-- ZoneId="399" -->
+		<Grind grindRef="67495" while="GetQuestStep(67495) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(67495) == 2">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-490.7868, 156.39116, -234.3825" Land="True"/> <!-- ZoneId="399" -->
+		<HandOver ItemId="2001697" NpcId="1013646" XYZ="-491.26422, 156.25494, -238.30017" QuestId="67495" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67495) == 255">
+        <GetTo ZoneId="478" XYZ="45.107716, 205.96849, 53.67435"/>  
+        <TurnIn QuestId="67495" NpcId="1012132" XYZ="43.015137, 206.04718, 56.50415"/>
+      </If>
+    </If>
+	
+    <!-- Watchcogs -->
+    <If Condition="not IsQuestCompleted(67498)">
+      <If Condition="not HasQuest(67498)">
+        <GetTo ZoneId="478" XYZ="104.8169, 207.22809, 85.58643"/>  
+        <If Condition="IsQuestAcceptQualified(67498)">
+          <PickupQuest QuestId="67498" NpcId="1012100"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(67498) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-518.8814, 153.4633, -63.701828" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1013650" XYZ="-521.5076, 153.46329, -64.164246" QuestId="67498" StepId="1"/>
+      </If>
+	  <While Condition="GetQuestStep(67498) == 2">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-492.56662, 154.83386, -54.87831" Land="True"/> <!-- ZoneId="399" -->
+        <Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(67498) == 3">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-519.67114, 153.4633, -63.428345" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1013650" XYZ="-521.5076, 153.46329, -64.164246" QuestId="67498" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67498) == 255">
+        <GetTo ZoneId="478" XYZ="104.782616, 207.22809, 84.9854"/>  
+        <TurnIn QuestId="67498" NpcId="1012100" XYZ="106.73682, 207.22809, 85.40466"/>
+      </If>
+    </If>
+	
+    <!-- Stop Bugging Me -->
+    <If Condition="not IsQuestCompleted(67467)">
+      <If Condition="not HasQuest(67467)">
+        <GetTo ZoneId="478" XYZ="104.782616, 207.22809, 84.9854"/>  
+        <If Condition="IsQuestAcceptQualified(67467)">
+          <PickupQuest QuestId="67467" NpcId="1012100"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67467) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-242.02386, 100.83908, -490.35107" Land="True"/> <!-- ZoneId="399" -->
+		<Grind grindRef="67467" while="GetQuestStep(67467) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(67467) == 255">
+        <GetTo ZoneId="478" XYZ="103.64499, 207.22809, 84.83849"/>  
+        <TurnIn QuestId="67467" NpcId="1012100" XYZ="106.73682, 207.22809, 85.40466"/>
+      </If>
+    </If>
+	
+    <!-- Feltsmox Switches Bait -->
+    <If Condition="not IsQuestCompleted(67479)">
+      <If Condition="not HasQuest(67479)">
+        <GetTo ZoneId="478" XYZ="-25.21683, 206.49942, 28.930735"/>  
+        <If Condition="IsQuestAcceptQualified(67479)">
+          <PickupQuest QuestId="67479" NpcId="1012133"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67479) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="95.00899, 65.06361, -183.1279" Land="True"/> <!-- ZoneId="399" -->
+		<HandOver ItemId="2001694" NpcId="1013644" XYZ="91.17261, 65.057884, -184.68" QuestId="67479" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67479) == 255">
+        <GetTo ZoneId="478" XYZ="-23.243315, 206.49942, 28.728205"/>  
+        <TurnIn QuestId="67479" NpcId="1012133" XYZ="-26.840637, 206.49944, 28.67163"/>
+      </If>
+    </If>
+	
+    <!-- Feltsmox Can't Bear It -->
+    <If Condition="not IsQuestCompleted(67496)">
+      <If Condition="not HasQuest(67496)">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-653.53534, 140.63863, 420.62057" Land="True"/> <!-- ZoneId="399" -->
+        <If Condition="IsQuestAcceptQualified(67496)">
+          <PickupQuest QuestId="67496" NpcId="1013647"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67496) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-717.601, 172.85706, 348.98517" Land="True"/> <!-- ZoneId="399" -->
+		<Grind grindRef="67496" while="GetQuestStep(67496) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(67496) == 255">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-654.2584, 140.50018, 419.9845" Land="True"/> <!-- ZoneId="399" -->
+        <TurnIn QuestId="67496" NpcId="1013647" XYZ="-651.2398, 140.70667, 422.20178"/>
+      </If>
+    </If>
+	
+    <!-- Feltsmox Tackles the Morbols -->
+    <If Condition="not IsQuestCompleted(67497)">
+      <If Condition="not HasQuest(67497)">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-527.29877, 153.42853, -37.890697" Land="True"/> <!-- ZoneId="399" -->
+        <If Condition="IsQuestAcceptQualified(67497)">
+          <PickupQuest QuestId="67497" NpcId="1013648"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(67497) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-654.0638, 140.62833, 420.66617" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1013647" XYZ="-651.2398, 140.70667, 422.20178" QuestId="67497" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(67497) == 2">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-633.648, 148.60048, 20.657532" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1013649" XYZ="-629.48047, 149.90913, 12.344482" QuestId="67497" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(67497) == 3">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-625.1242, 146.86842, 16.964373" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1013649" XYZ="-629.48047, 149.90913, 12.344482" QuestId="67497" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67497) == 255">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-530.3414, 152.85672, -486.45178"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-527.3438, 153.42854, -37.943336" Land="True"/> <!-- ZoneId="399" -->
+        <TurnIn QuestId="67497" NpcId="1013648" XYZ="-527.6417, 153.42853, -35.6604"/>
+      </If>
+    </If>
+	
+    <!-- Uncoordinated Defense -->
+    <If Condition="not IsQuestCompleted(67473)">
+      <If Condition="not HasQuest(67473)">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-29.325737, 100.969696, -188.39966" Land="True"/> <!-- ZoneId="399" -->
+        <If Condition="IsQuestAcceptQualified(67473)">
+          <PickupQuest QuestId="67473" NpcId="1012287"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(67473) == 1 and GetQuestById(67473).QuestI8A == 0">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-93.77028, 100.86306, -312.79422" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1014330" XYZ="-91.081116, 100.86439, -313.55768" QuestId="67473" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(67473) == 1 and GetQuestById(67473).QuestI8A == 16">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="140.70601, 61.51837, -278.3997" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1014328" XYZ="143.72461, 61.514713, -276.23407" QuestId="67473" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(67473) == 1 and GetQuestById(67473).QuestI8A == 32">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="100.81167, 65.06041, -152.46982" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1014326" XYZ="101.67078, 65.04988, -154.40613" QuestId="67473" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(67473) == 2">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-27.113352, 100.9697, -188.63292" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1012287" XYZ="-28.397034, 100.969696, -186.4195" QuestId="67473" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67473) == 255">
+        <GetTo ZoneId="478" XYZ="70.38616, 205.60925, 24.46803"/>  
+        <TurnIn QuestId="67473" NpcId="1012097" XYZ="73.3501, 205.88956, 23.483582"/>
+      </If>
+    </If>
+	
+    <!-- Administrative Difficulties -->
+    <If Condition="not IsQuestCompleted(67478)">
+      <If Condition="not HasQuest(67478)">
+        <GetTo ZoneId="478" XYZ="70.38616, 205.60925, 24.46803"/>  
+        <If Condition="IsQuestAcceptQualified(67478)">
+          <PickupQuest QuestId="67478" NpcId="1012097"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(67478) == 1">
+        <GetTo ZoneId="478" XYZ="-23.692604, 206.49944, 28.674461"/>  
+        <TalkTo NpcId="1012133" XYZ="-26.840637, 206.49944, 28.67163" QuestId="67478" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(67478) == 2">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="301.87067, 68.13164, -152.45248" Land="True"/> <!-- ZoneId="399" -->
+        <TalkTo NpcId="1014332" XYZ="302.44897, 68.25281, -151.72046" QuestId="67478" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67478) == 255">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="301.6044, 68.07985, -152.82187" Land="True"/> <!-- ZoneId="399" -->
+        <TurnIn QuestId="67478" NpcId="1014332" XYZ="302.44897, 68.25281, -151.72046"/>
+      </If>
+    </If>
+	
+    <!-- The Missing Logbook -->
+    <If Condition="not IsQuestCompleted(67480)">
+      <If Condition="not HasQuest(67480)">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="301.6044, 68.07985, -152.82187" Land="True"/> <!-- ZoneId="399" -->
+        <If Condition="IsQuestAcceptQualified(67480)">
+          <PickupQuest QuestId="67480" NpcId="1014332"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67480) == 1">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="193.7317, 72.77258, -25.877712" Land="True"/> <!-- ZoneId="399" -->
+		<Grind grindRef="67480" while="not GetQuestStep(67480) == 3"/>
+      </If>
+      <If Condition="GetQuestStep(67480) == 3">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="300.0175, 68.430046, -149.71384" Land="True"/> <!-- ZoneId="399" -->
+		<HandOver ItemId="2001770" NpcId="1014332" XYZ="302.44897, 68.25281, -151.72046" QuestId="67480" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67480) == 255">
+        <GetTo ZoneId="478" XYZ="68.97987, 205.69695, 22.521158"/>  
+        <TurnIn QuestId="67480" NpcId="1014335" XYZ="72.3125, 205.99373, 22.323914"/>
+      </If>
+    </If>
+	
+    <!-- Red Tape -->
+    <If Condition="not IsQuestCompleted(67484)">
+      <If Condition="not HasQuest(67484)">
+        <GetTo ZoneId="478" XYZ="68.97987, 205.69695, 22.521158"/>  
+        <If Condition="IsQuestAcceptQualified(67484)">
+          <PickupQuest QuestId="67484" NpcId="1014335"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(67484) == 1">
+        <GetTo ZoneId="478" XYZ="44.631203, 205.9372, 53.019016"/>  
+		<HandOver ItemId="2001771" NpcId="1012132" XYZ="43.015137, 206.04718, 56.50415" QuestId="67484" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(67484) == 2">
+        <GetTo ZoneId="478" XYZ="69.65057, 205.57047, 24.389446"/>  
+        <TalkTo NpcId="1014335" XYZ="72.3125, 205.99373, 22.323914" QuestId="67484" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(67484) == 3">
+		<If condition="not IsOnMap(399)">
+          <GetTo ZoneId="399" XYZ="-218.27411, 104.45129, -602.5139"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-30.172054, 100.969696, -190.2962" Land="True"/> <!-- ZoneId="399" -->
+		<HandOver ItemId="2001772" NpcId="1012287" XYZ="-28.397034, 100.969696, -186.4195" QuestId="67484" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(67484) == 255">
+        <GetTo ZoneId="478" XYZ="70.48722, 205.68958, 23.375765"/>  
+        <TurnIn QuestId="67484" NpcId="1014335" XYZ="72.3125, 205.99373, 22.323914"/>
+      </If>
+    </If>
+		
+
+	
+	</Order>
+	<CodeChunks>	
+	</CodeChunks>
+    <GrindAreas>
+    <GrindArea name="67483">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="300.72357, 76.13545, 175.07999"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3595" Weight="1"/> <!-- Ratel -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67469">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="746.25836, 135.02817, 0.52806824"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3596" Weight="1"/> <!-- Wildebeest -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67470">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="94.39228, 70.757385, 55.260216"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3594" Weight="1"/> <!-- Damselfly -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67474">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="314.7645, 75.083015, -96.45706"/>
+        <Hotspot Radius="200" XYZ="385.06277, 78.54599, -64.42306"/>
+        <Hotspot Radius="200" XYZ="348.07083, 77.94246, 31.553278"/>
+        <Hotspot Radius="200" XYZ="474.1418, 78.508415, 114.5252"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3600" Weight="1"/> <!-- Goblin Sharpshooter -->
+        <TargetMob Id="3599" Weight="1"/> <!-- Goblin Tinkerer -->
+        <TargetMob Id="3598" Weight="1"/> <!-- Goblin Brandisher -->
+        <TargetMob Id="3601" Weight="1"/> <!-- Goblin Glider -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67477">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="753.7064, 139.75, 129.88503"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3597" Weight="1"/> <!-- Narbrooi -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67493">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-499.83347, 142.22607, -296.67133"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3603" Weight="1"/> <!-- Crawler -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67494">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-552.599, 146.86841, 73.62965"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3605" Weight="1"/> <!-- Great Morbol -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67495">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-372.10413, 153.29063, 155.78662"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3604" Weight="1"/> <!-- Orn Kite -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67467">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-242.02386, 100.83908, -490.35107"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3593" Weight="1"/> <!-- Tarantula Hawk -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67496">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-717.601, 172.85706, 348.98517"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3606" Weight="1"/> <!-- Sun Bear -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="67480">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="193.7317, 72.77258, -25.877712"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="3602" Weight="1"/> <!-- Espertype Magitek Vangob G-III -->
+      </TargetMobs>
+    </GrindArea>
+    </GrindAreas>
+</Profile>
