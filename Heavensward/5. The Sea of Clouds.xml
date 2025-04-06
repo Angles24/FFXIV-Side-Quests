@@ -385,9 +385,9 @@ The Skies That Bind
 		<If condition="not IsOnMap(401)">
 			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
 		</If>
-		<FlyTo AllowedVariance="1" XYZ="230.64496, -82.111244, 317.35678" Land="True"/> <!-- ZoneId="401" -->
+		<FlyTo AllowedVariance="1" XYZ="-346.24033, -164.63962, 834.56335" Land="True"/> <!-- ZoneId="401" -->
         <If Condition="IsQuestAcceptQualified(67440)">
-          <PickupQuest QuestId="67440" NpcId="0"/>
+          <PickupQuest QuestId="67440" NpcId="1012059"/>
         </If>
       </If>
 	<If Condition="GetQuestStep(67440) == 1">
@@ -505,6 +505,7 @@ The Skies That Bind
 		</If>
 		<FlyTo AllowedVariance="1" XYZ="-123.97836, -137.09076, 512.818" Land="True"/> <!-- ZoneId="401" -->
         <TalkTo NpcId="1014128" XYZ="-130.4494, -137.52339, 512.32153" QuestId="67285" StepId="1"/>
+		<WaitWhile Condition="not GetQuestStep(67285) == 2"/>
       </If>
 		  <If Condition="GetQuestStep(67285) == 2">
 		<If condition="not IsOnMap(401)">
@@ -720,7 +721,7 @@ The Skies That Bind
 		<If condition="not IsOnMap(401)">
 			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
 		</If>
-		<FlyTo AllowedVariance="1" XYZ="-502.66675, -37.393375, -404.9511" Land="True"/> <!-- ZoneId="401" -->
+		<FlyTo AllowedVariance="1" XYZ="-523.6061, -38.522636, -414.60223" Land="True"/> <!-- ZoneId="401" -->
         <If Condition="IsQuestAcceptQualified(67453)">
           <PickupQuest QuestId="67453" NpcId="1012067"/>
         </If>
@@ -736,7 +737,7 @@ The Skies That Bind
 		<If condition="not IsOnMap(401)">
 			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
 		</If>
-		<FlyTo AllowedVariance="1" XYZ="-504.73032, -37.440018, -403.5893" Land="True"/> <!-- ZoneId="401" -->
+		<FlyTo AllowedVariance="1" XYZ="-523.6061, -38.522636, -414.60223" Land="True"/> <!-- ZoneId="401" -->
         <TurnIn QuestId="67453" NpcId="1012067" XYZ="-498.00873, -37.442852, -403.6164"/>
       </If>
     </If>
@@ -756,7 +757,7 @@ The Skies That Bind
 		<If condition="not IsOnMap(401)">
 			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
 		</If>
-		<FlyTo AllowedVariance="1" XYZ="-502.2172, -37.425514, -403.97357" Land="True"/> <!-- ZoneId="401" -->
+		<FlyTo AllowedVariance="1" XYZ="-523.6061, -38.522636, -414.60223" Land="True"/> <!-- ZoneId="401" -->
         <TalkTo NpcId="1012067" XYZ="-498.00873, -37.442852, -403.6164" QuestId="67457" StepId="1"/>
       </If>
       <If Condition="GetQuestStep(67457) == 2">
@@ -770,7 +771,7 @@ The Skies That Bind
 		<If condition="not IsOnMap(401)">
 			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
 		</If>
-		<FlyTo AllowedVariance="1" XYZ="-503.01416, -37.40296, -404.6696" Land="True"/> <!-- ZoneId="401" -->
+		<FlyTo AllowedVariance="1" XYZ="-523.6061, -38.522636, -414.60223" Land="True"/> <!-- ZoneId="401" -->
         <TurnIn QuestId="67457" NpcId="1012067" XYZ="-498.00873, -37.442852, -403.6164"/>
       </If>
     </If>
@@ -790,6 +791,7 @@ The Skies That Bind
 		<If condition="not IsOnMap(401)">
 			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
 		</If>
+		<FlyTo AllowedVariance="0" XYZ="-121.69629, 176.36612, -418.4477" Land="False"/> <!-- ZoneId="401" -->
 		<FlyTo AllowedVariance="0" XYZ="-110.09498, 163.96829, -393.32846" Land="True"/> <!-- ZoneId="401" -->
         <TalkTo NpcId="1013578" XYZ="-108.81213, 164.29382, -395.28497" QuestId="67456" StepId="1"/>
       </If>
@@ -806,6 +808,7 @@ The Skies That Bind
 		</If>
 		<FlyTo AllowedVariance="0" XYZ="238.62555, 127.81728, 120.756996" Land="True"/> <!-- ZoneId="401" -->
         <TalkTo NpcId="1013577" XYZ="239.52087, 127.79431, 121.14136" QuestId="67456" StepId="1"/>
+		<MoveTo UseMesh="False" XYZ="239.55841, 127.78132, 120.22627" Distance="0.1"/>
       </If>
       <If Condition="GetQuestStep(67456) == 255">
 		<If condition="not IsOnMap(401)">
@@ -813,47 +816,6 @@ The Skies That Bind
 		</If>
 		<FlyTo AllowedVariance="1" XYZ="-536.56244, -37.138172, -388.4466" Land="True"/> <!-- ZoneId="401" -->
         <TurnIn QuestId="67456" NpcId="1012064" XYZ="-542.7787, -37.11544, -386.7094"/>
-      </If>
-    </If>
-	
-    <!-- On Wings of Vanu -->
-    <If Condition="not IsQuestCompleted(67454)">
-      <If Condition="not HasQuest(67454)">
-		<If condition="not IsOnMap(401)">
-			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
-		</If>
-		<FlyTo AllowedVariance="1" XYZ="-539.799, -37.122948, -388.42908" Land="True"/> <!-- ZoneId="401" -->
-        <If Condition="IsQuestAcceptQualified(67454)">
-          <PickupQuest QuestId="67454" NpcId="1012064"/>
-        </If>
-      </If>
-	  <If Condition="GetQuestStep(67454) == 1 and GetQuestById(67454).QuestI8A == 0">
-		<If condition="not IsOnMap(401)">
-			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
-		</If>
-		<FlyTo AllowedVariance="1" XYZ="-355.15378, -36.358078, -304.4018" Land="True"/> <!-- ZoneId="401" -->
-        <TalkTo NpcId="1013571" XYZ="-353.6584, -36.09865, -306.63007" QuestId="67454" StepId="1"/>
-      </If>
-	  <If Condition="GetQuestStep(67454) == 1 and GetQuestById(67454).QuestI8A == 17">
-		<If condition="not IsOnMap(401)">
-			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
-		</If>
-		<FlyTo AllowedVariance="1" XYZ="-209.597, 112.249626, 221.87123" Land="True"/> <!-- ZoneId="401" -->
-        <TalkTo NpcId="1013572" XYZ="-208.20941, 112.034225, 220.84375" QuestId="67454" StepId="1"/>
-      </If>
-	  <If Condition="GetQuestStep(67454) == 1 and GetQuestById(67454).QuestI8A == 33">
-		<If condition="not IsOnMap(401)">
-			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
-		</If>
-		<FlyTo AllowedVariance="1" XYZ="-64.81458, -91.796684, 443.11005" Land="True"/> <!-- ZoneId="401" -->
-        <TalkTo NpcId="1013573" XYZ="-62.08899, -91.68686, 442.64893" QuestId="67454" StepId="1"/>
-      </If>
-      <If Condition="GetQuestStep(67454) == 255">
-		<If condition="not IsOnMap(401)">
-			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
-		</If>
-		<FlyTo AllowedVariance="1" XYZ="-275.80353, -184.36827, 737.1994" Land="True"/> <!-- ZoneId="401" -->
-        <TurnIn QuestId="67454" NpcId="1011952" XYZ="-277.63788, -184.59735, 741.60376"/>
       </If>
     </If>
 	
@@ -913,14 +875,14 @@ The Skies That Bind
 		<If condition="not IsOnMap(401)">
 			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
 		</If>
-		<FlyTo AllowedVariance="1" XYZ="-502.77216, -37.38381, -405.24155" Land="True"/> <!-- ZoneId="401" -->
+		<FlyTo AllowedVariance="1" XYZ="-523.6061, -38.522636, -414.60223" Land="True"/> <!-- ZoneId="401" -->
         <EmoteNPC Emote="dance" NpcId="1012067" XYZ="-498.00873, -37.442852, -403.6164" QuestId="67450" StepId="1"/>
       </If>
       <If Condition="GetQuestStep(67450) == 2">
 		<If condition="not IsOnMap(401)">
 			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
 		</If>
-		<FlyTo AllowedVariance="1" XYZ="-502.77216, -37.38381, -405.24155" Land="True"/> <!-- ZoneId="401" -->
+		<FlyTo AllowedVariance="1" XYZ="-523.6061, -38.522636, -414.60223" Land="True"/> <!-- ZoneId="401" -->
         <EmoteNPC Emote="dance" NpcId="1012067" XYZ="-498.00873, -37.442852, -403.6164" QuestId="67450" StepId="2"/>
       </If>
 	  <If Condition="GetQuestStep(67450) == 3">
@@ -1058,7 +1020,7 @@ The Skies That Bind
 		<If condition="not IsOnMap(401)">
 			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
 		</If>
-		<FlyTo AllowedVariance="1" XYZ="-503.23288, -37.401787, -404.70956" Land="True"/> <!-- ZoneId="401" -->
+		<FlyTo AllowedVariance="1" XYZ="-523.6061, -38.522636, -414.60223" Land="True"/> <!-- ZoneId="401" -->
         <TalkTo NpcId="1012067" XYZ="-498.00873, -37.442852, -403.6164" QuestId="67452" StepId="9"/>
       </If>
       <If Condition="GetQuestStep(67452) == 255">
@@ -1101,6 +1063,48 @@ The Skies That Bind
 		</If>
 		<FlyTo AllowedVariance="1" XYZ="-511.0135, -56.393887, -555.56696" Land="True"/> <!-- ZoneId="401" -->
         <TurnIn QuestId="67455" NpcId="1013575" XYZ="-508.53745, -56.39412, -558.46497"/>
+      </If>
+    </If>
+	
+    <!-- On Wings of Vanu -->
+    <If Condition="not IsQuestCompleted(67454)">
+      <If Condition="not HasQuest(67454)">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-539.799, -37.122948, -388.42908" Land="True"/> <!-- ZoneId="401" -->
+        <If Condition="IsQuestAcceptQualified(67454)">
+          <PickupQuest QuestId="67454" NpcId="1012064"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(67454) == 1 and GetQuestById(67454).QuestI8A == 0">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-355.15378, -36.358078, -304.4018" Land="True"/> <!-- ZoneId="401" -->
+        <TalkTo NpcId="1013571" XYZ="-353.6584, -36.09865, -306.63007" QuestId="67454" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(67454) == 1 and GetQuestById(67454).QuestI8A == 17">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
+		</If>
+		<FlyTo AllowedVariance="0" XYZ="-224.82658, 152.40335, 240.97363" Land="False"/> <!-- ZoneId="401" -->
+        <MoveTo UseMesh="False" XYZ="-209.597, 112.249626, 221.87123" Distance="0.1"/>
+        <TalkTo NpcId="1013572" XYZ="-208.20941, 112.034225, 220.84375" QuestId="67454" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(67454) == 1 and GetQuestById(67454).QuestI8A == 33">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-64.81458, -91.796684, 443.11005" Land="True"/> <!-- ZoneId="401" -->
+        <TalkTo NpcId="1013573" XYZ="-62.08899, -91.68686, 442.64893" QuestId="67454" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(67454) == 255">
+		<If condition="not IsOnMap(401)">
+			<TeleportTo Name="Camp Cloudtop" AetheryteId="72"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-275.80353, -184.36827, 737.1994" Land="True"/> <!-- ZoneId="401" -->
+        <TurnIn QuestId="67454" NpcId="1011952" XYZ="-277.63788, -184.59735, 741.60376"/>
       </If>
     </If>
 	
@@ -1238,6 +1242,7 @@ The Skies That Bind
 		</If>
 		<FlyTo AllowedVariance="0" XYZ="651.2787, -135.18922, 648.64795" Land="True"/> <!-- ZoneId="401" -->
         <TalkTo NpcId="1014457" XYZ="650.3546, -137.68219, 655.5123" QuestId="67512" StepId="4"/>
+		<GetTo ZoneId="401" XYZ="-598.1883, -122.50001, 557.50916"/> 
       </If>
       <If Condition="GetQuestStep(67512) == 255">
 		<If condition="not IsOnMap(401)">
