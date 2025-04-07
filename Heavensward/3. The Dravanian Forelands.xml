@@ -1793,7 +1793,7 @@ From the Jaws of Hunger
 		<If condition="not IsOnMap(398)">
 			<TeleportTo Name="Anyx Trine" AetheryteId="77"/>
 		</If>
-        <GetTo ZoneId="398" XYZ="-342.80527, 32.026745, -33.1897" Land="True"/>
+        <GetTo ZoneId="398" XYZ="-342.80527, 32.026745, -33.1897"/>
         <TurnIn QuestId="67347" NpcId="1013417" XYZ="-346.7918, 30.976194, -34.28705"/>
       </If>
     </If>

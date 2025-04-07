@@ -407,7 +407,7 @@ A War without End
 			<TeleportTo Name="Falcon's Nest" AetheryteId="71"/>
 		</If>
         <FlyTo AllowedVariance="1" XYZ="545.0194, 175.76515, -542.5687" Land="True"/> <!-- ZoneId="397" -->
-      <UseObject ItemId="2001600" NpcId="2005586" XYZ="541.9547, 176.77563, -544.97595" QuestId="67288" StepId="1"/>
+      <UseObject NpcId="2005586" XYZ="541.9547, 176.77563, -544.97595" QuestId="67288" StepId="1"/>
     </If>
       <If Condition="GetQuestStep(67288) == 255">
 		<If condition="not IsOnMap(397)">

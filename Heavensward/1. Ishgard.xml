@@ -249,7 +249,7 @@ The Paths We Walk (Not Ishgard Quest)
 		<WaitTimer WaitTime="5"/>
         <MoveTo XYZ="21.160727, 4.114032, -11.045168"/>  
         <TalkTo NpcId="1014710" XYZ="19.790894, 4.1140323, -8.529846" QuestId="67265" StepId="3"/>
-        <MoveTo ZoneId="439" XYZ="28.952803, 6.514125, -19.361567"/>  
+        <MoveTo XYZ="28.952803, 6.514125, -19.361567"/>  
 		<UseTransport NpcId="2005335" InteractDistance="3.0" XYZ="30.777344, 7.6447144, -21.439026"/>
 		<WaitTimer WaitTime="5"/>
       </If>
