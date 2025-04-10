@@ -224,6 +224,158 @@ A Fortune in Salt
         <TurnIn QuestId="68566" NpcId="1025115" XYZ="-285.99988, 11.183239, 185.8396"/>
       </If>
     </If>
+	
+	<!-- For Wilred -->
+    <If Condition="not IsQuestCompleted(68422)">
+      <If Condition="not HasQuest(68422)">
+        <GetTo ZoneId="146" XYZ="-224.6764, 26.138355, -352.11234"/>  
+        <If Condition="IsQuestAcceptQualified(68422)">
+          <PickupQuest QuestId="68422" NpcId="1006215"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68422) == 1">
+        <GetTo ZoneId="146" XYZ="-102.44959, 36.81067, -373.87347"/>  
+		<HandOver ItemId="2002384" NpcId="1023365" XYZ="-101.579346, 36.97219, -374.6853" QuestId="68422" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68422) == 2">
+        <GetTo ZoneId="146" XYZ="-223.37895, 26.140388, -353.61404"/>  
+        <TalkTo NpcId="1006215" XYZ="-227.34424, 26.16842, -352.98694" QuestId="68422" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(68422) == 3 and GetQuestById(68422).QuestI8A == 0">
+        <GetTo ZoneId="146" XYZ="-172.12744, 27.289589, -432.9645"/>  
+        <TalkTo NpcId="1023370" XYZ="-171.52673, 27.253004, -434.7448" QuestId="68422" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68422) == 3 and GetQuestById(68422).QuestI8A == 1">
+        <GetTo ZoneId="146" XYZ="-150.05434, 26.120747, -407.6534"/>  
+        <TalkTo NpcId="1023368" XYZ="-151.04907, 26.307241, -405.66113" QuestId="68422" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68422) == 3 and GetQuestById(68422).QuestI8A == 2">
+        <GetTo ZoneId="146" XYZ="-85.03825, 37.71988, -348.38016"/>  
+        <TalkTo NpcId="1023366" XYZ="-82.749695, 37.76457, -351.0338" QuestId="68422" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68422) == 3 and GetQuestById(68422).QuestI8A == 3">
+        <GetTo ZoneId="146" XYZ="-104.09914, 37.90388, -347.2425"/>  
+        <TalkTo NpcId="1023367" XYZ="-104.84479, 37.903877, -343.34332" QuestId="68422" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68422) == 3 and GetQuestById(68422).QuestI8A == 4">
+        <GetTo ZoneId="146" XYZ="-101.10677, 26.13833, -352.22852"/>  
+        <TalkTo NpcId="1023369" XYZ="-99.01581, 26.22153, -351.67468" QuestId="68422" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68422) == 255">
+        <GetTo ZoneId="146" XYZ="-225.18178, 26.138355, -352.6084"/>  
+        <TurnIn QuestId="68422" NpcId="1006215" XYZ="-227.34424, 26.16842, -352.98694"/>
+      </If>
+    </If>
+	
+	<!-- Journey's Beginning -->
+    <If Condition="not IsQuestCompleted(68423)">
+      <If Condition="not HasQuest(68423)">
+        <GetTo ZoneId="146" XYZ="-226.24812, 26.138924, -349.27768"/>  
+        <If Condition="IsQuestAcceptQualified(68423)">
+          <PickupQuest QuestId="68423" NpcId="1023371"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68423) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-675.05286, 129.99286, -507.99463" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1023372" XYZ="-677.9431, 129.99673, -509.20883" QuestId="68423" StepId="1"/>
+      </If>
+	  <While Condition="GetQuestStep(68423) == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="570.21014, 45.37462, 357.00894" Land="True"/> <!-- ZoneId="612" -->
+        <Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68423) == 3">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="570.51855, 45.36418, 356.34546" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1023376" XYZ="569.2682, 45.351055, 357.9308" QuestId="68423" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68423) == 255">
+		<If condition="not IsOnMap(620)">
+			<TeleportTo Name="Ala Ghiri" AetheryteId="101"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="332.1152, 324.3033, 397.57175" Land="True"/> <!-- ZoneId="620" -->
+        <TurnIn QuestId="68423" NpcId="1023383" XYZ="330.03735, 324.3033, 397.39062"/>
+      </If>
+    </If>
+	
+	<!-- Journey's End -->
+    <If Condition="not IsQuestCompleted(68424)">
+      <If Condition="not HasQuest(68424)">
+		<If condition="not IsOnMap(620)">
+			<TeleportTo Name="Ala Ghiri" AetheryteId="101"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="332.1152, 324.3033, 397.57175" Land="True"/> <!-- ZoneId="620" -->
+        <If Condition="IsQuestAcceptQualified(68424)">
+          <PickupQuest QuestId="68424" NpcId="1023383"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68424) == 1">
+		<If condition="not IsOnMap(621)">
+			<TeleportTo Name="Porta Praetoria" AetheryteId="102"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-719.0611, 57.999996, -24.181704" Land="True"/> <!-- ZoneId="621" -->
+        <TalkTo NpcId="1023387" XYZ="-717.0062, 57.999996, -26.535461" QuestId="68424" StepId="1"/>
+      </If>
+	  <While Condition="GetQuestStep(68424) == 2">
+		<If condition="not IsOnMap(621)">
+			<TeleportTo Name="The Ala Mhigan Quarter" AetheryteId="103"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-107.94489, 11.016915, 565.3172" Land="True"/> <!-- ZoneId="621" -->
+        <Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68424) == 3">
+		<If condition="not IsOnMap(621)">
+			<TeleportTo Name="The Ala Mhigan Quarter" AetheryteId="103"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-107.33704, 11.022124, 565.57434" Land="True"/> <!-- ZoneId="621" -->
+        <TalkTo NpcId="1023391" XYZ="-108.56799, 10.860042, 566.5521" QuestId="68424" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68424) == 255">
+		<If condition="not IsOnMap(621)">
+			<TeleportTo Name="The Ala Mhigan Quarter" AetheryteId="103"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="462.78174, 165.01027, 590.6341" Land="False"/> <!-- ZoneId="621" -->
+		<FlyTo AllowedVariance="1" XYZ="540.5684, 137.5465, 586.3593" Land="False"/> <!-- ZoneId="621" -->
+		<FlyTo AllowedVariance="1" XYZ="565.8728, 70, 571.9513" Land="True"/> <!-- ZoneId="621" -->
+        <TurnIn QuestId="68424" NpcId="1023395" XYZ="567.77295, 70, 571.1909"/>
+      </If>
+    </If>
+	
+	<!-- Those We Hold Dear -->
+    <If Condition="not IsQuestCompleted(68425)">
+      <If Condition="not HasQuest(68425)">
+		<If condition="not IsOnMap(621)">
+			<TeleportTo Name="The Ala Mhigan Quarter" AetheryteId="103"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="565.8728, 70, 571.9513" Land="True"/> <!-- ZoneId="621" -->
+        <If Condition="IsQuestAcceptQualified(68425)">
+          <PickupQuest QuestId="68425" NpcId="1023396"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68425) == 1">
+		<If condition="not IsOnMap(621)">
+			<TeleportTo Name="The Ala Mhigan Quarter" AetheryteId="103"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="565.8728, 70, 571.9513" Land="True"/> <!-- ZoneId="621" -->
+        <TalkTo NpcId="1023396" XYZ="564.9957, 70, 573.35767" QuestId="68425" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68425) == 255">
+		<If condition="not IsOnMap(621)">
+			<TeleportTo Name="Porta Praetoria" AetheryteId="102"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="48.2887, 26.656078, -803.7202" Land="True"/> <!-- ZoneId="621" -->
+        <TurnIn QuestId="68425" NpcId="1023400" XYZ="47.257202, 26.6561, -805.6001"/>
+      </If>
+    </If>
 		
 	</Order>
 	<CodeChunks>	
