@@ -20,7 +20,7 @@ The Weight of a Dream
 	<Order>	 
 
 	<!-- Zero Tolerance Teahouse -->
-    <If Condition="not IsQuestCompleted(68205)">
+    <If Condition="not IsQuestCompleted(68205) and IsQuestCompleted(68008) and Core.Player.ClassLevel &gt; 60">
       <If Condition="not HasQuest(68205)">
         <GetTo ZoneId="628" XYZ="5.2499027, 2.2350685E-06, -51.619007"/>  
         <If Condition="IsQuestAcceptQualified(68205)">
@@ -42,7 +42,7 @@ The Weight of a Dream
     </If>
 	
 	<!-- Where the Wild Pandas Are -->
-    <If Condition="not IsQuestCompleted(68206)">
+    <If Condition="not IsQuestCompleted(68206) and IsQuestCompleted(68011) and Core.Player.ClassLevel &gt; 60">
       <If Condition="not HasQuest(68206)">
         <GetTo ZoneId="628" XYZ="26.478807, 5.999998, -107.24992"/>  
         <If Condition="IsQuestAcceptQualified(68206)">
@@ -68,7 +68,7 @@ The Weight of a Dream
     </If>
 	
 	<!-- A Drink in the Tub -->
-    <If Condition="not IsQuestCompleted(68202)">
+    <If Condition="not IsQuestCompleted(68202) and IsQuestCompleted(68008) and Core.Player.ClassLevel &gt; 60">
       <If Condition="not HasQuest(68202)">
         <GetTo ZoneId="628" XYZ="-92.16533, 11.8, -147.41223"/>  
         <If Condition="IsQuestAcceptQualified(68202)">
@@ -79,26 +79,28 @@ The Weight of a Dream
         <GetTo ZoneId="628" XYZ="-48.48559, -2.9, -52.733925"/>  
         <TalkTo NpcId="1019002" XYZ="-48.05072, -2.9, -50.247986" QuestId="68202" StepId="1"/>
       </If>
-	  <If Condition="GetQuestStep(68202) == 1">
+	  <If Condition="GetQuestStep(68202) == 2">
         <GetTo ZoneId="628" XYZ="-93.23705, 11.8, -148.89482"/>  
-        <TalkTo NpcId="1019034" XYZ="-95.84198, 11.8, -147.29541" QuestId="68202" StepId="1"/>
+        <TalkTo NpcId="1019034" XYZ="-95.84198, 11.8, -147.29541" QuestId="68202" StepId="2"/>
       </If>
       <If Condition="GetQuestStep(68202) == 3 and GetQuestById(68202).QuestI8A == 0">
-        <GetTo ZoneId="628" XYZ="-119.67543, 14.199773, -164.16173"/>  
+        <GetTo ZoneId="628" XYZ="-108.86809, 11.8, -152.1839"/>  
+		<LLClimbHill Start="-108.86809, 11.8, -152.1839" End="-117.052, 14.480774, -165.91138" SpamJump="True"/>
 		<UseItem Condition="GetQuestById(68202).QuestI8A == 0" ItemId="2002278" NpcId="2008690" XYZ="-117.052, 14.480774, -165.91138" QuestId="68202" StepId="3"/>
       </If>
       <If Condition="GetQuestStep(68202) == 3 and GetQuestById(68202).QuestI8A == 1">
-        <GetTo ZoneId="628" XYZ="-131.28801, 15.699804, -181.28278"/>  
+		<LLClimbHill Start="-117.052, 14.480774, -165.91138" End="-131.28801, 15.699804, -181.28278" SpamJump="True"/>
 		<UseItem Condition="GetQuestById(68202).QuestI8A == 1" ItemId="2002278" NpcId="2008689" XYZ="-132.46362, 15.976135, -183.18463" QuestId="68202" StepId="3"/>
+		<MoveTo UseMesh="False" XYZ="-93.23705, 11.8, -148.89482"/>
       </If>
       <If Condition="GetQuestStep(68202) == 255">
-        <GetTo ZoneId="628" XYZ="-96.252365, 11.8, -143.53813"/>  
+        <GetTo ZoneId="628" XYZ="-108.86809, 11.8, -152.1839"/>  
         <TurnIn QuestId="68202" NpcId="1019034" XYZ="-95.84198, 11.8, -147.29541"/>
       </If>
     </If>
 	
 	<!-- To Bathe a Garlean -->
-    <If Condition="not IsQuestCompleted(68208)">
+    <If Condition="not IsQuestCompleted(68208) and IsQuestCompleted(68011) and Core.Player.ClassLevel &gt; 60">
       <If Condition="not HasQuest(68208)">
         <GetTo ZoneId="628" XYZ="6.1466227, 4.0559926, 29.466112"/>  
         <If Condition="IsQuestAcceptQualified(68208)">
@@ -106,8 +108,11 @@ The Weight of a Dream
         </If>
       </If>
 	  <If Condition="GetQuestStep(68208) == 1">
-        <GetTo ZoneId="628" XYZ="-126.904144, 15.728962, -185.6796"/>  
+        <GetTo ZoneId="628" XYZ="-108.86809, 11.8, -152.1839"/>  
+		<LLClimbHill Start="-108.86809, 11.8, -152.1839" End="-131.28801, 15.699804, -181.28278" Distance="2" SpamJump="True"/>
         <UseObject NpcId="2008099" XYZ="-128.13, 17.227417, -188.70837" QuestId="68208" StepId="1" />
+		<MoveTo UseMesh="False" XYZ="-128.12508, 15.699808, -175.52908"/>
+		<MoveTo UseMesh="False" XYZ="-108.86809, 11.8, -152.1839"/>
       </If>
 	  <If Condition="GetQuestStep(68208) == 2">
         <MoveTo XYZ="84.46538, 8.019986, 150.30537"/> 
@@ -120,7 +125,7 @@ The Weight of a Dream
     </If>
 	
 	<!-- Dedication to the Craft -->
-    <If Condition="not IsQuestCompleted(68201)">
+    <If Condition="not IsQuestCompleted(68201) and IsQuestCompleted(68008) and Core.Player.ClassLevel &gt; 60">
       <If Condition="not HasQuest(68201)">
         <GetTo ZoneId="628" XYZ="-33.7264, 4.26418, 60.387997"/>  
         <If Condition="IsQuestAcceptQualified(68201)">
@@ -142,7 +147,7 @@ The Weight of a Dream
     </If>
 	
 	<!-- A Bleak Diagnosis -->
-    <If Condition="not IsQuestCompleted(68207)">
+    <If Condition="not IsQuestCompleted(68207) and IsQuestCompleted(68011) and Core.Player.ClassLevel &gt; 60">
       <If Condition="not HasQuest(68207)">
         <GetTo ZoneId="628" XYZ="-153.8498, 4.0000043, 91.55835"/>  
         <If Condition="IsQuestAcceptQualified(68207)">
@@ -172,7 +177,7 @@ The Weight of a Dream
     </If>
 	
 	<!-- A Picture Is Worth a Thousand Moms -->
-    <If Condition="not IsQuestCompleted(68204)">
+    <If Condition="not IsQuestCompleted(68204) and IsQuestCompleted(68008) and Core.Player.ClassLevel &gt; 60">
       <If Condition="not HasQuest(68204)">
         <GetTo ZoneId="628" XYZ="25.761435, 7.9999995, 156.88184"/>  
         <If Condition="IsQuestAcceptQualified(68204)">
@@ -196,7 +201,7 @@ The Weight of a Dream
     </If>
 	
 	<!-- I'll Show You Angry -->
-    <If Condition="not IsQuestCompleted(68203)">
+    <If Condition="not IsQuestCompleted(68203) and IsQuestCompleted(68008) and Core.Player.ClassLevel &gt; 60">
       <If Condition="not HasQuest(68203)">
         <GetTo ZoneId="628" XYZ="116.00276, 12.000001, 55.339108"/>  
         <If Condition="IsQuestAcceptQualified(68203)">
@@ -214,6 +219,119 @@ The Weight of a Dream
       <If Condition="GetQuestStep(68203) == 255">
         <GetTo ZoneId="628" XYZ="113.71804, 11.999996, 55.541714"/>  
         <TurnIn QuestId="68203" NpcId="1022447" XYZ="114.4884, 12.000001, 53.08606"/>
+      </If>
+    </If>
+	
+	<!-- In the Line of Duty -->
+    <If Condition="not IsQuestCompleted(68350) and IsQuestCompleted(68061) and Core.Player.ClassLevel &gt; 66">
+      <If Condition="not HasQuest(68350)">
+        <GetTo ZoneId="628" XYZ="81.97377, -4.987674, 23.011938"/>  
+        <If Condition="IsQuestAcceptQualified(68350)">
+          <PickupQuest QuestId="68350" NpcId="1023326"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68350) == 1">
+        <GetTo ZoneId="628" XYZ="62.171417, 3.9999907, 91.55344"/>  
+        <TalkTo NpcId="1023327" XYZ="63.645386, 4.0000014, 93.858154" QuestId="68350" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68350) == 255">
+        <GetTo ZoneId="628" XYZ="83.791245, -4.976325, 23.194967"/>  
+		<UseItem ItemId="2002342" NpcId="1023326" XYZ="86.1676, -4.9614854, 23.23944" UseTimes="1" BlacklistAfter="True"/>
+        <TurnIn ItemId="2002342" QuestId="68350" NpcId="1023326" XYZ="86.1676, -4.9614854, 23.23944"/>
+      </If>
+    </If>
+	
+	<!-- The Weight of a Dream -->
+    <If Condition="not IsQuestCompleted(68351) and IsQuestCompleted(68061) and Core.Player.ClassLevel &gt; 66">
+      <If Condition="not HasQuest(68351)">
+        <GetTo ZoneId="628" XYZ="-65.02423, -4.7338758, 157.27213"/>  
+        <If Condition="IsQuestAcceptQualified(68351)">
+          <PickupQuest QuestId="68351" NpcId="1023328"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68351) == 1">
+        <GetTo ZoneId="628" XYZ="38.186604, 2.000001, 35.569035"/>  
+        <TalkTo NpcId="1023329" XYZ="40.81787, 2.0119922, 34.042847" QuestId="68351" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68351) == 255">
+        <GetTo ZoneId="628" XYZ="-64.9238, -4.7338753, 156.38365"/>  
+        <TurnIn QuestId="68351" NpcId="1023328" XYZ="-63.187683, -4.7338753, 157.85449"/>
+      </If>
+    </If>
+	
+	<!-- The Perfect Woman -->
+    <If Condition="not IsQuestCompleted(68348) and IsQuestCompleted(68061) and Core.Player.ClassLevel &gt; 66">
+      <If Condition="not HasQuest(68348)">
+        <GetTo ZoneId="628" XYZ="4.263262, 4.055991, 66.68145"/>  
+        <If Condition="IsQuestAcceptQualified(68348)">
+          <PickupQuest QuestId="68348" NpcId="1023118"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68348) == 1">
+        <GetTo ZoneId="628" XYZ="-63.373253, 8, -62.752575"/>  
+        <TalkTo NpcId="1023119" XYZ="-63.675964, 7.999999, -60.83777" QuestId="68348" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68348) == 2">
+        <GetTo ZoneId="628" XYZ="3.725672, 4.055991, 67.28958"/>  
+        <TalkTo NpcId="1023118" XYZ="1.6021729, 4.0000005, 66.91077" QuestId="68348" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(68348) == 3 and GetQuestById(68348).QuestI8A == 0">
+        <GetTo ZoneId="628" XYZ="82.53353, 4, 54.507984"/>  
+        <TalkTo NpcId="1023122" XYZ="81.467896, 4.05, 53.147095" QuestId="68348" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68348) == 3 and GetQuestById(68348).QuestI8A == 1">
+        <GetTo ZoneId="628" XYZ="105.18739, 12.000001, 44.97878"/>  
+        <TalkTo NpcId="1023121" XYZ="102.76941, 12.000001, 44.47998" QuestId="68348" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68348) == 3 and GetQuestById(68348).QuestI8A == 2">
+        <GetTo ZoneId="628" XYZ="130.52307, 25, 13.21282"/>  
+        <TalkTo NpcId="1023120" XYZ="126.81775, 24.999964, 12.649658" QuestId="68348" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68348) == 4">
+        <GetTo ZoneId="628" XYZ="-14.00029, 2.9802322E-06, -63.035164"/>  
+        <TalkTo NpcId="1023123" XYZ="-15.884705, 1.919939E-06, -65.35437" QuestId="68348" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(68348) == 255">
+        <GetTo ZoneId="628" XYZ="130.48851, 25, 13.76164"/>  
+        <TurnIn QuestId="68348" NpcId="1023124" XYZ="127.39758, 24.999983, 14.084045"/>
+      </If>
+    </If>
+	
+	<!-- Child Labor -->
+    <If Condition="not IsQuestCompleted(68349) and IsQuestCompleted(68061) and Core.Player.ClassLevel &gt; 66">
+      <If Condition="not HasQuest(68349)">
+        <GetTo ZoneId="628" XYZ="-3.237432, 0.0024225356, -112.20888"/>  
+        <If Condition="IsQuestAcceptQualified(68349)">
+          <PickupQuest QuestId="68349" NpcId="1022620"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68349) == 1 and GetQuestById(68349).QuestI8A == 0">
+        <GetTo ZoneId="628" XYZ="-103.06804, 11.80004, -117.15506"/>  
+		<HandOver ItemId="2002306" NpcId="1023127" XYZ="-102.9527, 11.80004, -114.76312" QuestId="68349" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68349) == 1 and GetQuestById(68349).QuestI8A == 1">
+        <GetTo ZoneId="628" XYZ="29.62138, 3.0550253, -48.79746"/>  
+		<HandOver ItemId="2002306" NpcId="1023126" XYZ="32.60852, 2.9999976, -49.881836" QuestId="68349" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68349) == 1 and GetQuestById(68349).QuestI8A == 2">
+        <GetTo ZoneId="628" XYZ="-85.40828, -6.999999, -63.297905"/>  
+		<HandOver ItemId="2002306" NpcId="1023131" XYZ="-88.304016, -6.9999995, -63.09613" QuestId="68349" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68349) == 1 and GetQuestById(68349).QuestI8A == 3">
+        <GetTo ZoneId="628" XYZ="16.119383, 11.005748, 172.23862"/>  
+		<HandOver ItemId="2002306" NpcId="1023129" XYZ="17.593567, 11.44387, 174.45642" QuestId="68349" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68349) == 1 and GetQuestById(68349).QuestI8A == 4">
+        <GetTo ZoneId="628" XYZ="75.80382, 4, 69.26903"/>  
+		<HandOver ItemId="2002306" NpcId="1023130" XYZ="80.460815, 4.000001, 71.488525" QuestId="68349" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68349) == 1 and GetQuestById(68349).QuestI8A == 5">
+        <GetTo ZoneId="628" XYZ="-33.888203, 15.000002, 66.085396"/>  
+		<HandOver ItemId="2002306" NpcId="1023128" XYZ="-34.103943, 15.000004, 68.86389" QuestId="68349" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68349) == 255">
+        <GetTo ZoneId="628" XYZ="-6.127119, 0.044722557, -115.85865"/>  
+        <TurnIn ItemId="0" QuestId="68349" NpcId="1022620" XYZ="-4.7455444, 0.022830343, -113.96973"/>
       </If>
     </If>
 	
