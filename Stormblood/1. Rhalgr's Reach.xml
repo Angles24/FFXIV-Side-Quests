@@ -226,7 +226,7 @@ A Fortune in Salt
     </If>
 	
 	<!-- For Wilred -->
-    <If Condition="not IsQuestCompleted(68422)">
+    <If Condition="not IsQuestCompleted(68422) and IsQuestCompleted(68421) and IsQuestCompleted(68089) and Core.Player.ClassLevel &gt; 69">
       <If Condition="not HasQuest(68422)">
         <GetTo ZoneId="146" XYZ="-224.6764, 26.138355, -352.11234"/>  
         <If Condition="IsQuestAcceptQualified(68422)">
@@ -268,7 +268,7 @@ A Fortune in Salt
     </If>
 	
 	<!-- Journey's Beginning -->
-    <If Condition="not IsQuestCompleted(68423)">
+    <If Condition="not IsQuestCompleted(68423) and IsQuestCompleted(68422) and IsQuestCompleted(68089) and Core.Player.ClassLevel &gt; 69">
       <If Condition="not HasQuest(68423)">
         <GetTo ZoneId="146" XYZ="-226.24812, 26.138924, -349.27768"/>  
         <If Condition="IsQuestAcceptQualified(68423)">
@@ -307,7 +307,7 @@ A Fortune in Salt
     </If>
 	
 	<!-- Journey's End -->
-    <If Condition="not IsQuestCompleted(68424)">
+    <If Condition="not IsQuestCompleted(68424) and IsQuestCompleted(68423) and IsQuestCompleted(68089) and Core.Player.ClassLevel &gt; 69">
       <If Condition="not HasQuest(68424)">
 		<If condition="not IsOnMap(620)">
 			<TeleportTo Name="Ala Ghiri" AetheryteId="101"/>
@@ -351,7 +351,7 @@ A Fortune in Salt
     </If>
 	
 	<!-- Those We Hold Dear -->
-    <If Condition="not IsQuestCompleted(68425)">
+    <If Condition="not IsQuestCompleted(68425) and IsQuestCompleted(68424) and IsQuestCompleted(68089) and Core.Player.ClassLevel &gt; 69">
       <If Condition="not HasQuest(68425)">
 		<If condition="not IsOnMap(621)">
 			<TeleportTo Name="The Ala Mhigan Quarter" AetheryteId="103"/>
