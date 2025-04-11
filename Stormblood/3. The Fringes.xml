@@ -22,6 +22,710 @@ My Dear Brother
 <Profile>
 	<Name>The Fringes Side Quests</Name>
 	<Order>	 
+	
+	<!-- What a Tangled Web We Weave -->
+    <If Condition="not IsQuestCompleted(68178) and IsQuestCompleted(67988) and Core.Player.ClassLevel &gt; 59">
+      <If Condition="not HasQuest(68178)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-618.11804, 130.1114, -484.28052" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68178)">
+          <PickupQuest QuestId="68178" NpcId="1021654"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68178) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-255.5889, 44.62707, -301.24335" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1021655" XYZ="-256.82465, 44.65572, -303.70032" QuestId="68178" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68178) == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-269.4448, 43.739033, -292.01483" Land="True"/> <!-- ZoneId="612" -->
+		<UseItem ItemId="2002184" NpcId="2008260" XYZ="-272.32782, 43.533936, -292.04242" QuestId="68178" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(68178) == 3">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-258.36124, 44.79797, -300.46994" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1021655" XYZ="-256.82465, 44.65572, -303.70032" QuestId="68178" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68178) == 4">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-269.855, 43.579323, -289.2577" Land="True"/> <!-- ZoneId="612" -->
+        <Dismount/>
+		<WaitTimer WaitTime="1"/>
+		<MoveTo UseMesh="False" XYZ="-294.12363, 16.400005, -288.00565"/> 
+		<WaitTimer Timer="5"/>
+		<WaitWhile Condition="not GetQuestStep(68178) == 5"/>
+      </If>
+	  <If Condition="GetQuestStep(68178) == 5">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-257.74982, 44.66291, -299.53098" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1021655" XYZ="-256.82465, 44.65572, -303.70032" QuestId="68178" StepId="5"/>
+      </If>
+      <If Condition="GetQuestStep(68178) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<GetTo ZoneId="612" XYZ="-620.1861, 130.07454, -483.2475"/>
+        <TurnIn QuestId="68178" NpcId="1021654" XYZ="-620.14197, 130.20311, -480.91858"/>
+      </If>
+    </If>
+	
+	<!-- Gross Encounters -->
+    <If Condition="not IsQuestCompleted(68176) and IsQuestCompleted(67988) and Core.Player.ClassLevel &gt; 59">
+      <If Condition="not HasQuest(68176)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-614.2618, 130, -527.60266" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68176)">
+          <PickupQuest QuestId="68176" NpcId="1019519"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68176) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-265.6233, 60.465775, -460.22794" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1022059" XYZ="-266.8651, 60.448654, -457.5418" QuestId="68176" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68176) == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-232.7434, 42.003307, -237.40479" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1022060" XYZ="-234.85168, 42.32795, -235.55353" QuestId="68176" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(68176) == 3">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="196.76962, 54.177994, -529.68695" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject NpcId="2008814" XYZ="199.60315, 54.09314, -529.5339" QuestId="68176" StepId="3" />
+      </If>
+      <While Condition="GetQuestStep(68176) == 4">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="195.24812, 61.228325, -611.6052" Land="True"/> <!-- ZoneId="612" -->
+		<Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+      <If Condition="GetQuestStep(68176) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-617.56635, 130, -526.8149" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68176" NpcId="1019519" XYZ="-613.1228, 130, -529.839"/>
+      </If>
+    </If>
+	
+	<!-- Spicing Things Up -->
+    <If Condition="not IsQuestCompleted(68180) and IsQuestCompleted(67988) and Core.Player.ClassLevel &gt; 59">
+      <If Condition="not HasQuest(68180)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-629.7136, 130.10837, -524.75146" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68180)">
+          <PickupQuest QuestId="68180" NpcId="1019520"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68180) == 1 and GetQuestById(68180).QuestI8A == 0">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-649.494, 130.05196, -512.49396" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1019517" XYZ="-653.0099, 129.91537, -510.67374" QuestId="68180" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68180) == 1 and GetQuestById(68180).QuestI8A == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-627.3552, 130.02467, -496.04294" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1019522" XYZ="-625.94037, 130.02669, -493.98032" QuestId="68180" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68180) == 1 and GetQuestById(68180).QuestI8A == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-603.44775, 130, -488.4901" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1019518" XYZ="-601.12915, 129.99998, -487.48004" QuestId="68180" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68180) == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-629.25024, 130.10623, -525.1075" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1019520" XYZ="-630.64014, 130.17412, -527.306" QuestId="68180" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68180) == 3">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-171.21228, 58.571022, -658.16144" Land="True"/> <!-- ZoneId="612" -->
+		<Grind grindRef="68180" while="not GetQuestById(68180).QuestI8A == 16"/>
+      </If>
+	  <If Condition="GetQuestStep(68180) == 3 and GetQuestById(68180).QuestI8A == 16">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-529.92944, 96.894966, -306.4043" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68180).QuestI8A == 16" NpcId="2008078" XYZ="-530.7546, 97.67297, -308.30853" QuestId="68180" StepId="3" />
+      </If>
+	  <If Condition="GetQuestStep(68180) == 3 and GetQuestById(68180).QuestI8A == 17">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-577.81885, 111.9126, -284.34555" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68180).QuestI8A == 17" NpcId="2008080" XYZ="-580.4379, 112.2301, -284.6571" QuestId="68180" StepId="3" />
+      </If>
+	  <If Condition="GetQuestStep(68180) == 3 and GetQuestById(68180).QuestI8A == 18">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-536.5795, 97.27283, -246.9062" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68180).QuestI8A == 18" NpcId="2008079" XYZ="-538.4451, 97.520386, -244.95312" QuestId="68180" StepId="3" />
+      </If>
+      <If Condition="GetQuestStep(68180) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-629.2657, 130.0928, -524.48065" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68180" NpcId="1019520" XYZ="-630.64014, 130.17412, -527.306"/>
+      </If>
+    </If>
+	
+	<!-- Prison Break -->
+    <If Condition="not IsQuestCompleted(68177) and IsQuestCompleted(67988) and Core.Player.ClassLevel &gt; 59">
+      <If Condition="not HasQuest(68177)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-656.3612, 130, -533.5589" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68177)">
+          <PickupQuest QuestId="68177" NpcId="1022954"/>
+        </If>
+      </If>
+      <While Condition="GetQuestStep(68177) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="0" XYZ="-274.65805, 69.27825, -663.56494" Land="True"/> <!-- ZoneId="612" -->
+		<Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68177) == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-273.5376, 69.2193, -663.60077" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1022955" XYZ="-274.58612, 69.28654, -663.7522" QuestId="68177" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68177) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-657.4015, 130, -534.7383" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68177" NpcId="1022954" XYZ="-658.2894, 129.99998, -536.49194"/>
+      </If>
+    </If>
+	
+	<!-- Doing Her Part -->
+    <If Condition="not IsQuestCompleted(68179) and IsQuestCompleted(67988) and Core.Player.ClassLevel &gt; 59">
+      <If Condition="not HasQuest(68179)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-645.997, 129.90576, -547.48663" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68179)">
+          <PickupQuest QuestId="68179" NpcId="1019524"/>
+		  <MoveTo XYZ="-641.63226, 130, -520.4247"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68179) == 1 and GetQuestById(68179).QuestI8A == 0">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-214.82257, 58.508507, -545.00757" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68179).QuestI8A == 0" NpcId="2008077" XYZ="-211.87158, 58.304688, -545.922" QuestId="68179" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68179) == 1 and GetQuestById(68179).QuestI8A == 16">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-317.33994, 82.62304, -495.2109" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68179).QuestI8A == 16" NpcId="2008075" XYZ="-318.74573, 83.05481, -497.2763" QuestId="68179" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68179) == 1 and GetQuestById(68179).QuestI8A == 17">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-516.6285, 101.084694, -341.18082" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68179).QuestI8A == 17" NpcId="2008074" XYZ="-517.6013, 100.35852, -337.54486" QuestId="68179" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68179) == 1 and GetQuestById(68179).QuestI8A == 18">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-528.7586, 117.20322, -422.5299" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68179).QuestI8A == 18" NpcId="2008076" XYZ="-527.1229, 116.990845, -421.6526" QuestId="68179" StepId="1" />
+      </If>
+      <If Condition="GetQuestStep(68179) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<GetTo ZoneId="612" XYZ="-646.20056, 129.91287, -546.3852"/>
+        <TurnIn QuestId="68179" NpcId="1019524" XYZ="-647.27246, 129.83813, -549.61475"/>
+      </If>
+    </If>
+	
+	<!-- A Second Assessment -->
+    <If Condition="not IsQuestCompleted(68196) and IsQuestCompleted(68179) and IsQuestCompleted(68002) and Core.Player.ClassLevel &gt; 60">
+      <If Condition="not HasQuest(68196)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-646.20056, 129.91287, -546.3852" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68196)">
+          <PickupQuest QuestId="68196" NpcId="1019524"/>
+		  <MoveTo XYZ="-641.63226, 130, -520.4247"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68196) == 1 and GetQuestById(68196).QuestI8B == 0">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-348.64807, 54.273384, 353.11102" Land="True"/> <!-- ZoneId="612" -->
+        <GetTo ZoneId="612" XYZ="-382.37222, 43.083534, 464.52972"/>  
+        <UseObject Condition="GetQuestById(68196).QuestI8B == 0" NpcId="2008828" XYZ="-380.3922, 42.98462, 465.4154" QuestId="68196" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68196) == 1 and GetQuestById(68196).QuestI8A == 0">
+        <GetTo ZoneId="612" XYZ="-361.10474, 38.67, 494.97702"/>  
+        <UseObject Condition="GetQuestById(68196).QuestI8A == 0" NpcId="2008829" XYZ="-360.34186, 38.956177, 496.63525" QuestId="68196" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68196) == 1 and GetQuestById(68196).QuestI8B == 17">
+        <GetTo ZoneId="612" XYZ="-406.63257, 39.58161, 483.28476"/>  
+        <UseObject Condition="GetQuestById(68196).QuestI8B == 17" NpcId="2008827" XYZ="-408.5603, 39.6886, 482.62744" QuestId="68196" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68196) == 1 and GetQuestById(68196).QuestI8B == 34">
+        <GetTo ZoneId="612" XYZ="-438.19498, 39.416164, 508.65787"/>  
+        <UseObject Condition="GetQuestById(68196).QuestI8B == 34" NpcId="2008826" XYZ="-439.84137, 39.352905, 509.97168" QuestId="68196" StepId="1" />
+      </If>
+      <If Condition="GetQuestStep(68196) == 255">
+        <GetTo ZoneId="612" XYZ="-646.9737, 129.88142, -545.5523"/>  
+        <TurnIn QuestId="68196" NpcId="1019524" XYZ="-647.27246, 129.83813, -549.61475"/>
+      </If>
+    </If>
+	
+	<!-- A Good Role Model -->
+    <If Condition="not IsQuestCompleted(68195) and IsQuestCompleted(68002) and Core.Player.ClassLevel &gt; 60">
+      <If Condition="not HasQuest(68195)">
+        <GetTo ZoneId="612" XYZ="-615.48975, 130, -528.52045"/>  
+        <If Condition="IsQuestAcceptQualified(68195)">
+          <PickupQuest QuestId="68195" NpcId="1019519"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68195) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-273.84915, 41.193214, 103.4376" Land="True"/> <!-- ZoneId="612" -->
+		<Grind grindRef="68195" while="GetQuestStep(68195) == 1"/>
+      </If>
+	  <If Condition="GetQuestStep(68195) == 2 and GetQuestById(68195).QuestI8A == 0">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-292.49237, 43.883427, -19.855669" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1022755" XYZ="-289.601, 43.95064, -20.767578" QuestId="68195" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(68195) == 2 and GetQuestById(68195).QuestI8A == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-281.26822, 40.253174, 200.16234" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1022754" XYZ="-279.1333, 40.439335, 201.43433" QuestId="68195" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68195) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-614.28314, 130, -526.96765" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68195" NpcId="1019519" XYZ="-613.1228, 130, -529.839"/>
+      </If>
+    </If>
+	
+	<!-- Falling Down on the Job -->
+    <If Condition="not IsQuestCompleted(68408) and IsQuestCompleted(68176) and IsQuestCompleted(68405) and IsQuestCompleted(68083) and Core.Player.ClassLevel &gt; 68">
+      <If Condition="not HasQuest(68408)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-614.28314, 130, -526.96765" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68408)">
+          <PickupQuest QuestId="68408" NpcId="1019519"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68408) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="131.11722, 62.41044, -143.19308" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1019529" XYZ="131.60901, 62.475544, -144.39618" QuestId="68408" StepId="1"/>
+      </If>
+      <While Condition="GetQuestStep(68408) == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="0" XYZ="511.47083, 121.968414, -257.83978" Land="True"/> <!-- ZoneId="612" -->
+		<Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68408) == 3">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="512.3354, 122.00759, -257.1741" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1023344" XYZ="509.57495, 121.86528, -257.8012" QuestId="68408" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68408) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-614.9743, 130, -526.13446" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68408" NpcId="1019519" XYZ="-613.1228, 130, -529.839"/>
+      </If>
+    </If>
+	
+	<!-- Confessions of the Heart -->
+    <If Condition="not IsQuestCompleted(68407) and IsQuestCompleted(68083) and IsQuestCompleted(68405) and Core.Player.ClassLevel &gt; 68">
+      <If Condition="not HasQuest(68407)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-602.87146, 130, -486.41992" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68407)">
+          <PickupQuest QuestId="68407" NpcId="1019518"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68407) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="674.21735, 77.08775, 501.1066" Land="True"/> <!-- ZoneId="612" -->
+		<HandOver ItemId="2002359" NpcId="1020832" XYZ="675.7151, 76.92028, 502.89148" QuestId="68407" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68407) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+        <FlyTo AllowedVariance="1" XYZ="-604.06903, 130.10123, -488.70825" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68407" NpcId="1019518" XYZ="-601.12915, 129.99998, -487.48004"/>
+      </If>
+    </If>
+	  
+	<!-- Spooked -->
+    <If Condition="not IsQuestCompleted(68359) and IsQuestCompleted(68069) and Core.Player.ClassLevel &gt; 66">
+      <If Condition="not HasQuest(68359)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="386.16617, 105.06597, 250.42584" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68359)">
+          <PickupQuest QuestId="68359" NpcId="1020814"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68359) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="63.077343, 79.67827, 549.9254" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject NpcId="2008749" XYZ="61.81433, 79.63672, 549.85876" QuestId="68359" StepId="1" />
+      </If>
+      <If Condition="GetQuestStep(68359) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="383.1966, 105.2237, 251.568" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68359" NpcId="1020814" XYZ="384.66467, 105.18404, 250.04956"/>
+      </If>
+    </If>
+	
+	<!-- Gold Rush -->
+    <If Condition="not IsQuestCompleted(68356) and IsQuestCompleted(68066) and Core.Player.ClassLevel &gt; 66">
+      <If Condition="not HasQuest(68356)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="391.04034, 105.32516, 274.8457" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68356)">
+          <PickupQuest QuestId="68356" NpcId="1020808"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68356) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="400.40472, 60.159313, 392.91293" Land="True"/> <!-- ZoneId="612" -->
+		<Grind grindRef="68356" while="not GetQuestStep(68356) == 255"/>
+      </If>
+      <If Condition="GetQuestStep(68356) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="392.86975, 105.26367, 280.2001" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68356" NpcId="1020808" XYZ="391.4397, 105.25135, 276.96643"/>
+      </If>
+    </If>
+	
+	<!-- The Perfect Gift -->
+    <If Condition="not IsQuestCompleted(68358) and IsQuestCompleted(68069) and Core.Player.ClassLevel &gt; 66">
+      <If Condition="not HasQuest(68358)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="459.37436, 114.16567, 224.95839" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68358)">
+          <PickupQuest QuestId="68358" NpcId="1020804"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68358) == 1 and GetQuestById(68358).QuestI8A == 0">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="278.85123, 77.04738, -25.165678" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1020821" XYZ="276.7223, 76.853935, -23.51416" QuestId="68358" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68358) == 1 and GetQuestById(68358).QuestI8A == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="274.36374, 77.122025, -44.521713" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1020819" XYZ="273.48743, 77.24829, -46.341675" QuestId="68358" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68358) == 1 and GetQuestById(68358).QuestI8A == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="318.62628, 77.495476, -56.36098" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1020820" XYZ="317.1587, 77.65647, -55.13086" QuestId="68358" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68358) == 1 and GetQuestById(68358).QuestI8A == 3">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="337.06802, 81.655945, -74.30437" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1020818" XYZ="339.55884, 82.34022, -76.52399" QuestId="68358" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68358) == 1 and GetQuestById(68358).QuestI8A == 4">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="287.46353, 71.92556, -75.96728" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1020823" XYZ="283.22266, 72.2038, -74.69299" QuestId="68358" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68358) == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="458.01108, 114.15908, 227.16885" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1020804" XYZ="460.4104, 114.21034, 222.73596" QuestId="68358" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(68358) == 3">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-502.37137, 56.417892, 205.4112" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject NpcId="2008357" XYZ="-501.06052, 58.6709, 202.38037" QuestId="68358" StepId="3" />
+      </If>
+      <If Condition="GetQuestStep(68358) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="455.80887, 114.16992, 224.48807" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68358" NpcId="1020804" XYZ="460.4104, 114.21034, 222.73596"/>
+      </If>
+    </If>
+	
+	<!-- Slug It Out -->
+    <If Condition="not IsQuestCompleted(68354) and IsQuestCompleted(68067) and Core.Player.ClassLevel &gt; 66">
+      <If Condition="not HasQuest(68354)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="274.31192, 77.091286, -43.194683" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68354)">
+          <PickupQuest QuestId="68354" NpcId="1020819"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68354) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="398.5384, 86.149414, -356.60153" Land="True"/> <!-- ZoneId="612" -->
+		<UseItem ItemId="2002090" NpcId="2008087" XYZ="400.04578, 86.1676, -358.54126" QuestId="68354" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68354) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="275.2952, 77.01974, -45.745464" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68354" NpcId="1020819" XYZ="273.48743, 77.24829, -46.341675"/>
+      </If>
+    </If>
+	
+	<!-- Hard to Swallow -->
+    <If Condition="not IsQuestCompleted(68355) and IsQuestCompleted(68067) and Core.Player.ClassLevel &gt; 66">
+      <If Condition="not HasQuest(68355)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="296.76938, 71.51501, -86.45739" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68355)">
+          <PickupQuest QuestId="68355" NpcId="1022054"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68355) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="349.34726, 81.37154, -272.2882" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1022056" XYZ="349.2942, 81.44338, -274.40308" QuestId="68355" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68355) == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="337.2453, 77.9167, -232.63206" Land="True"/> <!-- ZoneId="612" -->
+		<Grind grindRef="68355" while="not GetQuestStep(68355) == 3"/>
+      </If>
+      <If Condition="GetQuestStep(68355) == 3">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="349.71964, 81.27194, -270.1008" Land="True"/> <!-- ZoneId="612" -->
+		<HandOver ItemId="2002211" NpcId="1022056" XYZ="349.2942, 81.44338, -274.40308" QuestId="68355" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68355) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="298.7599, 71.965256, -88.87101" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68355" NpcId="1022054" XYZ="298.20703, 71.86882, -88.7923"/>
+      </If>
+    </If>
+	
+	<!-- Delicate as a Flower -->
+    <If Condition="not IsQuestCompleted(68353) and IsQuestCompleted(68067) and Core.Player.ClassLevel &gt; 66">
+      <If Condition="not HasQuest(68353)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="339.21008, 81.99955, -74.839035" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68353)">
+          <PickupQuest QuestId="68353" NpcId="1020818"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68353) == 1 and GetQuestById(68353).QuestI8A == 0">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-446.78516, 137.96205, -519.27325" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68353).QuestI8A == 0" NpcId="2008841" XYZ="-445.2735, 137.8042, -519.55444" QuestId="68353" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68353) == 1 and GetQuestById(68353).QuestI8A == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-470.8199, 82.80485, -265.02673" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68353).QuestI8A == 1" NpcId="2008842" XYZ="-472.03784, 82.74963, -265.2171" QuestId="68353" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68353) == 1 and GetQuestById(68353).QuestI8A == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-505.81808, 53.478794, 34.725487" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68353).QuestI8A == 2" NpcId="2008843" XYZ="-506.82846, 53.421753, 36.453735" QuestId="68353" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68353) == 1 and GetQuestById(68353).QuestI8A == 3">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-596.4221, 36.569126, 325.16055" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68353).QuestI8A == 3" NpcId="2008844" XYZ="-598.2605, 36.453735, 328.66406" QuestId="68353" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68353) == 1 and GetQuestById(68353).QuestI8A == 4">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-584.30585, 36.58316, 467.77283" Land="True"/> <!-- ZoneId="612" -->
+        <UseObject Condition="GetQuestById(68353).QuestI8A == 4" NpcId="2008845" XYZ="-582.8794, 36.575806, 466.6056" QuestId="68353" StepId="1" />
+      </If>
+      <If Condition="GetQuestStep(68353) == 255">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="339.10922, 82.02064, -74.99638" Land="True"/> <!-- ZoneId="612" -->
+        <TurnIn QuestId="68353" NpcId="1020818" XYZ="339.55884, 82.34022, -76.52399"/>
+      </If>
+    </If>
+	
+	<!-- My Dear Brother -->
+    <If Condition="not IsQuestCompleted(68409) and IsQuestCompleted(68083) and IsQuestCompleted(68408) and IsQuestCompleted(68407) and Core.Player.ClassLevel &gt; 68">
+      <If Condition="not HasQuest(68409)">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-664.7212, 129.99998, -527.2555" Land="True"/> <!-- ZoneId="612" -->
+        <If Condition="IsQuestAcceptQualified(68409)">
+          <PickupQuest QuestId="68409" NpcId="1021232"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68409) == 1">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-374.9929, 41.96841, 24.64966" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1021233" XYZ="-373.37305, 42.268456, 22.75116" QuestId="68409" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68409) == 2">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-111.71225, 39.923847, -248.01256" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1021234" XYZ="-112.65735, 39.94139, -251.02618" QuestId="68409" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(68409) == 3">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="Castrum Oriens" AetheryteId="98"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="53.258278, 60.205704, -617.81384" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1021235" XYZ="54.215332, 60.30366, -619.5621" QuestId="68409" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68409) == 4">
+		<If condition="not IsOnMap(612)">
+			<TeleportTo Name="The Peering Stones" AetheryteId="99"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="405.77536, 62.25279, -524.30023" Land="True"/> <!-- ZoneId="612" -->
+        <TalkTo NpcId="1021236" XYZ="409.65894, 61.239017, -523.064" QuestId="68409" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(68409) == 255">
+        <GetTo ZoneId="635" XYZ="-155.5936, -4.5338473, -156.2675"/>  
+        <TurnIn QuestId="68409" NpcId="1021237" XYZ="-155.32166, -4.533847, -158.25134"/>
+      </If>
+    </If>
 		
 
 	
@@ -29,5 +733,41 @@ My Dear Brother
 	<CodeChunks>	
 	</CodeChunks>
     <GrindAreas>
+    <GrindArea name="68180">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-171.21228, 58.571022, -658.16144"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="5680" Weight="1"/> <!-- Velodyna Sarcosuchus -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="68195">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-273.84915, 41.193214, 103.4376"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="5681" Weight="1"/> <!-- Tracer Antlion -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="68356">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="400.40472, 60.159313, 392.91293"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="5808" Weight="1"/> <!-- Gold Dust Dhara -->
+        <TargetMob Id="5696" Weight="2"/> <!-- Highland Dhara -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="68355">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="337.2453, 77.9167, -232.63206"/>
+        <Hotspot Radius="200" XYZ="488.88647, 119.06342, -239.50552"/>
+        <Hotspot Radius="200" XYZ="280.98553, 69.59001, -171.07866"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="5692" Weight="1"/> <!-- Gagana -->
+      </TargetMobs>
+    </GrindArea>
     </GrindAreas>
 </Profile>
+	
