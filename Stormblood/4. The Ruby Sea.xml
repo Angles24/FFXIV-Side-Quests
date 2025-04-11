@@ -48,12 +48,426 @@ Up in Flames
 <Profile>
 	<Name>The Ruby Sea Side Quests</Name>
 	<Order>	 
+	
+	<!-- Fight or Flight -->
+    <If Condition="not IsQuestCompleted(68222)">
+      <If Condition="not HasQuest(68222)">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="106.430145, 0.9144956, -575.8391" Land="True"/> <!-- ZoneId="613" -->
+        <If Condition="IsQuestAcceptQualified(68222)">
+          <PickupQuest QuestId="68222" NpcId="1021509"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68222) == 1">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="490.2689, 32.19783, -791.29877" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1019248" XYZ="489.89087, 32.19783, -789.395" QuestId="68222" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68222) == 2">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="692.4574, -0.049864113, -574.20905" Land="True"/> <!-- ZoneId="613" -->
+        <LLSendChat Emote="battlestance" NpcId="1022402" XYZ="692.89685, -0.06297852, -573.4188" QuestId="68222" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(68222) == 3">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="493.51947, 32.19783, -789.0695" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1019248" XYZ="489.89087, 32.19783, -789.395" QuestId="68222" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68222) == 255">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="110.33287, 0.62352693, -575.23236" Land="True"/> <!-- ZoneId="613" -->
+        <TurnIn QuestId="68222" NpcId="1021509" XYZ="107.80493, 0.80715245, -574.548"/>
+      </If>
+    </If>
+	
+	<!-- Pirate Stew -->
+    <If Condition="not IsQuestCompleted(68220)">
+      <If Condition="not HasQuest(68220)">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="29.06193, 3.12598, -600.73413" Land="True"/> <!-- ZoneId="613" -->
+        <If Condition="IsQuestAcceptQualified(68220)">
+          <PickupQuest QuestId="68220" NpcId="1021511"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68220) == 1">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-180.5302, 1.0972111, -586.1316" Land="True"/> <!-- ZoneId="613" -->
+		<Grind grindRef="68220" while="GetQuestStep(68220) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(68220) == 255">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="29.365776, 3.1701834, -601.60834" Land="True"/> <!-- ZoneId="613" -->
+        <TurnIn QuestId="68220" NpcId="1021511" XYZ="31.3573, 3.245383, -602.74664"/>
+      </If>
+    </If>
+	
+	<!-- A Dance with Snakes -->
+    <If Condition="not IsQuestCompleted(68216)">
+      <If Condition="not HasQuest(68216)">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="44.99753, 21.003912, -637.9514" Land="True"/> <!-- ZoneId="613" -->
+        <If Condition="IsQuestAcceptQualified(68216)">
+          <PickupQuest QuestId="68216" NpcId="1021519"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68216) == 1">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="429.24594, 3.0223334, -677.7015" Land="True"/> <!-- ZoneId="613" -->
+      <UserDialog DialogText="Use Large Burlap Sacks to capture weakend Sea Serpents." QuestRequirementInLog="InLog" QuestId="68216" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68216) == 255">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="44.87008, 21.003912, -637.1973" Land="True"/> <!-- ZoneId="613" -->
+        <TurnIn ItemId="2002282" QuestId="68216" NpcId="1021519" XYZ="45.853394, 21.003914, -641.5045"/>
+      </If>
+    </If>
+	
+	<!-- The Soul's Remembrance -->
+    <If Condition="not IsQuestCompleted(68221)">
+      <If Condition="not HasQuest(68221)">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-3.4221249, 33.2304, -634.1304" Land="True"/> <!-- ZoneId="613" -->
+        <If Condition="IsQuestAcceptQualified(68221)">
+          <PickupQuest QuestId="68221" NpcId="1021512"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68221) == 1">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="224.41019, 1.9774544, -806.2609" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1023178" XYZ="223.3158, 2.0665014, -808.49927" QuestId="68221" StepId="1"/>
+      </If>
+      <While Condition="GetQuestStep(68221) == 2 and GetQuestById(68221).QuestI8A == 0">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="653.6008, 2.5903633, -820.0592" Land="True"/> <!-- ZoneId="613" -->
+		<Dismount/>
+		<RunCode name="68221"/>
+		<UseItem ItemId="2002317" InCombatOnly="True" UseHealthPercent="50" NpcId="5916" XYZ="656.58044, 2.5753202, -820.0046" QuestId="68221" StepId="2" UseTimes="1"/>
+      </While>
+      <While Condition="GetQuestStep(68221) == 2 and GetQuestById(68221).QuestI8A == 17">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="439.70883, 2.8660185, -601.63" Land="True"/> <!-- ZoneId="613" -->
+		<Dismount/>
+		<RunCode name="68221"/>
+		<UseItem ItemId="2002317" InCombatOnly="True" UseHealthPercent="50" NpcId="5916" XYZ="441.4043, 2.6819873, -593.7448" QuestId="68221" StepId="2" UseTimes="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68221) == 3">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="226.46933, 1.8499305, -805.7676" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1023178" XYZ="223.3158, 2.0665014, -808.49927" QuestId="68221" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68221) == 255">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-3.9712884, 33.2304, -634.364" Land="True"/> <!-- ZoneId="613" -->
+        <TurnIn QuestId="68221" NpcId="1021512" XYZ="-5.783203, 33.2304, -633.78345"/>
+      </If>
+    </If>
+	
+	<!-- Unfinished Business -->
+    <If Condition="not IsQuestCompleted(68224)">
+      <If Condition="not HasQuest(68224)">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-46.5806, 2.8408327, -634.0047" Land="True"/> <!-- ZoneId="613" -->
+        <If Condition="IsQuestAcceptQualified(68224)">
+          <PickupQuest QuestId="68224" NpcId="1022117"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68224) == 1">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="33.964664, 16.897331, -625.1643" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1022106" XYZ="30.105957, 16.897331, -625.8793" QuestId="68224" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68224) == 3">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="32.649414, 16.897331, -625.4511" Land="True"/> <!-- ZoneId="613" -->
+		<HandOver ItemId="2002263" NpcId="1022106" XYZ="30.105957, 16.897331, -625.8793" QuestId="68224" StepId="3"/>
+      </If>
+      <While Condition="GetQuestStep(68224) == 4">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="0" XYZ="666.649, 1.0018401, -661.33234" Land="True"/> <!-- ZoneId="613" -->
+		<Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68224) == 5">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="666.179, 1.0354068, -661.5299" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1022109" XYZ="667.38367, 0.86623794, -659.84595" QuestId="68224" StepId="5"/>
+      </If>
+      <If Condition="GetQuestStep(68224) == 255">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="32.32243, 16.897331, -625.604" Land="True"/> <!-- ZoneId="613" -->
+        <TurnIn QuestId="68224" NpcId="1022106" XYZ="30.105957, 16.897331, -625.8793"/>
+      </If>
+    </If>
+	
+	<!-- The Girl with the Pearl Ring -->
+    <If Condition="not IsQuestCompleted(68225)">
+      <If Condition="not HasQuest(68225)">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="32.32243, 16.897331, -625.604" Land="True"/> <!-- ZoneId="613" -->
+        <If Condition="IsQuestAcceptQualified(68225)">
+          <PickupQuest QuestId="68225" NpcId="1022106"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68225) == 1">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="573.2039, 0.73303545, 801.3512" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1023488" XYZ="573.32715, 0.69880545, 804.34875" QuestId="68225" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68225) == 2">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="598.7356, 0.93538165, 867.19653" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1022110" XYZ="603.57056, 0.9353817, 867.9789" QuestId="68225" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68225) == 3">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="492.6516, 30.152153, 764.5897" Land="True"/> <!-- ZoneId="613" -->
+        <LLSendChat Say="Suzume" NpcId="2008379" XYZ="494.59058, 30.166992, 764.24805" QuestId="68225" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68225) == 255">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="601.3223, 0.93538165, 867.7847" Land="True"/> <!-- ZoneId="613" -->
+        <TurnIn QuestId="68225" NpcId="1022110" XYZ="603.57056, 0.9353817, 867.9789"/>
+      </If>
+    </If>
+	
+	<!-- Family Affairs -->
+    <If Condition="not IsQuestCompleted(68226)">
+      <If Condition="not HasQuest(68226)">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="601.3223, 0.9353817, 867.7847" Land="True"/> <!-- ZoneId="613" -->
+        <If Condition="IsQuestAcceptQualified(68226)">
+          <PickupQuest QuestId="68226" NpcId="1022110"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68226) == 1">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="436.07828, 0.73303545, 715.5835" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1022111" XYZ="437.2472, 0.73303545, 715.32764" QuestId="68226" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68226) == 2">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="443.03336, 2.6945393, 591.2762" Land="True"/> <!-- ZoneId="613" -->
+        <UseObject NpcId="2008574" XYZ="444.11377, 3.0670166, 589.9595" QuestId="68226" StepId="2" />
+      </If>
+	  <If Condition="GetQuestStep(68226) == 3">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="336.85965, 0.16653836, 512.8435" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1022115" XYZ="335.6526, 0.4205821, 511.10095" QuestId="68226" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68226) == 4">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="334.43286, 0.46532285, 511.95248" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1022115" XYZ="335.6526, 0.4205821, 511.10095" QuestId="68226" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(68226) == 255">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="34.130955, 16.897331, -625.37036" Land="True"/> <!-- ZoneId="613" -->
+        <TurnIn QuestId="68226" NpcId="1022106" XYZ="30.105957, 16.897331, -625.8793"/>
+      </If>
+    </If>
+	
+	<!-- Stranded -->
+    <If Condition="not IsQuestCompleted(68218)">
+      <If Condition="not HasQuest(68218)">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-25.482838, 61.34498, -678.1991" Land="True"/> <!-- ZoneId="613" -->
+        <If Condition="IsQuestAcceptQualified(68218)">
+          <PickupQuest QuestId="68218" NpcId="1023307"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68218) == 1">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-34.54389, 63.01167, -677.5413" Land="True"/> <!-- ZoneId="613" -->
+        <Snipe NpcId="2008831" XYZ="-28.854858, 61.32605, -677.7905" QuestId="68218" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68218) == 2">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-25.482838, 61.34498, -678.1991" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1023307" XYZ="-28.641174, 61.344975, -679.3469" QuestId="68218" StepId="2"/>
+      </If>
+      <While Condition="GetQuestStep(68218) == 3">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="0" XYZ="-159.74207, -0.13577396, -663.2243" Land="True"/> <!-- ZoneId="613" -->
+		<Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68218) == 4">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-159.3894, -0.1310497, -663.35767" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1023308" XYZ="-159.92987, -0.14117318, -662.80615" QuestId="68218" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(68218) == 255">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-24.160923, 61.34498, -678.1666" Land="True"/> <!-- ZoneId="613" -->
+        <TurnIn QuestId="68218" NpcId="1023307" XYZ="-28.641174, 61.344975, -679.3469"/>
+      </If>
+    </If>
+	
+	<!-- In Cold Blood -->
+    <If Condition="not IsQuestCompleted(68219)">
+      <If Condition="not HasQuest(68219)">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="11.041158, 49.21076, -716.4561" Land="True"/> <!-- ZoneId="613" -->
+        <If Condition="IsQuestAcceptQualified(68219)">
+          <PickupQuest QuestId="68219" NpcId="1021520"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68219) == 1 and GetQuestById(68219).QuestI8A == 0">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-9.144674, 0.9983487, -812.75055" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1022752" XYZ="-10.238831, 0.75020504, -817.0138" QuestId="68219" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68219) == 1 and GetQuestById(68219).QuestI8A == 16">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-264.81656, 1.0307696, -495.5945" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1022753" XYZ="-264.8203, 1.1813434, -493.12582" QuestId="68219" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68219) == 1 and GetQuestById(68219).QuestI8A == 32">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="306.53223, 5.6409025, -669.62317" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1022751" XYZ="305.98914, 6.275602, -671.77844" QuestId="68219" StepId="1"/>
+      </If>
+	  <While Condition="GetQuestStep(68219) == 1 and GetQuestById(68219).QuestI8A == 49">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="530.49097, 0.08931911, -513.7076" Land="True"/> <!-- ZoneId="613" -->
+        <TalkTo NpcId="1022750" XYZ="529.5337, -0.03959952, -512.10803" QuestId="68219" StepId="1"/>
+      </While>
+      <If Condition="GetQuestStep(68219) == 255">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Onokoro" AetheryteId="106"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="11.92961, 49.21076, -716.10785" Land="True"/> <!-- ZoneId="613" -->
+        <TurnIn QuestId="68219" NpcId="1021520" XYZ="12.130859, 49.21076, -718.5016"/>
+      </If>
+    </If>
 		
 
 	
 	</Order>
 	<CodeChunks>	
+    <CodeChunk Name="68221">
+      <![CDATA[
+          uint[] questNpcIds = { 2008783,2008782 };
+          var npcId = GameObjectManager.GameObjects.Where(r => r.IsTargetable && questNpcIds.Contains(r.NpcId)).OrderBy(r => r.Distance()).FirstOrDefault();
+
+        if (!npcId.IsWithinInteractRange)
+        {
+          var _target = npcId.Location;
+          Navigator.PlayerMover.MoveTowards(_target);
+          
+          while (_target.Distance2D(Core.Me.Location) >= 4)
+          {
+            Navigator.PlayerMover.MoveTowards(_target);
+            await Coroutine.Sleep(100);
+          }
+          
+          Navigator.PlayerMover.MoveStop();
+        }
+
+        npcId.Interact();
+        await Coroutine.Sleep(7000);
+      ]]>
+    </CodeChunk>
 	</CodeChunks>
     <GrindAreas>
+    <GrindArea name="68220">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-180.5302, 1.0972111, -586.1316"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="5734" Weight="1"/> <!-- Gyuki -->
+      </TargetMobs>
+    </GrindArea>
     </GrindAreas>
 </Profile>
+	
