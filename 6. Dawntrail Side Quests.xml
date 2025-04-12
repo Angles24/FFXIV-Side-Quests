@@ -335,7 +335,7 @@ Dawntrail Side Quests
 	<!-- Urqopacha Side Quests -->
 	
     <!--  An Unlikely Inspector -->
-    <If Condition="not IsQuestCompleted(70566)">
+    <If Condition="not IsQuestCompleted(70566)and IsQuestCompleted(70408) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70566)">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
@@ -383,7 +383,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  To Catch a Merchant -->
-    <If Condition="not IsQuestCompleted(70588)">
+    <If Condition="not IsQuestCompleted(70588)and IsQuestCompleted(70587) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -424,7 +424,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Finding Bait -->
-    <If Condition="not IsQuestCompleted(70589)">
+    <If Condition="not IsQuestCompleted(70589)and IsQuestCompleted(70588) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -469,7 +469,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Springing the Trap -->
-    <If Condition="not IsQuestCompleted(70590)">
+    <If Condition="not IsQuestCompleted(70590)and IsQuestCompleted(70589) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -510,7 +510,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Too Much of a Good Thing -->
-    <If Condition="not IsQuestCompleted(70576) and IsQuestCompleted(70556) ">
+    <If Condition="not IsQuestCompleted(70576) and IsQuestCompleted(70556)and IsQuestCompleted(70413) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -537,7 +537,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  The Carmine Secret -->
-    <If Condition="not IsQuestCompleted(70567)">
+    <If Condition="not IsQuestCompleted(70567)and IsQuestCompleted(70408) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -571,7 +571,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  In Pursuit of Mezcal -->
-    <If Condition="not IsQuestCompleted(70574)">
+    <If Condition="not IsQuestCompleted(70574)and IsQuestCompleted(70413) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -597,8 +597,8 @@ Dawntrail Side Quests
       </If>
     </If>
 	  
-    <!--  A Sordid Situationl -->
-    <If Condition="not IsQuestCompleted(70573)">
+    <!--  A Sordid Situation -->
+    <If Condition="not IsQuestCompleted(70573)and IsQuestCompleted(70413) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -646,7 +646,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  The Reeking Robber -->
-    <If Condition="not IsQuestCompleted(70572)">
+    <If Condition="not IsQuestCompleted(70572)and IsQuestCompleted(70413) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -688,7 +688,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  A Blend for Every Taste -->
-    <If Condition="not IsQuestCompleted(70570)">
+    <If Condition="not IsQuestCompleted(70570)and IsQuestCompleted(70410) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -736,7 +736,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Mate is the Medicine -->
-    <If Condition="not IsQuestCompleted(70571)">
+    <If Condition="not IsQuestCompleted(70571)and IsQuestCompleted(70413) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -770,7 +770,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Gone Doll -->
-    <If Condition="not IsQuestCompleted(70569)">
+    <If Condition="not IsQuestCompleted(70569)and IsQuestCompleted(70410) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -797,7 +797,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Dirty Dancing -->
-    <If Condition="not IsQuestCompleted(70568)">
+    <If Condition="not IsQuestCompleted(70568)and IsQuestCompleted(70410) and Core.Player.ClassLevel &gt; 89">
 		<If condition="not IsOnMap(1187)">
 			<TeleportTo Name="Wachunpelo" AetheryteId="200"/>
 	   </If> 
@@ -824,7 +824,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Big Wounds to Heal -->
-    <If Condition="not IsQuestCompleted(70581)">
+    <If Condition="not IsQuestCompleted(70581)and IsQuestCompleted(70431) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -865,7 +865,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  The Biggest Sucker -->
-    <If Condition="not IsQuestCompleted(70585)">
+    <If Condition="not IsQuestCompleted(70585)and IsQuestCompleted(70431) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -916,7 +916,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Bearing Fruit -->
-    <If Condition="not IsQuestCompleted(70586)">
+    <If Condition="not IsQuestCompleted(70586)and IsQuestCompleted(70431) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -957,7 +957,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  A Tradition Best Preserved -->
-    <If Condition="not IsQuestCompleted(70582)">
+    <If Condition="not IsQuestCompleted(70582)and IsQuestCompleted(70431) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -984,7 +984,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Sparks of Joy -->
-    <If Condition="not IsQuestCompleted(70592)">
+    <If Condition="not IsQuestCompleted(70592)and IsQuestCompleted(70591) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -1036,7 +1036,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  A Giant's Footsteps -->
-    <If Condition="not IsQuestCompleted(70593)">
+    <If Condition="not IsQuestCompleted(70593)and IsQuestCompleted(70592) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -1093,7 +1093,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Resolve Reignited -->
-    <If Condition="not IsQuestCompleted(70594)">
+    <If Condition="not IsQuestCompleted(70594)and IsQuestCompleted(70593) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -1157,7 +1157,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Brains and Brawn -->
-    <If Condition="not IsQuestCompleted(70595)">
+    <If Condition="not IsQuestCompleted(70595)and IsQuestCompleted(70594) and IsQuestCompleted(70590) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -1206,7 +1206,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Soothing the Salty -->
-    <If Condition="not IsQuestCompleted(70584)">
+    <If Condition="not IsQuestCompleted(70584)and IsQuestCompleted(70431) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -1241,7 +1241,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  The Might Be Giant -->
-    <If Condition="not IsQuestCompleted(70578)">
+    <If Condition="not IsQuestCompleted(70578)and IsQuestCompleted(70426) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -1280,7 +1280,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Grandmother's Grave Gift -->
-    <If Condition="not IsQuestCompleted(70577)">
+    <If Condition="not IsQuestCompleted(70577)and IsQuestCompleted(70426) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -1321,7 +1321,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Paws off That Pigment -->
-    <If Condition="not IsQuestCompleted(70580)">
+    <If Condition="not IsQuestCompleted(70580)and IsQuestCompleted(70426) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -1348,7 +1348,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Putting Out Fires -->
-    <If Condition="not IsQuestCompleted(70579)">
+    <If Condition="not IsQuestCompleted(70579)and IsQuestCompleted(70426) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1187)">
 		<TeleportTo Name="Worlar's Echo" AetheryteId="201"/>
 	  </If> 
@@ -1396,7 +1396,7 @@ Dawntrail Side Quests
 	<!-- Kozamauka Side Quests -->
 
     <!--  Stretched Thin -->
-    <If Condition="not IsQuestCompleted(70606)">
+    <If Condition="not IsQuestCompleted(70606)and IsQuestCompleted(70406) and IsQuestCompleted(70556) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1423,7 +1423,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Mesmerizing Moss -->
-    <If Condition="not IsQuestCompleted(70603)">
+    <If Condition="not IsQuestCompleted(70603)and IsQuestCompleted(70406) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1458,7 +1458,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  A Strong Foundation -->
-    <If Condition="not IsQuestCompleted(70596)">
+    <If Condition="not IsQuestCompleted(70596)and IsQuestCompleted(70402) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1506,7 +1506,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Danger at the Dock -->
-    <If Condition="not IsQuestCompleted(70598)">
+    <If Condition="not IsQuestCompleted(70598)and IsQuestCompleted(70406) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1534,7 +1534,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Dry Run -->
-    <If Condition="not IsQuestCompleted(70604)">
+    <If Condition="not IsQuestCompleted(70604)and IsQuestCompleted(70406) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1569,7 +1569,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Dumpling Delivery -->
-    <If Condition="not IsQuestCompleted(70605)">
+    <If Condition="not IsQuestCompleted(70605)and IsQuestCompleted(70406) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1612,7 +1612,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Molting Season -->
-    <If Condition="not IsQuestCompleted(70597)">
+    <If Condition="not IsQuestCompleted(70597)and IsQuestCompleted(70402) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1642,7 +1642,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  One Feather at a Time -->
-    <If Condition="not IsQuestCompleted(70618)">
+    <If Condition="not IsQuestCompleted(70618)and IsQuestCompleted(70617) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1690,7 +1690,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  The Wind's Blessing -->
-    <If Condition="not IsQuestCompleted(70619)">
+    <If Condition="not IsQuestCompleted(70619)and IsQuestCompleted(70618) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1738,7 +1738,7 @@ Dawntrail Side Quests
     </If>
 	  
 	<!--  Nahanshe's Answer -->
-    <If Condition="not IsQuestCompleted(70620)">
+    <If Condition="not IsQuestCompleted(70620)and IsQuestCompleted(70619) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1800,7 +1800,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Secrets of the Wind -->
-    <If Condition="not IsQuestCompleted(70601)">
+    <If Condition="not IsQuestCompleted(70601)and IsQuestCompleted(70406) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1841,7 +1841,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Reeding the Room -->
-    <If Condition="not IsQuestCompleted(70599)">
+    <If Condition="not IsQuestCompleted(70599)and IsQuestCompleted(70406) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1882,7 +1882,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Leap into the Unknown -->
-    <If Condition="not IsQuestCompleted(70602)">
+    <If Condition="not IsQuestCompleted(70602)and IsQuestCompleted(70406) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -1926,7 +1926,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Lost Property -->
-    <If Condition="not IsQuestCompleted(70616)">
+    <If Condition="not IsQuestCompleted(70616)and IsQuestCompleted(70424) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Many Fires" AetheryteId="203"/>
 	  </If> 
@@ -1967,7 +1967,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Last Call for Earthenshire -->
-    <If Condition="not IsQuestCompleted(70614)">
+    <If Condition="not IsQuestCompleted(70614)and IsQuestCompleted(70424) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Many Fires" AetheryteId="203"/>
 	  </If> 
@@ -2015,7 +2015,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Many Fires, Many Mouths -->
-    <If Condition="not IsQuestCompleted(70615)">
+    <If Condition="not IsQuestCompleted(70615)and IsQuestCompleted(70424) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Many Fires" AetheryteId="203"/>
 	  </If> 
@@ -2049,7 +2049,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Broken Vessels -->
-    <If Condition="not IsQuestCompleted(70607)">
+    <If Condition="not IsQuestCompleted(70607)and IsQuestCompleted(70416) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Earthenshrie" AetheryteId="204"/>
 	  </If> 
@@ -2085,7 +2085,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Pact Away -->
-    <If Condition="not IsQuestCompleted(70613)">
+    <If Condition="not IsQuestCompleted(70613)and IsQuestCompleted(70420) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Earthenshrie" AetheryteId="204"/>
 	  </If> 
@@ -2126,7 +2126,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Movamuq's Treasure -->
-    <If Condition="not IsQuestCompleted(70622)">
+    <If Condition="not IsQuestCompleted(70622)and IsQuestCompleted(70621) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Earthenshrie" AetheryteId="204"/>
 	  </If> 
@@ -2169,7 +2169,7 @@ Dawntrail Side Quests
     </If>
 
     <!--  Helping the Helphand -->
-    <If Condition="not IsQuestCompleted(70623)">
+    <If Condition="not IsQuestCompleted(70623)and IsQuestCompleted(70622) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Earthenshrie" AetheryteId="204"/>
 	  </If> 
@@ -2212,7 +2212,7 @@ Dawntrail Side Quests
     </If> 
 	  
     <!--  Give as Good as You Get -->
-    <If Condition="not IsQuestCompleted(70624)">
+    <If Condition="not IsQuestCompleted(70624)and IsQuestCompleted(70623) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Earthenshrie" AetheryteId="204"/>
 	  </If> 
@@ -2271,7 +2271,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  The Landsguard's New Clothes -->
-    <If Condition="not IsQuestCompleted(70625)">
+    <If Condition="not IsQuestCompleted(70625)and IsQuestCompleted(70624) and IsQuestCompleted(70620) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Ok'hanu" AetheryteId="202"/>
 	  </If> 
@@ -2328,7 +2328,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Pole Apart -->
-    <If Condition="not IsQuestCompleted(70608)">
+    <If Condition="not IsQuestCompleted(70608)and IsQuestCompleted(70420) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Earthenshrie" AetheryteId="204"/>
 	  </If> 
@@ -2369,7 +2369,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Water Colors -->
-    <If Condition="not IsQuestCompleted(70611)">
+    <If Condition="not IsQuestCompleted(70611)and IsQuestCompleted(70420) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Earthenshrie" AetheryteId="204"/>
 	  </If> 
@@ -2432,7 +2432,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Take a Powder -->
-    <If Condition="not IsQuestCompleted(70612)">
+    <If Condition="not IsQuestCompleted(70612)and IsQuestCompleted(70416) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Earthenshrie" AetheryteId="204"/>
 	  </If> 
@@ -2459,7 +2459,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Twinkle Twinkle Little Stones -->
-    <If Condition="not IsQuestCompleted(70609)">
+    <If Condition="not IsQuestCompleted(70609)and IsQuestCompleted(70416) and Core.Player.ClassLevel &gt; 89">
 	  <If condition="not IsOnMap(1188)">
 		<TeleportTo Name="Earthenshrie" AetheryteId="204"/>
 	  </If> 
@@ -2509,7 +2509,7 @@ Dawntrail Side Quests
 	<!-- Yak Tel Side Quests -->
 	
     <!--  A Stomach for Change -->
-    <If Condition="not IsQuestCompleted(70635)">
+    <If Condition="not IsQuestCompleted(70635) and IsQuestCompleted(70606) and IsQuestCompleted(70576) and IsQuestCompleted(70438) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70635)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2536,7 +2536,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Getting to the Bottom of Things -->
-    <If Condition="not IsQuestCompleted(70627)">
+    <If Condition="not IsQuestCompleted(70627) and IsQuestCompleted(70436) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70627)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2571,7 +2571,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Hunting for the Family -->
-    <If Condition="not IsQuestCompleted(70647)">
+    <If Condition="not IsQuestCompleted(70647) and IsQuestCompleted(70646) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70647)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2613,7 +2613,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  A Hunter's Dream -->
-    <If Condition="not IsQuestCompleted(70648)">
+    <If Condition="not IsQuestCompleted(70648) and IsQuestCompleted(70647) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70648)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2647,7 +2647,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  The Trial Commences -->
-    <If Condition="not IsQuestCompleted(70649)">
+    <If Condition="not IsQuestCompleted(70649) and IsQuestCompleted(70648) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70649)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2689,7 +2689,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Hunters with Bite -->
-    <If Condition="not IsQuestCompleted(70631)">
+    <If Condition="not IsQuestCompleted(70631) and IsQuestCompleted(70438) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70631)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2724,7 +2724,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  The Crimson Cenote -->
-    <If Condition="not IsQuestCompleted(70628)">
+    <If Condition="not IsQuestCompleted(70628) and IsQuestCompleted(70436) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70628)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2759,7 +2759,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Preying Mantises -->
-    <If Condition="not IsQuestCompleted(70626)">
+    <If Condition="not IsQuestCompleted(70626) and IsQuestCompleted(70436) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70626)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2788,7 +2788,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  To Forge in the Forest -->
-    <If Condition="not IsQuestCompleted(70634)">
+    <If Condition="not IsQuestCompleted(70634) and IsQuestCompleted(70438) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70634)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2843,7 +2843,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Sick Day -->
-    <If Condition="not IsQuestCompleted(70633)">
+    <If Condition="not IsQuestCompleted(70633) and IsQuestCompleted(70438) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70633)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2878,7 +2878,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Watching the Watchtowers -->
-    <If Condition="not IsQuestCompleted(70629)">
+    <If Condition="not IsQuestCompleted(70629) and IsQuestCompleted(70436) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70629)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2912,7 +2912,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Reminders of the Past -->
-    <If Condition="not IsQuestCompleted(70632)">
+    <If Condition="not IsQuestCompleted(70632) and IsQuestCompleted(70438) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70632)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -2953,7 +2953,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Two Hearts Aflutter -->
-    <If Condition="not IsQuestCompleted(70637)">
+    <If Condition="not IsQuestCompleted(70637) and IsQuestCompleted(70444) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70637)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Mamook" AetheryteId="206"/>
@@ -2996,7 +2996,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Carved in Stone -->
-    <If Condition="not IsQuestCompleted(70636)">
+    <If Condition="not IsQuestCompleted(70636) and IsQuestCompleted(70444) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70636)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Mamook" AetheryteId="206"/>
@@ -3023,7 +3023,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Proper Respects -->
-    <If Condition="not IsQuestCompleted(70638)">
+    <If Condition="not IsQuestCompleted(70638) and IsQuestCompleted(70444) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70638)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Mamook" AetheryteId="206"/>
@@ -3071,7 +3071,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Seek the Sun -->
-    <If Condition="not IsQuestCompleted(70641)">
+    <If Condition="not IsQuestCompleted(70641) and IsQuestCompleted(70444) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70641)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Mamook" AetheryteId="206"/>
@@ -3105,7 +3105,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Spirit's Call -->
-    <If Condition="not IsQuestCompleted(70640)">
+    <If Condition="not IsQuestCompleted(70640) and IsQuestCompleted(70444) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70640)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Mamook" AetheryteId="206"/>
@@ -3160,7 +3160,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Growing Grove -->
-    <If Condition="not IsQuestCompleted(70643)">
+    <If Condition="not IsQuestCompleted(70643) and IsQuestCompleted(70444) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70643)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Mamook" AetheryteId="206"/>
@@ -3204,7 +3204,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Secret of Sweetness -->
-    <If Condition="not IsQuestCompleted(70642)">
+    <If Condition="not IsQuestCompleted(70642) and IsQuestCompleted(70444) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70642)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Mamook" AetheryteId="206"/>
@@ -3238,7 +3238,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  I'm with Wivre -->
-    <If Condition="not IsQuestCompleted(70645)">
+    <If Condition="not IsQuestCompleted(70645) and IsQuestCompleted(70444) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70645)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -3284,7 +3284,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Age Is Just a Number -->
-    <If Condition="not IsQuestCompleted(70644)">
+    <If Condition="not IsQuestCompleted(70644) and IsQuestCompleted(70444) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70644)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Iq Br'aax" AetheryteId="205"/>
@@ -3312,7 +3312,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Remembering a Dream -->
-    <If Condition="not IsQuestCompleted(70651)">
+    <If Condition="not IsQuestCompleted(70651) and IsQuestCompleted(70650) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70651)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Mamook" AetheryteId="206"/>
@@ -3360,7 +3360,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Budding Promise -->
-    <If Condition="not IsQuestCompleted(70652)">
+    <If Condition="not IsQuestCompleted(70652) and IsQuestCompleted(70651) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70652)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Mamook" AetheryteId="206"/>
@@ -3394,7 +3394,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Skill of a Veteran -->
-    <If Condition="not IsQuestCompleted(70653)">
+    <If Condition="not IsQuestCompleted(70653) and IsQuestCompleted(70652) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70653)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Mamook" AetheryteId="206"/>
@@ -3428,7 +3428,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  One Forest -->
-    <If Condition="not IsQuestCompleted(70654)">
+    <If Condition="not IsQuestCompleted(70654) and IsQuestCompleted(70653) and IsQuestCompleted(70649) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70654)">
 		<If condition="not IsOnMap(1189)">
 			<TeleportTo Name="Mamook" AetheryteId="206"/>
@@ -3521,7 +3521,7 @@ Dawntrail Side Quests
 	<!-- Shaaloani Side Quests -->
 	
     <!--  Gentle Giants -->
-    <If Condition="not IsQuestCompleted(70659)">
+    <If Condition="not IsQuestCompleted(70659) and IsQuestCompleted(70448) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70659)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Hhusatahwi" AetheryteId="207"/>
@@ -3577,7 +3577,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Taste of the Wilds -->
-    <If Condition="not IsQuestCompleted(70657)">
+    <If Condition="not IsQuestCompleted(70657) and IsQuestCompleted(70448) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70657)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Hhusatahwi" AetheryteId="207"/>
@@ -3612,7 +3612,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  A Private Delivery -->
-    <If Condition="not IsQuestCompleted(70655)">
+    <If Condition="not IsQuestCompleted(70655) and IsQuestCompleted(70448) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70655)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Hhusatahwi" AetheryteId="207"/>
@@ -3652,7 +3652,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  A Sobering Proposition -->
-    <If Condition="not IsQuestCompleted(70656)">
+    <If Condition="not IsQuestCompleted(70656) and IsQuestCompleted(70448) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70656)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Hhusatahwi" AetheryteId="207"/>
@@ -3703,7 +3703,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Death by Popoto -->
-    <If Condition="not IsQuestCompleted(70668)">
+    <If Condition="not IsQuestCompleted(70668) and IsQuestCompleted(70459) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70668)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Hhusatahwi" AetheryteId="207"/>
@@ -3744,7 +3744,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Fruitful Endeavors -->
-    <If Condition="not IsQuestCompleted(70658)">
+    <If Condition="not IsQuestCompleted(70658) and IsQuestCompleted(70459) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70658)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Hhusatahwi" AetheryteId="207"/>
@@ -3778,7 +3778,7 @@ Dawntrail Side Quests
     </If>
 		  
     <!--  Tastes Like Home -->
-    <If Condition="not IsQuestCompleted(70670)">
+    <If Condition="not IsQuestCompleted(70670) and IsQuestCompleted(70635) and IsQuestCompleted(70452) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70670)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Hhusatahwi" AetheryteId="207"/>
@@ -3805,7 +3805,7 @@ Dawntrail Side Quests
     </If>
 		  
     <!--  Waiting One's Turn -->
-    <If Condition="not IsQuestCompleted(70660)">
+    <If Condition="not IsQuestCompleted(70660) and IsQuestCompleted(70459) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70660)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Hhusatahwi" AetheryteId="207"/>
@@ -3844,7 +3844,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Watching Big Brother -->
-    <If Condition="not IsQuestCompleted(70667)">
+    <If Condition="not IsQuestCompleted(70667) and IsQuestCompleted(70452) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70667)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -3879,7 +3879,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Broken Record -->
-    <If Condition="not IsQuestCompleted(70677)">
+    <If Condition="not IsQuestCompleted(70677) and IsQuestCompleted(70676) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70677)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Hhusatahwi" AetheryteId="207"/>
@@ -3906,7 +3906,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Back on Stage -->
-    <If Condition="not IsQuestCompleted(70678)">
+    <If Condition="not IsQuestCompleted(70678) and IsQuestCompleted(70677) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70678)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Hhusatahwi" AetheryteId="207"/>
@@ -3956,7 +3956,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  A Family's Worth -->
-    <If Condition="not IsQuestCompleted(70679)">
+    <If Condition="not IsQuestCompleted(70679) and IsQuestCompleted(70678) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70679)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Hhusatahwi" AetheryteId="207"/>
@@ -3990,7 +3990,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  A Tool Tale -->
-    <If Condition="not IsQuestCompleted(70669)">
+    <If Condition="not IsQuestCompleted(70669) and IsQuestCompleted(70459) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70669)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4017,7 +4017,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Bomb Disposal -->
-    <If Condition="not IsQuestCompleted(70661)">
+    <If Condition="not IsQuestCompleted(70661) and IsQuestCompleted(70449) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70661)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4044,7 +4044,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Surprising Source of Fiber -->
-    <If Condition="not IsQuestCompleted(70663)">
+    <If Condition="not IsQuestCompleted(70663) and IsQuestCompleted(70459) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70663)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4085,7 +4085,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  A Refined Perspective -->
-    <If Condition="not IsQuestCompleted(70662)">
+    <If Condition="not IsQuestCompleted(70662) and IsQuestCompleted(70449) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70662)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4112,7 +4112,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Working on a Full Stomach -->
-    <If Condition="not IsQuestCompleted(70665)">
+    <If Condition="not IsQuestCompleted(70665) and IsQuestCompleted(70452) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70665)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4139,7 +4139,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  A Grave Matter -->
-    <If Condition="not IsQuestCompleted(70664)">
+    <If Condition="not IsQuestCompleted(70664) and IsQuestCompleted(70459) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70664)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4173,7 +4173,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  A Mount with a View -->
-    <If Condition="not IsQuestCompleted(70673)">
+    <If Condition="not IsQuestCompleted(70673) and IsQuestCompleted(70454) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70673)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4207,7 +4207,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Snakes on a Train(line) -->
-    <If Condition="not IsQuestCompleted(70671)">
+    <If Condition="not IsQuestCompleted(70671) and IsQuestCompleted(70454) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70671)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4234,7 +4234,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Down in the Mouth -->
-    <If Condition="not IsQuestCompleted(70681)">
+    <If Condition="not IsQuestCompleted(70681) and IsQuestCompleted(70680) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70681)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4275,7 +4275,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Listen to Your Elders -->
-    <If Condition="not IsQuestCompleted(70682)">
+    <If Condition="not IsQuestCompleted(70682) and IsQuestCompleted(70681) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70682)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4323,7 +4323,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Back in Blue -->
-    <If Condition="not IsQuestCompleted(70683)">
+    <If Condition="not IsQuestCompleted(70683) and IsQuestCompleted(70682) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70683)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4358,7 +4358,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Dig for Victory -->
-    <If Condition="not IsQuestCompleted(70684)">
+    <If Condition="not IsQuestCompleted(70684) and IsQuestCompleted(70683) and IsQuestCompleted(70679) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70684)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Sheshenewezi Springs" AetheryteId="208"/>
@@ -4418,7 +4418,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  The Horns That Bind Us -->
-    <If Condition="not IsQuestCompleted(70675)">
+    <If Condition="not IsQuestCompleted(70675) and IsQuestCompleted(70454) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70675)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Mehwahhetsoan" AetheryteId="209"/>
@@ -4452,7 +4452,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  It's a Terrible Ring to Lose -->
-    <If Condition="not IsQuestCompleted(70672)">
+    <If Condition="not IsQuestCompleted(70672) and IsQuestCompleted(70454) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70672)">
 		<If condition="not IsOnMap(1190)">
 			<TeleportTo Name="Mehwahhetsoan" AetheryteId="209"/>
@@ -4493,7 +4493,7 @@ Dawntrail Side Quests
 	<!-- Heritage Found Side Quests -->
 	
     <!--  Refined Tastes -->
-    <If Condition="not IsQuestCompleted(70690)">
+    <If Condition="not IsQuestCompleted(70690) and IsQuestCompleted(70670) and IsQuestCompleted(70467) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70690)">
 		<If condition="not IsOnMap(1191)">
 			<TeleportTo Name="The Outskirts" AetheryteId="211"/>
@@ -4520,7 +4520,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Gwok Away -->
-    <If Condition="not IsQuestCompleted(70685)">
+    <If Condition="not IsQuestCompleted(70685) and IsQuestCompleted(70465) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70685)">
 		<If condition="not IsOnMap(1191)">
 			<TeleportTo Name="The Outskirts" AetheryteId="211"/>
@@ -4561,7 +4561,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Natural Selection -->
-    <If Condition="not IsQuestCompleted(70686)">
+    <If Condition="not IsQuestCompleted(70686) and IsQuestCompleted(70465) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70686)">
 		<If condition="not IsOnMap(1191)">
 			<TeleportTo Name="The Outskirts" AetheryteId="211"/>
@@ -4599,7 +4599,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  The Miracle of Electrope -->
-    <If Condition="not IsQuestCompleted(70687)">
+    <If Condition="not IsQuestCompleted(70687) and IsQuestCompleted(70465) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70687)">
 		<If condition="not IsOnMap(1191)">
 			<TeleportTo Name="The Outskirts" AetheryteId="211"/>
@@ -4646,7 +4646,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Fear and Lightning in the Thunderyards -->
-    <If Condition="not IsQuestCompleted(70688)">
+    <If Condition="not IsQuestCompleted(70688) and IsQuestCompleted(70467) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70688)">
 		<If condition="not IsOnMap(1191)">
 			<TeleportTo Name="The Outskirts" AetheryteId="211"/>
@@ -4695,7 +4695,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  History Reforged -->
-    <If Condition="not IsQuestCompleted(70691)">
+    <If Condition="not IsQuestCompleted(70691) and IsQuestCompleted(70476) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70691)">
 		<If condition="not IsOnMap(1191)">
 			<TeleportTo Name="The Outskirts" AetheryteId="211"/>
@@ -4736,7 +4736,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Storm's Traces -->
-    <If Condition="not IsQuestCompleted(70694)">
+    <If Condition="not IsQuestCompleted(70694) and IsQuestCompleted(70476) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70694)">
 		<If condition="not IsOnMap(1191)">
 			<TeleportTo Name="Electrope Strike" AetheryteId="212"/>
@@ -4772,7 +4772,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  A Well-oiled Machine -->
-    <If Condition="not IsQuestCompleted(70693)">
+    <If Condition="not IsQuestCompleted(70693) and IsQuestCompleted(70476) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70693)">
 		<If condition="not IsOnMap(1191)">
 			<TeleportTo Name="Electrope Strike" AetheryteId="212"/>
@@ -4801,7 +4801,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Yyupye's Dirt -->
-    <If Condition="not IsQuestCompleted(70697)">
+    <If Condition="not IsQuestCompleted(70697) and IsQuestCompleted(70696) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70697)">
 		<If condition="not IsOnMap(1191)">
 			<TeleportTo Name="The Outskirts" AetheryteId="211"/>
@@ -4856,7 +4856,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  What She Left Behind -->
-    <If Condition="not IsQuestCompleted(70698)">
+    <If Condition="not IsQuestCompleted(70698) and IsQuestCompleted(70697) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70698)">
 		<If condition="not IsOnMap(1191)">
 			<TeleportTo Name="The Outskirts" AetheryteId="211"/>
@@ -4898,7 +4898,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  All That She Carried -->
-    <If Condition="not IsQuestCompleted(70699)">
+    <If Condition="not IsQuestCompleted(70699) and IsQuestCompleted(70698) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70699)">
 		<If condition="not IsOnMap(1191)">
 			<TeleportTo Name="The Outskirts" AetheryteId="211"/>
@@ -4943,7 +4943,7 @@ Dawntrail Side Quests
 	<!-- Living Memory Side Quests -->
 	
     <!--  The Canals of History -->
-    <If Condition="not IsQuestCompleted(70711)">
+    <If Condition="not IsQuestCompleted(70711) and IsQuestCompleted(70486) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70711)">
 		<If condition="not IsOnMap(1192)">
 			<TeleportTo Name="Leynode Mnemo" AetheryteId="213"/>
@@ -4984,7 +4984,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Brotherly Bonds Know No Barrier -->
-    <If Condition="not IsQuestCompleted(70713)">
+    <If Condition="not IsQuestCompleted(70713) and IsQuestCompleted(70488) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70713)">
 		<If condition="not IsOnMap(1192)">
 			<TeleportTo Name="Leynode Mnemo" AetheryteId="213"/>
@@ -5027,7 +5027,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Leaving This Place for Good -->
-    <If Condition="not IsQuestCompleted(70717)">
+    <If Condition="not IsQuestCompleted(70717) and IsQuestCompleted(70495) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70717)">
 		<If condition="not IsOnMap(1192)">
 			<TeleportTo Name="Leynode Aero" AetheryteId="215"/>
@@ -5069,7 +5069,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Lindblum, We Hardly Knew Ye -->
-    <If Condition="not IsQuestCompleted(70716)">
+    <If Condition="not IsQuestCompleted(70716) and IsQuestCompleted(70495) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70716)">
 		<If condition="not IsOnMap(1192)">
 			<TeleportTo Name="Leynode Aero" AetheryteId="215"/>
@@ -5105,7 +5105,7 @@ Dawntrail Side Quests
 	<!-- Solution Nine Side Quests -->
 	
     <!--  Of Lightning Rings and Romance -->
-    <If Condition="not IsQuestCompleted(70707)">
+    <If Condition="not IsQuestCompleted(70707) and IsQuestCompleted(70480) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70707)">
         <GetTo ZoneId="1186" XYZ="-180.97801, 1.1086464E-05, 44.23075"/>  
         <If Condition="IsQuestAcceptQualified(70707)">
@@ -5123,7 +5123,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Credits Where Credits Are Due -->
-    <If Condition="not IsQuestCompleted(70700)">
+    <If Condition="not IsQuestCompleted(70700) and IsQuestCompleted(70473) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70700)">
         <GetTo ZoneId="1186" XYZ="-183.60852, 0.65999997, -43.060337"/>  
         <If Condition="IsQuestAcceptQualified(70700)">
@@ -5141,7 +5141,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Warrior of Light, Wrangler of Cats -->
-    <If Condition="not IsQuestCompleted(70708)">
+    <If Condition="not IsQuestCompleted(70708) and IsQuestCompleted(70480) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70708)">
         <GetTo ZoneId="1186" XYZ="-311.0919, 4.690008, -35.707157"/>  
         <If Condition="IsQuestAcceptQualified(70708)">
@@ -5151,7 +5151,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  An Usher's Lament -->
-    <If Condition="not IsQuestCompleted(70703)">
+    <If Condition="not IsQuestCompleted(70703) and IsQuestCompleted(70480) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70703)">
         <GetTo ZoneId="1186" XYZ="-345.00952, 9.519508, 17.942535"/>  
         <If Condition="IsQuestAcceptQualified(70703)">
@@ -5173,7 +5173,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Problem Child, Solution Nine -->
-    <If Condition="not IsQuestCompleted(70702)">
+    <If Condition="not IsQuestCompleted(70702) and IsQuestCompleted(70473) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70702)">
         <GetTo ZoneId="1186" XYZ="-316.47116, 13.999978, 156.08716"/>  
         <If Condition="IsQuestAcceptQualified(70702)">
@@ -5199,7 +5199,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  Rousing Mister Robot -->
-    <If Condition="not IsQuestCompleted(70706)">
+    <If Condition="not IsQuestCompleted(70706) and IsQuestCompleted(70480) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70706)">
         <GetTo ZoneId="1186" XYZ="-156.21321, 2.1999714, 228.64804"/>  
         <If Condition="IsQuestAcceptQualified(70706)">
@@ -5225,7 +5225,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  A Fitting Send-off -->
-    <If Condition="not IsQuestCompleted(70705)">
+    <If Condition="not IsQuestCompleted(70705) and IsQuestCompleted(70480) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70705)">
         <GetTo ZoneId="1186" XYZ="382.88135, 60, 58.620235"/>  
         <If Condition="IsQuestAcceptQualified(70705)">
@@ -5248,7 +5248,7 @@ Dawntrail Side Quests
     </If>
 	
     <!--  True Vue Blues -->
-    <If Condition="not IsQuestCompleted(70701)">
+    <If Condition="not IsQuestCompleted(70701) and IsQuestCompleted(70473) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70701)">
         <GetTo ZoneId="1186" XYZ="499.67493, 59.99981, 162.85443"/>  
         <If Condition="IsQuestAcceptQualified(70701)">
@@ -5282,7 +5282,7 @@ Dawntrail Side Quests
     </If>
 	  
     <!--  Towering Troubles -->
-    <If Condition="not IsQuestCompleted(70704)">
+    <If Condition="not IsQuestCompleted(70704) and IsQuestCompleted(70480) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70704)">
         <GetTo ZoneId="1186" XYZ="-39.714993, 38.80659, -458.20154"/>  
         <If Condition="IsQuestAcceptQualified(70704)">
@@ -5308,7 +5308,7 @@ Dawntrail Side Quests
     </If>
 		  
     <!--  Tasteful Memories -->
-    <If Condition="not IsQuestCompleted(70709)">
+    <If Condition="not IsQuestCompleted(70709) and IsQuestCompleted(70480) and IsQuestCompleted(70690) and Core.Player.ClassLevel &gt; 89">
       <If Condition="not HasQuest(70709)">
         <GetTo ZoneId="1186" XYZ="263.86652, 59.69999, 4.3783245"/>  
         <If Condition="IsQuestAcceptQualified(70709)">
@@ -5342,7 +5342,7 @@ Dawntrail Side Quests
     </If>	
 	
 	<!--  Warrior of Light, Wrangler of Cats -->
-    <If Condition="not IsQuestCompleted(70708)">
+    <If Condition="not IsQuestCompleted(70708) and IsQuestCompleted(70480) and Core.Player.ClassLevel &gt; 89">
       <If Condition="GetQuestStep(70708) == 1">
         <GetTo ZoneId="1186" XYZ="-375.1309, 14.000001, 140.98866"/>  
         <TalkTo NpcId="2014292" XYZ="-375.93652, 13.992493, 144.06042" QuestId="70708" StepId="1"/>
@@ -5360,7 +5360,7 @@ Dawntrail Side Quests
     </If>
 	
     <!-- When Death Comes to Dinner -->
-    <If Condition="not IsQuestCompleted(70843) and IsQuestCompleted(70495) and IsQuestCompleted(70709)">
+    <If Condition="not IsQuestCompleted(70843) and IsQuestCompleted(70495) and IsQuestCompleted(70709) and Core.Player.ClassLevel &gt; 99">
       <If Condition="not HasQuest(70843)">
         <GetTo ZoneId="1185" XYZ="151.5666, -17.9645, 93.90087"/>  
         <If Condition="IsQuestAcceptQualified(70843)">
