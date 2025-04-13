@@ -50,7 +50,7 @@ Up in Flames
 	<Order>	 
 	
 	<!-- Fight or Flight -->
-    <If Condition="not IsQuestCompleted(68222)">
+    <If Condition="not IsQuestCompleted(68222) and IsQuestCompleted(68017) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68222)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -91,7 +91,7 @@ Up in Flames
     </If>
 	
 	<!-- Pirate Stew -->
-    <If Condition="not IsQuestCompleted(68220)">
+    <If Condition="not IsQuestCompleted(68220) and IsQuestCompleted(68017) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68220)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -118,7 +118,7 @@ Up in Flames
     </If>
 	
 	<!-- A Dance with Snakes -->
-    <If Condition="not IsQuestCompleted(68216)">
+    <If Condition="not IsQuestCompleted(68216) and IsQuestCompleted(68017) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68216)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -145,7 +145,7 @@ Up in Flames
     </If>
 	
 	<!-- The Soul's Remembrance -->
-    <If Condition="not IsQuestCompleted(68221)">
+    <If Condition="not IsQuestCompleted(68221) and IsQuestCompleted(68017) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68221)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -197,7 +197,7 @@ Up in Flames
     </If>
 	
 	<!-- Unfinished Business -->
-    <If Condition="not IsQuestCompleted(68224)">
+    <If Condition="not IsQuestCompleted(68224) and IsQuestCompleted(68223) and IsQuestCompleted(68017) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68224)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -214,6 +214,10 @@ Up in Flames
 		<FlyTo AllowedVariance="1" XYZ="33.964664, 16.897331, -625.1643" Land="True"/> <!-- ZoneId="613" -->
         <TalkTo NpcId="1022106" XYZ="30.105957, 16.897331, -625.8793" QuestId="68224" StepId="1"/>
       </If>
+	  <If Condition="GetQuestStep(68224) == 2">
+        <GetTo ZoneId="628" XYZ="-129.43666, -4.999999, 141.65878"/>  
+        <HandOver ItemId="2002225" NpcId="1019049" XYZ="-130.87665, -5.000044, 140.82544" QuestId="68224" StepId="2"/>
+    </If>
       <If Condition="GetQuestStep(68224) == 3">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -246,7 +250,7 @@ Up in Flames
     </If>
 	
 	<!-- The Girl with the Pearl Ring -->
-    <If Condition="not IsQuestCompleted(68225)">
+    <If Condition="not IsQuestCompleted(68225) and IsQuestCompleted(68017) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68225)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -287,7 +291,7 @@ Up in Flames
     </If>
 	
 	<!-- Family Affairs -->
-    <If Condition="not IsQuestCompleted(68226)">
+    <If Condition="not IsQuestCompleted(68226) and IsQuestCompleted(68225) and IsQuestCompleted(68017) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68226)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
@@ -317,6 +321,7 @@ Up in Flames
 		</If>
 		<FlyTo AllowedVariance="1" XYZ="336.85965, 0.16653836, 512.8435" Land="True"/> <!-- ZoneId="613" -->
         <TalkTo NpcId="1022115" XYZ="335.6526, 0.4205821, 511.10095" QuestId="68226" StepId="3"/>
+		<WaitWhile Condition="not GetQuestStep(68226) == 4"/>
       </If>
 	  <If Condition="GetQuestStep(68226) == 4">
 		<If condition="not IsOnMap(613)">
@@ -335,7 +340,7 @@ Up in Flames
     </If>
 	
 	<!-- Stranded -->
-    <If Condition="not IsQuestCompleted(68218)">
+    <If Condition="not IsQuestCompleted(68218) and IsQuestCompleted(68017) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68218)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -384,7 +389,7 @@ Up in Flames
     </If>
 	
 	<!-- In Cold Blood -->
-    <If Condition="not IsQuestCompleted(68219)">
+    <If Condition="not IsQuestCompleted(68219) and IsQuestCompleted(68017) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68219)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -432,7 +437,7 @@ Up in Flames
     </If>
 	
 	<!-- Ethereal Lights -->
-    <If Condition="not IsQuestCompleted(68213)">
+    <If Condition="not IsQuestCompleted(68213) and IsQuestCompleted(68209) and IsQuestCompleted(68014) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68213)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -447,7 +452,7 @@ Up in Flames
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
 		</If>
 		<FlyTo AllowedVariance="1" XYZ="670.67206, 1.8901141, 713.7144" Land="True"/> <!-- ZoneId="613" -->
-        <UseObject Condition="GetQuestById(68213).QuestI8A == " NpcId="2008347" XYZ="671.5648, 2.243042, 712.09265" QuestId="68213" StepId="1" />
+        <UseObject Condition="GetQuestById(68213).QuestI8A == 0" NpcId="2008347" XYZ="671.5648, 2.243042, 712.09265" QuestId="68213" StepId="1" />
       </If>
 	  <If Condition="GetQuestStep(68213) == 1 and GetQuestById(68213).QuestI8A == 16">
 		<If condition="not IsOnMap(613)">
@@ -473,7 +478,7 @@ Up in Flames
     </If>
 	
 	<!-- First Line of Defense -->
-    <If Condition="not IsQuestCompleted(68212)">
+    <If Condition="not IsQuestCompleted(68212) and IsQuestCompleted(68209) and IsQuestCompleted(68014) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68212)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
@@ -514,7 +519,7 @@ Up in Flames
     </If>
 	
 	<!-- Protector of the Small -->
-    <If Condition="not IsQuestCompleted(68214)">
+    <If Condition="not IsQuestCompleted(68214) and IsQuestCompleted(68213) and IsQuestCompleted(68212) and IsQuestCompleted(68014) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68214)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
@@ -549,7 +554,7 @@ Up in Flames
     </If>
 	
 	<!-- The Organ of Sight -->
-    <If Condition="not IsQuestCompleted(68210)">
+    <If Condition="not IsQuestCompleted(68210) and IsQuestCompleted(68014) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68210)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
@@ -576,7 +581,7 @@ Up in Flames
     </If>
 	
 	<!-- The Devil's Cough -->
-    <If Condition="not IsQuestCompleted(68211)">
+    <If Condition="not IsQuestCompleted(68211) and IsQuestCompleted(68014) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68211)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
@@ -638,7 +643,7 @@ Up in Flames
     </If>
 	
 	<!-- Sink or Swim -->
-    <If Condition="not IsQuestCompleted(68254)">
+    <If Condition="not IsQuestCompleted(68254) and IsQuestCompleted(68026) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68254)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -695,7 +700,7 @@ Up in Flames
 			<FlyTo AllowedVariance="0" Land="false" XYZ="-421.38083, -0.59999657, -238.97775"/> 
 			<RunCode Name="Diving"/>
 		</If>
-		<MoveTo UseMesh="False" XYZ="-380.79846, -143.2332, -244.131"/>
+		<MoveTo UseMesh="False" XYZ="-380.79846, -147.2332, -244.131"/>
         <UseObject NpcId="2008512" XYZ="-377.1878, -142.99237, -244.40375" QuestId="68254" StepId="6" />
 		<If Condition="MovementManager.IsDiving">
 			<RunCode Name="Breath"/>
@@ -718,7 +723,7 @@ Up in Flames
     </If>
 	
 	<!-- Plunder on High -->
-    <If Condition="not IsQuestCompleted(68253)">
+    <If Condition="not IsQuestCompleted(68253) and IsQuestCompleted(68026) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68253)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -759,7 +764,7 @@ Up in Flames
     </If>
 	
 	<!-- Thrice Cursed -->
-    <If Condition="not IsQuestCompleted(68255)">
+    <If Condition="not IsQuestCompleted(68255) and IsQuestCompleted(68026) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68255)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -808,7 +813,7 @@ Up in Flames
     </If>
 	
 	<!-- A Glimmer of Hope -->
-    <If Condition="not IsQuestCompleted(68256)">
+    <If Condition="not IsQuestCompleted(68256) and IsQuestCompleted(68255) and IsQuestCompleted(68026) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68256)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -872,7 +877,7 @@ Up in Flames
     </If>
 	
 	<!-- Rock Bottom -->
-    <If Condition="not IsQuestCompleted(68257)">
+    <If Condition="not IsQuestCompleted(68257) and IsQuestCompleted(68256) and IsQuestCompleted(68026) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68257)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -942,7 +947,7 @@ Up in Flames
     </If>
 	
 	<!-- Passing the Torch -->
-    <If Condition="not IsQuestCompleted(68258)">
+    <If Condition="not IsQuestCompleted(68258) and IsQuestCompleted(68257) and IsQuestCompleted(68026) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68258)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -998,7 +1003,7 @@ Up in Flames
     </If>
 	
 	<!-- Up in Flames -->
-    <If Condition="not IsQuestCompleted(68259)">
+    <If Condition="not IsQuestCompleted(68259) and IsQuestCompleted(68258) and IsQuestCompleted(68226) and IsQuestCompleted(68026) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68259)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -1061,7 +1066,7 @@ Up in Flames
     </If>
 	
 	<!-- At the Mercy of Monsters -->
-    <If Condition="not IsQuestCompleted(68249)">
+    <If Condition="not IsQuestCompleted(68249) and IsQuestCompleted(68026) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68249)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -1077,6 +1082,7 @@ Up in Flames
 		</If>
 		<FlyTo AllowedVariance="1" XYZ="-592.3056, 1.5844507, -643.4431" Land="True"/> <!-- ZoneId="613" -->
         <UseObject Condition="GetQuestById(68249).QuestI8A == 0" NpcId="2008279" XYZ="-591.42444, 1.7241821, -644.5869" QuestId="68249" StepId="1" />
+		<WaitWhile Condition="not GetQuestById(68249).QuestI8A == 21"/>
       </If>
 	  <If Condition="GetQuestStep(68249) == 1 and GetQuestById(68249).QuestI8A == 21">
 		<If condition="not IsOnMap(613)">
@@ -1095,7 +1101,7 @@ Up in Flames
     </If>
 	
 	<!-- Blessings of the Sea -->
-    <If Condition="not IsQuestCompleted(68251)">
+    <If Condition="not IsQuestCompleted(68251) and IsQuestCompleted(68026) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68251)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -1122,7 +1128,7 @@ Up in Flames
     </If>
 	
 	<!-- In Health and in Sickness -->
-    <If Condition="not IsQuestCompleted(68252)">
+    <If Condition="not IsQuestCompleted(68252) and IsQuestCompleted(68026) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68252)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -1191,7 +1197,7 @@ Up in Flames
     </If>
 	
 	<!-- A Dream to Remember -->
-    <If Condition="not IsQuestCompleted(68250)">
+    <If Condition="not IsQuestCompleted(68250) and IsQuestCompleted(68026) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68250)">
 		<If condition="not IsOnMap(613)">
 			<TeleportTo Name="Onokoro" AetheryteId="106"/>
@@ -1257,7 +1263,7 @@ Up in Flames
     </If>
 	
 	<!-- Our Most Venerated Ancestor -->
-    <If Condition="not IsQuestCompleted(68227)">
+    <If Condition="not IsQuestCompleted(68227) and IsQuestCompleted(68019) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68227)">
 		<If condition="not IsOnSubMap(2769)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
@@ -1305,7 +1311,7 @@ Up in Flames
     </If>
 	
 	<!-- Not Just Any Banquet -->
-    <If Condition="not IsQuestCompleted(68228)">
+    <If Condition="not IsQuestCompleted(68228) and IsQuestCompleted(68019) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68228)">
 		<If condition="not IsOnSubMap(2769)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
@@ -1340,7 +1346,7 @@ Up in Flames
     </If>
 	
 	<!-- Treasure Cove -->
-    <If Condition="not IsQuestCompleted(68231)">
+    <If Condition="not IsQuestCompleted(68231) and IsQuestCompleted(68019) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68231)">
 		<If condition="not IsOnSubMap(2769)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
@@ -1373,7 +1379,7 @@ Up in Flames
     </If>
 	
 	<!-- Unmeasured Strength -->
-    <If Condition="not IsQuestCompleted(68230)">
+    <If Condition="not IsQuestCompleted(68230) and IsQuestCompleted(68019) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68230)">
 		<If condition="not IsOnSubMap(2769)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
@@ -1405,7 +1411,7 @@ Up in Flames
     </If>
 	
 	<!-- The Mysterious Assailant -->
-    <If Condition="not IsQuestCompleted(68232)">
+    <If Condition="not IsQuestCompleted(68232) and IsQuestCompleted(68019) and Core.Player.ClassLevel &gt; 61">
       <If Condition="not HasQuest(68232)">
 		<If condition="not IsOnSubMap(2769)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
@@ -1437,7 +1443,7 @@ Up in Flames
     </If>
 	
 	<!-- A Stroll along the Seabed -->
-    <If Condition="not IsQuestCompleted(68245)">
+    <If Condition="not IsQuestCompleted(68245) and IsQuestCompleted(68023) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68245)">
 		<If condition="not IsOnSubMap(2769)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
@@ -1503,7 +1509,7 @@ Up in Flames
     </If>	
 	
 	<!-- Forgotten Saviors of the Sea -->
-    <If Condition="not IsQuestCompleted(68246)">
+    <If Condition="not IsQuestCompleted(68246) and IsQuestCompleted(68245) and IsQuestCompleted(68023) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68246)">
 		<If condition="not IsOnSubMap(2769)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
@@ -1554,7 +1560,7 @@ Up in Flames
     </If>
 	
 	<!-- Serpent Troubles -->
-    <If Condition="not IsQuestCompleted(68248)">
+    <If Condition="not IsQuestCompleted(68248) and IsQuestCompleted(68246) and IsQuestCompleted(68023) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68248)">
 		<If condition="not IsOnSubMap(2769)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
@@ -1621,7 +1627,7 @@ Up in Flames
     </If>
 	
 	<!-- A True Kojin of the Blue -->
-    <If Condition="not IsQuestCompleted(68247)">
+    <If Condition="not IsQuestCompleted(68247) and IsQuestCompleted(68023) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68247)">
 		<If condition="not IsOnSubMap(2769)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
@@ -1683,7 +1689,7 @@ Up in Flames
     </If>
 	
 	<!-- In Search of Treasure -->
-    <If Condition="not IsQuestCompleted(68244)">
+    <If Condition="not IsQuestCompleted(68244) and IsQuestCompleted(68023) and Core.Player.ClassLevel &gt; 62">
       <If Condition="not HasQuest(68244)">
 		<If condition="not IsOnSubMap(2769)">
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
@@ -1736,6 +1742,398 @@ Up in Flames
 		</If>
         <GetTo ZoneId="613" XYZ="419.72458, -104.99769, -285.83746"/>  
         <TurnIn QuestId="68244" NpcId="1023096" XYZ="421.89673, -104.40164, -285.11487"/>
+      </If>
+    </If>
+	
+	<!-- A Daughter's Love -->
+    <If Condition="not IsQuestCompleted(68239) and IsQuestCompleted(68021) and Core.Player.ClassLevel &gt; 62">
+      <If Condition="not HasQuest(68239)">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="4.798213, -196.37216, -82.64543"/> 
+        <If Condition="IsQuestAcceptQualified(68239)">
+          <PickupQuest QuestId="68239" NpcId="1019199"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68239) == 1">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-52.44243, -199.03783, -72.31612"/> 
+        <TalkTo NpcId="1019200" XYZ="-56.351562, -199.06569, -74.815" QuestId="68239" StepId="1"/>
+        <MoveTo XYZ="17.088242, -197.91455, -151.01654" Distance="0.1"/> 
+		<RunCode Name="ExitSuiNoSato"/>
+		<RunCode Name="Mount"/>
+		<If Condition="MovementManager.IsDiving">
+			<RunCode Name="Breath"/>
+		</If>
+      </If>
+	  <If Condition="GetQuestStep(68239) == 2 and GetQuestById(68239).QuestI8A == 0">
+		<If Condition="not MovementManager.IsDiving">
+			<FlyTo AllowedVariance="0" Land="false" XYZ="-908.34, 0.8805274, 756.89557"/> 
+			<RunCode Name="Diving"/>
+		</If>
+        <MoveTo UseMesh="False" XYZ="-902.64746, -888.4587, 733.30273" Distance="0.2"/> 
+        <UseObject Condition="GetQuestById(68239).QuestI8A == 0" NpcId="2008124" XYZ="-902.64746, -884.4587, 733.30273" QuestId="68239" StepId="2" />
+      </If>
+	  <If Condition="GetQuestStep(68239) == 2 and GetQuestById(68239).QuestI8A == 1">
+        <MoveTo UseMesh="False" XYZ="-917.2045, -891.6162, 784.8783" Distance="0.2"/> 
+        <UseObject Condition="GetQuestById(68239).QuestI8A == 1" NpcId="2008123" XYZ="-917.2045, -889.6162, 784.8783" QuestId="68239" StepId="2" />
+      </If>
+	  <If Condition="GetQuestStep(68239) == 2 and GetQuestById(68239).QuestI8A == 2">
+        <MoveTo UseMesh="False" XYZ="-936.4004, -882.2777, 726.4972" Distance="0.2"/> 
+        <UseObject Condition="GetQuestById(68239).QuestI8A == 2" NpcId="2008125" XYZ="-936.4004, -880.2777, 726.4972" QuestId="68239" StepId="2" />
+      </If>
+      <If Condition="GetQuestStep(68239) == 255">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="3.1281857, -196.4501, -81.45176"/> 
+        <TurnIn QuestId="68239" NpcId="1019199" XYZ="4.3792725, -196.44943, -80.094604"/>
+      </If>
+    </If>
+	
+	<!-- All Good Deeds -->
+    <If Condition="not IsQuestCompleted(68236) and IsQuestCompleted(68021) and Core.Player.ClassLevel &gt; 62">
+      <If Condition="not HasQuest(68236)">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-34.92295, -198.33476, -47.637478"/> 
+        <If Condition="IsQuestAcceptQualified(68236)">
+          <PickupQuest QuestId="68236" NpcId="1019198"/>
+          <MoveTo XYZ="17.088242, -197.91455, -151.01654" Distance="0.1"/> 
+		  <RunCode Name="ExitSuiNoSato"/>
+		  <RunCode Name="Mount"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68236) == 1 and GetQuestById(68236).QuestI8A == 0">
+		<MoveTo UseMesh="False" XYZ="145.24384, -112.94172, -120.36259" Distance="0.2"/>
+        <MoveTo UseMesh="False" XYZ="189.86792, -142.87024, -138.62823" Distance="0.2"/>
+        <UseObject Condition="GetQuestById(68236).QuestI8A == 0" NpcId="2008120" XYZ="189.86792, -142.87024, -138.62823" QuestId="68236" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68236) == 1 and GetQuestById(68236).QuestI8A == 1">
+		<MoveTo UseMesh="False" XYZ="174.99191, -122.442696, -116.774155" Distance="0.2"/>
+        <MoveTo UseMesh="False" XYZ="189.25769, -135.63751, -94.773865" Distance="0.2"/>
+        <UseObject Condition="GetQuestById(68236).QuestI8A == 1" NpcId="2008121" XYZ="189.25769, -135.63751, -94.773865" QuestId="68236" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68236) == 1 and GetQuestById(68236).QuestI8A == 2">
+		<MoveTo UseMesh="False" XYZ="197.50572, -102.631485, -89.80794" Distance="0.2"/>
+        <MoveTo UseMesh="False" XYZ="237.8728, -116.28906, -100.29761" Distance="0.2"/>
+        <UseObject Condition="GetQuestById(68236).QuestI8A == 2" NpcId="2008122" XYZ="237.8728, -116.28906, -100.29761" QuestId="68236" StepId="1" />
+		  <RunCode Name="Mount"/>
+      </If>
+	  <If Condition="GetQuestStep(68236) == 1 and GetQuestById(68236).QuestI8A == 3">
+		<MoveTo UseMesh="False" XYZ="284.48392, -38.894516, -309.50128" Distance="0.2"/>
+        <MoveTo UseMesh="False" XYZ="358.51062, -103.05347, -395.19348" Distance="0.2"/>
+        <UseObject Condition="GetQuestById(68236).QuestI8A == 3" NpcId="2008119" XYZ="358.51062, -100.05347, -395.19348" QuestId="68236" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68236) == 1 and GetQuestById(68236).QuestI8A == 4">
+		<MoveTo UseMesh="False" XYZ="316.54013, -81.487595, -426.85175" Distance="0.2"/>
+        <MoveTo UseMesh="False" XYZ="292.31702, -102.64752, -447.04358" Distance="0.2"/> 
+        <UseObject Condition="GetQuestById(68236).QuestI8A == 4" NpcId="2008117" XYZ="292.31702, -102.64752, -447.04358" QuestId="68236" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68236) == 1 and GetQuestById(68236).QuestI8A == 5">
+        <MoveTo UseMesh="False" XYZ="352.52917, -94.22449, -456.0769" Distance="0.2"/>
+        <UseObject Condition="GetQuestById(68236).QuestI8A == 5" NpcId="2008118" XYZ="352.52917, -94.22449, -456.0769" QuestId="68236" StepId="1" />
+		<RunCode Name="Mount"/>
+        <MoveTo UseMesh="False" XYZ="302.42798, -65.30238, -427.42725" Distance="0.2"/>
+		<RunCode Name="SuiNoSato"/>
+      </If>
+      <If Condition="GetQuestStep(68236) == 255">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-35.362747, -198.35684, -48.838345"/> 
+		<TurnIn NpcId="1019198" XYZ="-35.934998, -198.31625, -45.12097" QuestId="68236" StepId="255"/>
+      </If>
+	</If>
+
+	<!-- The Core of Life -->
+    <If Condition="not IsQuestCompleted(68235) and IsQuestCompleted(68021) and Core.Player.ClassLevel &gt; 62">
+      <If Condition="not HasQuest(68235)">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <If Condition="IsQuestAcceptQualified(68235)">
+          <PickupQuest QuestId="68235" NpcId="1019201"/>
+          <MoveTo XYZ="17.088242, -197.91455, -151.01654" Distance="0.1"/> 
+		  <RunCode Name="ExitSuiNoSato"/>
+		  <RunCode Name="Mount"/>
+		  <If Condition="MovementManager.IsDiving">
+			  <RunCode Name="Breath"/>
+		  </If>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68235) == 1">
+		<If condition="not IsOnMap(613)">
+			<TeleportTo Name="Tamamizu" AetheryteId="105"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-206.01396, -0.5, 688.9427" Land="True"/> <!-- ZoneId="613" -->
+		<Grind grindRef="68235" while="GetQuestStep(68235) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(68235) == 255">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-34.248966, -198.44672, -63.543537"/> 
+        <TurnIn QuestId="68235" NpcId="1019201" XYZ="-38.651123, -198.58493, -62.33313"/>
+      </If>
+    </If>
+	
+	<!-- An Unforgettable Taste -->
+    <If Condition="not IsQuestCompleted(68233) and IsQuestCompleted(68021) and Core.Player.ClassLevel &gt; 62">
+      <If Condition="not HasQuest(68233)">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-86.19297, -199.16815, -109.78748"/> 
+        <If Condition="IsQuestAcceptQualified(68233)">
+          <PickupQuest QuestId="68233" NpcId="1019205"/>
+          <MoveTo XYZ="17.088242, -197.91455, -151.01654" Distance="0.1"/> 
+		  <RunCode Name="ExitSuiNoSato"/>
+		  <RunCode Name="Mount"/>
+		  <If Condition="MovementManager.IsDiving">
+			  <RunCode Name="Breath"/>
+		  </If>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68233) == 1">
+        <MoveTo XYZ="571.3686, 61.41513, -64.622345"/> 
+		<Grind grindRef="68233" while="GetQuestStep(68233) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(68233) == 255">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-84.31868, -199.17325, -109.58472"/> 
+        <TurnIn QuestId="68233" NpcId="1019205" XYZ="-87.66315, -199.14807, -112.077515"/>
+      </If>
+    </If>
+
+	<!-- The Bond between Brothers -->
+    <If Condition="not IsQuestCompleted(68234) and IsQuestCompleted(68021) and Core.Player.ClassLevel &gt; 62">
+      <If Condition="not HasQuest(68234)">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-75.353, -199.00653, -148.17032"/> 
+        <If Condition="IsQuestAcceptQualified(68234)">
+          <PickupQuest QuestId="68234" NpcId="1019215"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68234) == 1">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-17.376802, -198.33784, -164.11876"/> 
+        <TalkTo NpcId="1023094" XYZ="-16.220398, -198.34047, -166.03345" QuestId="68234" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68234) == 2">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-17.376802, -198.33784, -164.11876"/> 
+        <LLSendChat Emote="huh" NpcId="1023094" XYZ="-16.220398, -198.34047, -166.03345" QuestId="68234" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(68234) == 3">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-18.38579, -197.71362, -63.224983"/> 
+        <TalkTo NpcId="1023095" XYZ="-18.32611, -197.78377, -61.112427" QuestId="68234" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68234) == 4">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-18.38579, -197.71362, -63.224983"/> 
+        <LLSendChat Emote="huh" NpcId="1023095" XYZ="-18.32611, -197.78377, -61.112427" QuestId="68234" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(68234) == 255">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-77.64313, -198.94722, -147.64178"/> 
+        <TurnIn QuestId="68234" NpcId="1019215" XYZ="-77.47009, -198.95496, -149.76733"/>
+      </If>
+    </If>
+	
+	<!-- The Fight for Survival -->
+    <If Condition="not IsQuestCompleted(68238) and IsQuestCompleted(68021) and Core.Player.ClassLevel &gt; 62">
+      <If Condition="not HasQuest(68238)">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-68.76876, -199.09525, -154.15619"/> 
+        <If Condition="IsQuestAcceptQualified(68238)">
+          <PickupQuest QuestId="68238" NpcId="1019218"/>
+          <MoveTo XYZ="17.088242, -197.91455, -151.01654" Distance="0.1"/> 
+		  <RunCode Name="ExitSuiNoSato"/>
+		  <RunCode Name="Mount"/>
+		  <If Condition="MovementManager.IsDiving">
+			  <RunCode Name="Breath"/>
+		  </If>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68238) == 1">
+		<If Condition="not MovementManager.IsDiving">
+			<FlyTo AllowedVariance="0" Land="false" XYZ="-141.03261, 1.4001036, 110.044106"/> 
+			<RunCode Name="Diving"/>
+		</If>
+		<RunCode Name="AirPocket"/>
+        <MoveTo XYZ="9.654175, -194.99994, 239.47313"/> 
+		<Dismount/>
+		<WaitWhile Condition="not GetQuestStep(68238) == 255"/>
+      </If>
+      <If Condition="GetQuestStep(68238) == 255">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-67.26391, -199.10657, -153.10246"/> 
+        <TurnIn QuestId="68238" NpcId="1019218" XYZ="-68.467285, -199.1032, -156.05408"/>
+      </If>
+    </If>
+	
+	<!-- Fear Her Almighty Waves -->
+    <If Condition="not IsQuestCompleted(68237) and IsQuestCompleted(68218) and IsQuestCompleted(68021) and Core.Player.ClassLevel &gt; 62">
+      <If Condition="not HasQuest(68237)">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-51.1366, -198.56084, -160.32835"/> 
+        <If Condition="IsQuestAcceptQualified(68237)">
+          <PickupQuest QuestId="68237" NpcId="1023310"/>
+          <MoveTo XYZ="17.088242, -197.91455, -151.01654" Distance="0.1"/> 
+		  <RunCode Name="ExitSuiNoSato"/>
+		  <RunCode Name="Mount"/>
+		  <If Condition="MovementManager.IsDiving">
+			  <RunCode Name="Breath"/>
+		  </If>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68237) == 1 and GetQuestById(68237).QuestI8A == 0">
+		<If Condition="not MovementManager.IsDiving">
+			<FlyTo AllowedVariance="0" Land="false" XYZ="-121.271774, 1.6811938, -355.20346"/> 
+			<RunCode Name="Diving"/>
+		</If>
+        <MoveTo UseMesh="False" XYZ="-92.79016, -45.304077, -445.3651" Distance="0.2"/> 
+        <UseObject Condition="GetQuestById(68237).QuestI8A == 0" NpcId="2008834" XYZ="-92.79016, -45.304077, -445.3651" QuestId="68237" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68237) == 1 and GetQuestById(68237).QuestI8A == 1">
+        <MoveTo UseMesh="False" XYZ="-99.10736, -79.9115, -404.7456" Distance="0.2"/>
+        <UseObject Condition="GetQuestById(68237).QuestI8A == 1" NpcId="2008832" XYZ="-99.10736, -79.9115, -404.7456" QuestId="68237" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68237) == 1 and GetQuestById(68237).QuestI8A == 2">
+        <MoveTo UseMesh="False" XYZ="-127.763855, -88.578674, -392.8435" Distance="0.2"/> 
+        <UseObject Condition="GetQuestById(68237).QuestI8A == 2" NpcId="2008833" XYZ="-127.763855, -88.578674, -392.8435" QuestId="68237" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68237) == 1 and GetQuestById(68237).QuestI8A == 3">
+        <MoveTo UseMesh="False" XYZ="-178.11859, -85.86255, -393.7591" Distance="0.2"/>
+        <UseObject Condition="GetQuestById(68237).QuestI8A == 3" NpcId="2008835" XYZ="-178.11859, -85.86255, -393.7591" QuestId="68237" StepId="1" />
+      </If>
+      <If Condition="GetQuestStep(68237) == 255">
+		<If condition="not IsOnSubMap(2772)">
+			<TeleportTo Name="Onokoro" AetheryteId="106" Force="True"/>
+			<FlyTo AllowedVariance="1" XYZ="68.49455, 1.4001036, -189.48468" Land="False"/> <!-- ZoneId="613" -->
+			<If Condition="not MovementManager.IsDiving">
+				<RunCode Name="Diving"/>
+			</If>
+			<RunCode Name="SuiNoSato"/>
+		</If>
+        <MoveTo XYZ="-47.227074, -198.30315, -161.72795"/> 
+        <TurnIn QuestId="68237" NpcId="1023310" XYZ="-50.614258, -198.66734, -162.70697"/>
       </If>
     </If>
 	
@@ -1804,10 +2202,6 @@ Up in Flames
 
 		while (!MovementManager.IsDiving)   {  await Coroutine.Yield();  }
 		while (CommonBehaviors.IsLoading)   {  await Coroutine.Yield();  }
-	
-		MovementManager.MoveForwardStart();
-		await Coroutine.Sleep(4000);
-		MovementManager.MoveStop();		
 
 		while (Core.Player.Location.Distance(p1) > 2f)
 		{
@@ -1822,6 +2216,29 @@ Up in Flames
 		}
 	
 		MovementManager.SetFacing(5.25f);
+		MovementManager.MoveForwardStart();
+		await Coroutine.Sleep(6000);
+		while (MovementManager.IsDiving)  {  await Coroutine.Yield();  }
+		while (CommonBehaviors.IsLoading)  {  await Coroutine.Yield();  }
+	  ]]>
+	</CodeChunk>
+	<CodeChunk Name="AirPocket">
+	  <![CDATA[
+		var p1 = new Vector3(-95.130066f, -184.19969f, 154.87715f);
+		
+		MovementManager.MoveForwardStart();
+		await Coroutine.Sleep(4000);
+
+		while (!MovementManager.IsDiving)   {  await Coroutine.Yield();  }
+		while (CommonBehaviors.IsLoading)   {  await Coroutine.Yield();  }
+
+		while (Core.Player.Location.Distance(p1) > 2f)
+		{
+		   Navigator.PlayerMover.MoveTowards(p1);
+		   await Coroutine.Yield();
+		}
+	
+		MovementManager.SetFacing(1.04f);
 		MovementManager.MoveForwardStart();
 		await Coroutine.Sleep(6000);
 		while (MovementManager.IsDiving)  {  await Coroutine.Yield();  }
@@ -1893,6 +2310,22 @@ Up in Flames
       </Hotspots>
       <TargetMobs>
         <TargetMob Id="5739" Weight="1"/> <!-- Shiranui -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="68235">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="-206.01396, -0.5, 688.9427"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="5747" Weight="1"/> <!-- Apa -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="68233">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="571.3686, 61.41513, -64.622345"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="5748" Weight="1"/> <!-- Ruby Hornbill -->
       </TargetMobs>
     </GrindArea>
     </GrindAreas>
