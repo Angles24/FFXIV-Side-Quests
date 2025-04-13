@@ -27,6 +27,332 @@ A View to a Spill
 <Profile>
 	<Name>Yanxia Side Quests</Name>
 	<Order>	 
+
+	<!-- Hungry Hog -->
+    <If Condition="not IsQuestCompleted(68267)">
+      <If Condition="not HasQuest(68267)">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="419.4866, 68.02854, -109.5935" Land="True"/> <!-- ZoneId="614" -->
+        <If Condition="IsQuestAcceptQualified(68267)">
+          <PickupQuest QuestId="68267" NpcId="1019260"/>
+        </If>
+      </If>
+      <While Condition="GetQuestStep(68267) == 1">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="0" XYZ="653.82166, 92.18606, -93.99804" Land="True"/> <!-- ZoneId="614" -->
+		<Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68267) == 2">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="637.10864, 92.73464, -72.49916" Land="True"/> <!-- ZoneId="614" -->
+        <TalkTo NpcId="1021896" XYZ="635.70605, 92.10862, -70.90869" QuestId="68267" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68267) == 255">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="419.52637, 68.02854, -108.79287" Land="True"/> <!-- ZoneId="614" -->
+        <TurnIn QuestId="68267" NpcId="1019260" XYZ="417.5935, 68.02854, -110.24652"/>
+      </If>
+    </If>
+	
+	<!-- Tiger Blood -->
+    <If Condition="not IsQuestCompleted(68268)">
+      <If Condition="not HasQuest(68268)">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="406.823, 67.7755, -63.116764" Land="True"/> <!-- ZoneId="614" -->
+        <If Condition="IsQuestAcceptQualified(68268)">
+          <PickupQuest QuestId="68268" NpcId="1019259"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68268) == 1">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="802.71436, 107.035965, -275.8708" Land="True"/> <!-- ZoneId="614" -->
+		<Grind grindRef="68268" while="GetQuestStep(68268) == 1"/>
+      </If>
+      <If Condition="GetQuestStep(68268) == 255">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="407.898, 67.667, -62.221714" Land="True"/> <!-- ZoneId="614" -->
+        <TurnIn QuestId="68268" NpcId="1019259" XYZ="405.4779, 67.4601, -61.539734"/>
+      </If>
+    </If>
+	
+	<!-- Dearest Keiko -->
+    <If Condition="not IsQuestCompleted(68271)">
+      <If Condition="not HasQuest(68271)">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="361.3551, 41.120197, -15.079168" Land="True"/> <!-- ZoneId="614" -->
+        <If Condition="IsQuestAcceptQualified(68271)">
+          <PickupQuest QuestId="68271" NpcId="1021822"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68271) == 1">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="619.9159, 125.89894, -348.86026" Land="True"/> <!-- ZoneId="614" -->
+		<LLHandOver ItemId="2002198" NpcId="1021823" XYZ="620.66064, 125.75867, -347.61578" QuestId="68271" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68271) == 2">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="674.83563, 127.9829, -407.20358" Land="True"/> <!-- ZoneId="614" -->
+        <TalkTo NpcId="1021824" XYZ="676.7528, 128.47508, -408.86554" QuestId="68271" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68271) == 255">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="464.87146, 68.02488, -85.5804" Land="True"/> <!-- ZoneId="614" -->
+        <TurnIn QuestId="68271" NpcId="1023699" XYZ="466.45288, 68.027664, -85.98462"/>
+      </If>
+    </If>
+	
+	<!-- The Toon Patrol -->
+    <If Condition="not IsQuestCompleted(68265)">
+      <If Condition="not HasQuest(68265)">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="471.5854, 58.762524, -177.69997" Land="True"/> <!-- ZoneId="614" -->
+        <If Condition="IsQuestAcceptQualified(68265)">
+          <PickupQuest QuestId="68265" NpcId="1019265"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68265) == 1">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="417.83554, 33.2903, 237.20575" Land="True"/> <!-- ZoneId="614" -->
+        <UseObject NpcId="2008313" XYZ="417.99023, 33.279907, 238.36108" QuestId="68265" StepId="1" />
+		<WaitWhile Condition="not GetQuestStep(68265) == 255"/>
+      </If>
+      <If Condition="GetQuestStep(68265) == 255">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="476.17825, 58.444077, -175.60847" Land="True"/> <!-- ZoneId="614" -->
+        <TurnIn QuestId="68265" NpcId="1019265" XYZ="473.47217, 58.557114, -175.58557"/>
+      </If>
+    </If>
+	
+	<!-- Beyond the Powers of Stone -->
+    <If Condition="not IsQuestCompleted(68261)">
+      <If Condition="not HasQuest(68261)">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="519.01825, 70.1022, -258.14273" Land="True"/> <!-- ZoneId="614" -->
+        <If Condition="IsQuestAcceptQualified(68261)">
+          <PickupQuest QuestId="68261" NpcId="1019315"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68261) == 1">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="516.1779, 42.19184, -139.82307" Land="True"/> <!-- ZoneId="614" -->
+        <UseObject Condition="GetQuestById(68261).QuestI8A == 0" NpcId="2008470" XYZ="513.2676, 42.130127, -140.27618" QuestId="68261" StepId="1" />
+        <UseObject Condition="GetQuestById(68261).QuestI8A == 1" NpcId="2008469" XYZ="513.2981, 42.770996, -132.61621" QuestId="68261" StepId="1" />
+        <UseObject Condition="GetQuestById(68261).QuestI8A == 2" NpcId="2008467" XYZ="539.7573, 43.656006, -118.73047" QuestId="68261" StepId="1" />
+        <UseObject Condition="GetQuestById(68261).QuestI8A == 3" NpcId="2008468" XYZ="545.52527, 43.198242, -122.91144" QuestId="68261" StepId="1" />
+      </If>
+      <If Condition="GetQuestStep(68261) == 2 and GetQuestById(68261).QuestI8A == 0">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="619.672, 87.289215, -74.93346" Land="True"/> <!-- ZoneId="614" -->
+		<UseObject Condition="GetQuestById(68261).QuestI8A == 0" NpcId="2008473" XYZ="620.447, 87.296875, -73.99103" QuestId="68261" StepId="2"/>
+      </If>
+	  <If Condition="GetQuestStep(68261) == 2 and GetQuestById(68261).QuestI8A == 16">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="390.1803, 75.65476, -109.452866" Land="True"/> <!-- ZoneId="614" -->
+        <UseObject Condition="GetQuestById(68261).QuestI8A == 16" NpcId="2008474" XYZ="389.2423, 75.69995, -109.941284" QuestId="68261" StepId="2" />
+      </If>
+	  <If Condition="GetQuestStep(68261) == 2 and GetQuestById(68261).QuestI8A == 32">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="518.55334, 66.037285, -239.41713" Land="True"/> <!-- ZoneId="614" -->
+        <UseObject Condition="GetQuestById(68261).QuestI8A == 32" NpcId="2008472" XYZ="519.89014, 66.08679, -240.55853" QuestId="68261" StepId="2" />
+      </If>
+	  <If Condition="GetQuestStep(68261) == 2 and GetQuestById(68261).QuestI8A == 49">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="581.66693, 105.51641, -330.54767" Land="True"/> <!-- ZoneId="614" -->
+        <UseObject Condition="GetQuestById(68261).QuestI8A == 49" NpcId="2008471" XYZ="583.0625, 105.85181, -331.99054" QuestId="68261" StepId="2" />
+      </If>
+      <If Condition="GetQuestStep(68261) == 255">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="519.5746, 70.65299, -259.96918" Land="True"/> <!-- ZoneId="614" -->
+        <TurnIn QuestId="68261" NpcId="1019315" XYZ="521.2023, 71.305405, -258.77777"/>
+      </If>
+    </If>
+	
+	<!-- Not Safe for Children -->
+    <If Condition="not IsQuestCompleted(68262)">
+      <If Condition="not HasQuest(68262)">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="0" XYZ="679.2617, 136.5252, -199.50185" Land="False"/> <!-- ZoneId="614" -->
+		<FlyTo AllowedVariance="0" XYZ="775.21765, 99.22351, -243.91313" Land="True"/> <!-- ZoneId="614" -->
+        <If Condition="IsQuestAcceptQualified(68262)">
+          <PickupQuest QuestId="68262" NpcId="1019295"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68262) == 1 and GetQuestById(68262).QuestI8A == 0">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="753.5062, 98.282074, -165.44409" Land="True"/> <!-- ZoneId="614" -->
+		<UseItem Condition="GetQuestById(68262).QuestI8A == 0" ItemId="2002244" NpcId="2008509" XYZ="753.6582, 98.68005, -163.31738" QuestId="68262" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68262) == 1 and GetQuestById(68262).QuestI8A == 1">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="788.5793, 105.90211, -200.51025" Land="True"/> <!-- ZoneId="614" -->
+		<UseItem Condition="GetQuestById(68262).QuestI8A == 1" ItemId="2002244" NpcId="2008508" XYZ="790.18835, 106.126465, -201.15973" QuestId="68262" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68262) == 1 and GetQuestById(68262).QuestI8A == 2">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="826.3679, 116.75644, -176.82979" Land="True"/> <!-- ZoneId="614" -->
+		<UseItem Condition="GetQuestById(68262).QuestI8A == 2" ItemId="2002244" NpcId="2008507" XYZ="828.18335, 117.57068, -173.9071" QuestId="68262" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68262) == 1 and GetQuestById(68262).QuestI8A == 3">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="754.5246, 99.87777, -279.92545" Land="True"/> <!-- ZoneId="614" -->
+		<UseItem Condition="GetQuestById(68262).QuestI8A == 3" ItemId="2002244" NpcId="2008506" XYZ="753.8109, 100.175415, -280.7508" QuestId="68262" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68262) == 1 and GetQuestById(68262).QuestI8A == 4">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="743.9472, 106.310265, -318.59943" Land="True"/> <!-- ZoneId="614" -->
+		<UseItem Condition="GetQuestById(68262).QuestI8A == 4" ItemId="2002244" NpcId="2008505" XYZ="742.2445, 106.248535, -319.5697" QuestId="68262" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68262) == 1 and GetQuestById(68262).QuestI8A == 5">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="776.9812, 106.51255, -319.63107" Land="True"/> <!-- ZoneId="614" -->
+		<UseItem Condition="GetQuestById(68262).QuestI8A == 5" ItemId="2002244" NpcId="2008504" XYZ="778.5304, 106.7063, -320.54633" QuestId="68262" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68262) == 255">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="761.0257, 98.400894, -232.01994" Land="True"/> <!-- ZoneId="614" -->
+        <TurnIn ItemId="0" QuestId="68262" NpcId="1019295" XYZ="756.3439, 98.04659, -229.93823"/>
+      </If>
+    </If>
+	
+	<!-- Gone Fishing -->
+    <If Condition="not IsQuestCompleted(68263)">
+      <If Condition="not HasQuest(68263)">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="759.9951, 98.368225, -231.46667" Land="True"/> <!-- ZoneId="614" -->
+        <If Condition="IsQuestAcceptQualified(68263)">
+          <PickupQuest QuestId="68263" NpcId="1019295"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68263) == 1 and GetQuestById(68263).QuestI8A == 0">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="760.0736, 98.133415, -229.60269" Land="True"/> <!-- ZoneId="614" -->
+        <UseObject Condition="GetQuestById(68263).QuestI8A == 0" NpcId="2008513" XYZ="757.53406, 100.1449, -223.83466" QuestId="68263" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68263) == 1 and GetQuestById(68263).QuestI8A == 17">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="559.20996, 40.90624, -146.58792" Land="True"/> <!-- ZoneId="614" -->
+        <UseObject Condition="GetQuestById(68263).QuestI8A == 17" NpcId="2008514" XYZ="558.15967, 40.634766, -144.39618" QuestId="68263" StepId="1" />
+      </If>
+      <If Condition="GetQuestStep(68263) == 255">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="Namai" AetheryteId="107"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="462.05112, 58.442646, -171.45572" Land="True"/> <!-- ZoneId="614" -->
+        <TurnIn QuestId="68263" NpcId="1019313" XYZ="465.26282, 58.52148, -171.09949"/>
+		<TeleportTo Name="The House of the Fierce" AetheryteId="108" Force="True"/>
+      </If>
+    </If>
+	
+	<!-- An Eye for an Emblem -->
+    <If Condition="not IsQuestCompleted(68345)">
+      <If Condition="not HasQuest(68345)">
+		<TeleportTo Name="The House of the Fierce" AetheryteId="108" Force="True"/>
+		<FlyTo AllowedVariance="1" XYZ="254.4495, 4.8809986, -378.0811" Land="True"/> <!-- ZoneId="614" -->
+        <If Condition="IsQuestAcceptQualified(68345)">
+          <PickupQuest QuestId="68345" NpcId="1023108"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68345) == 1">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="The House of the Fierce" AetheryteId="108"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-57.695774, 53.260506, -535.0301" Land="True"/> <!-- ZoneId="614" -->
+        <TalkTo NpcId="1023109" XYZ="-60.44104, 53.217514, -538.81134" QuestId="68345" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68345) == 2">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="The House of the Fierce" AetheryteId="108"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-180.17534, 53.217514, -653.1371" Land="True"/> <!-- ZoneId="614" -->
+        <UseObject NpcId="2008738" XYZ="-179.06464, 53.20813, -654.6273" QuestId="68345" StepId="2" />
+      </If>
+	  <If Condition="GetQuestStep(68345) == 3">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="The House of the Fierce" AetheryteId="108"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-262.83487, 53.217514, -559.00275" Land="True"/> <!-- ZoneId="614" -->
+        <TalkTo NpcId="1023110" XYZ="-263.4776, 53.217514, -560.87585" QuestId="68345" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68345) == 4">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="The House of the Fierce" AetheryteId="108"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-189.20059, 53.21751, -648.736" Land="True"/> <!-- ZoneId="614" -->
+        <TalkTo NpcId="1023111" XYZ="-186.9383, 53.217514, -648.9509" QuestId="68345" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(68345) == 255">
+		<If condition="not IsOnMap(614)">
+			<TeleportTo Name="The House of the Fierce" AetheryteId="108"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="255.17632, 4.7931385, -379.17566" Land="True"/> <!-- ZoneId="614" -->
+        <TurnIn QuestId="68345" NpcId="1023108" XYZ="256.3058, 5.172042, -374.92944"/>
+      </If>
+    </If>
 		
 
 	
@@ -34,5 +360,14 @@ A View to a Spill
 	<CodeChunks>	
 	</CodeChunks>
     <GrindAreas>
+    <GrindArea name="68268">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="802.71436, 107.035965, -275.8708"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="5760" Weight="1"/> <!-- Yanxian Tiger -->
+      </TargetMobs>
+    </GrindArea>
     </GrindAreas>
 </Profile>
+	
