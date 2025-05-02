@@ -53,12 +53,1033 @@ Steppe of Hard Knocks
 <Profile>
 	<Name>The Azim Steppe Side Quests</Name>
 	<Order>	 
+
+	<!-- Merchant for a Day -->
+    <If Condition="not IsQuestCompleted(68291)">
+      <If Condition="not HasQuest(68291)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="547.69556, -19.505655, 354.0936" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68291)">
+          <PickupQuest QuestId="68291" NpcId="1019349"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68291) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="547.69556, -19.505655, 354.0936" Land="True"/> <!-- ZoneId="622" -->
+        <SelectStringOverride Index="2,2,0,3,2,0"/>
+        <TurnIn QuestId="68291" NpcId="1019349" XYZ="543.93823, -19.505642, 354.08557"/>
+      </If>
+    </If>
+	
+	<!-- You Buuz, You Lose -->
+    <If Condition="not IsQuestCompleted(68292)">
+      <If Condition="not HasQuest(68292)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="553.9432, -19.505638, 398.40497" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68292)">
+          <PickupQuest QuestId="68292" NpcId="1019355"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68292) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="456.40506, -25.221565, 491.6139" Land="True"/> <!-- ZoneId="622" -->
+		<Grind grindRef="68292" while="GetQuestStep(68292) == 1"/>
+      </If>
+	  <If Condition="GetQuestStep(68292) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="554.4022, -19.505638, 398.37744" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019355" XYZ="556.8779, -19.505642, 397.14648" QuestId="68292" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68292) == 3">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="596.7062, -19.505632, 406.69327" Land="True"/> <!-- ZoneId="622" -->
+		<HandOver ItemId="2002111" NpcId="1021338" XYZ="594.72034, -19.505638, 405.32532" QuestId="68292" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68292) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="557.31067, -19.505634, 400.35007" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn ItemId="0" QuestId="68292" NpcId="1019355" XYZ="556.8779, -19.505642, 397.14648"/>
+      </If>
+    </If>
+	
+	<!-- Fishing for Customers -->
+    <If Condition="not IsQuestCompleted(68293)">
+      <If Condition="not HasQuest(68293)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="567.4243, -19.505632, 364.43814" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68293)">
+          <PickupQuest QuestId="68293" NpcId="1019352"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68293) == 1 and GetQuestById(68293).QuestI8A == 0">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="550.3023, -19.505648, 400.08307" Land="True"/> <!-- ZoneId="622" -->
+		<Dismount/>
+        <LLSendChat Say="smoked fish from Isari" NpcId="2008168" XYZ="548.30237, -19.516357, 399.13013"/>
+		<WaitTimer WaitTime="5"/>
+		<LLSmallTalk/>
+      </If>
+      <If Condition="GetQuestStep(68293) == 1 and GetQuestById(68293).QuestI8A == 16">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="564.1714, -19.505638, 296.4512" Land="True"/> <!-- ZoneId="622" -->
+		<Dismount/>
+        <LLSendChat Say="smoked fish from Isari" NpcId="2008169" XYZ="563.43933, -19.516357, 294.5448"/>
+		<WaitTimer WaitTime="5"/>
+		<LLSmallTalk/>		
+		<WaitWhile Condition="not GetQuestStep(68293) == 255"/>
+      </If>
+      <If Condition="GetQuestStep(68293) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="567.93713, -19.505634, 362.88992" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68293" NpcId="1019352" XYZ="570.00073, -19.505636, 361.01306"/>
+      </If>
+    </If>
+	
+	<!-- Rip-off Reunion -->
+    <If Condition="not IsQuestCompleted(68290)">
+      <If Condition="not HasQuest(68290)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="573.18036, -19.505632, 344.9657" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68290)">
+          <PickupQuest QuestId="68290" NpcId="1019347"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68290) == 1 and GetQuestById(68290).QuestI8A == 0">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="558.4385, -19.505636, 398.88647" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019355" XYZ="556.8779, -19.505642, 397.14648" QuestId="68290" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68290) == 1 and GetQuestById(68290).QuestI8A == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="546.3782, -19.50565, 392.7373" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019353" XYZ="544.0298, -19.505642, 391.68372" QuestId="68290" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68290) == 1 and GetQuestById(68290).QuestI8A == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="547.07916, -19.505653, 355.09875" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019349" XYZ="543.93823, -19.505642, 354.08557" QuestId="68290" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68290) == 1 and GetQuestById(68290).QuestI8A == 3">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="564.8192, -19.505632, 320.34998" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019350" XYZ="563.2562, -19.505632, 319.11182" QuestId="68290" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68290) == 1 and GetQuestById(68290).QuestI8A == 4">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="571.5782, -19.505655, 312.08752" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019354" XYZ="573.6323, -19.505655, 311.6654" QuestId="68290" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68290) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="573.5903, -19.505632, 342.12103" Land="True"/> <!-- ZoneId="622" -->
+        <!--<SelectStringOverride Index="4,1,0,3,2,3,5,2"/>		-->
+		<RunCode Name="68290"/>
+        <TurnIn QuestId="68290" NpcId="1019347" XYZ="575.2803, -19.505632, 343.74"/>
+      </If>
+    </If>
+	
+	<!-- Who Needs Words -->
+    <If Condition="not IsQuestCompleted(68289)">
+      <If Condition="not HasQuest(68289)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="609.1168, -15.009545, 340.51144" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68289)">
+          <PickupQuest QuestId="68289" NpcId="1019345"/>
+        </If>
+      </If>
+      <While Condition="GetQuestStep(68289) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="538.5677, 3.8844054, -43.78584" Land="True"/> <!-- ZoneId="622" -->
+		<Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68289) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="0" XYZ="539.0026, 3.930805, -44.796413" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1021337" XYZ="538.56714, 3.8423905, -42.557434" QuestId="68289" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68289) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="609.0185, -15.009548, 341.00055" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68289" NpcId="1019345" XYZ="612.69543, -15.041958, 341.63416"/>
+      </If>
+    </If>
+	
+	<!-- Words Are Trivial -->
+    <If Condition="not IsQuestCompleted(68297)">
+      <If Condition="not HasQuest(68297)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="587.0021, -19.50565, 316.26248" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68297)">
+          <PickupQuest QuestId="68297" NpcId="1022128"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68297) == 1 and GetQuestById(68297).QuestI8A == 0">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="569.29193, -19.505636, 358.27692" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019352" XYZ="570.00073, -19.505636, 361.01306" QuestId="68297" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68297) == 1 and GetQuestById(68297).QuestI8A == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="547.2203, -19.505653, 354.03012" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019349" XYZ="543.93823, -19.505642, 354.08557" QuestId="68297" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68297) == 1 and GetQuestById(68297).QuestI8A == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="550.46484, -19.505638, 296.54968" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019351" XYZ="548.8822, -19.505648, 295.1858" QuestId="68297" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68297) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="547.4576, -19.505632, 379.5357" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1022132" XYZ="546.1051, -19.505634, 379.93433" QuestId="68297" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68297) == 3">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="605.3878, -15.027386, 330.27203" Land="True"/> <!-- ZoneId="622" -->
+		<Dismount/>
+        <LLSendChat Emote="me" NpcId="1019346" XYZ="605.7678, -14.99195, 327.2296" QuestId="68297" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68297) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="585.8223, -19.505644, 314.71176" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68297" NpcId="1022128" XYZ="588.00635, -19.505651, 316.57886"/>
+      </If>
+    </If>
+	
+	<!-- Words Are Meaningless -->
+    <If Condition="not IsQuestCompleted(68298)">
+      <If Condition="not HasQuest(68298)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="585.8223, -19.505644, 314.71176" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68298)">
+          <PickupQuest QuestId="68298" NpcId="1022128"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68298) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="583.9255, -19.505632, 420.2366" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1022135" XYZ="585.59546, -19.505632, 418.265" QuestId="68298" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68298) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="648.87213, -0.6556846, 159.04189" Land="True"/> <!-- ZoneId="622" -->
+		<Grind grindRef="68298" while="not GetQuestStep(68298) == 3"/>
+      </If>
+      <If Condition="GetQuestStep(68298) == 3">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="585.9489, -19.505646, 315.31186" Land="True"/> <!-- ZoneId="622" -->
+		<HandOver ItemId="2002229" NpcId="1022128" XYZ="588.00635, -19.505651, 316.57886" QuestId="68298" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68298) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="604.7943, -15.04204, 330.43164" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68298" NpcId="1019346" XYZ="605.7678, -14.99195, 327.2296"/>
+      </If>
+    </If>
+	
+	<!-- Enjoy the Silence -->
+    <If Condition="not IsQuestCompleted(68299)">
+      <If Condition="not HasQuest(68299)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="604.7943, -15.04204, 330.43164" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68299)">
+          <PickupQuest QuestId="68299" NpcId="1019346"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68299) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="613.22925, -15.041946, 338.3486" Land="True"/> <!-- ZoneId="622" -->
+		<HandOver ItemId="2002230" NpcId="1019344" XYZ="615.53357, -15.021034, 338.55188" QuestId="68299" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68299) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="0" XYZ="690.2702, 18.227552, 150.01611" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject NpcId="2008382" XYZ="689.7229, 18.234497, 147.29529" QuestId="68299" StepId="2" />
+      </If>
+      <While Condition="GetQuestStep(68299) == 3">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="0" XYZ="712.72174, -1.674295, 92.08006" Land="True"/> <!-- ZoneId="622" -->
+		<Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68299) == 4">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="711.5226, -1.5306345, 90.89719" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1022137" XYZ="710.20056, -1.3254056, 89.09741" QuestId="68299" StepId="4"/>
+      </If>
+      <If Condition="GetQuestStep(68299) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="558.81866, -19.505705, 422.1572" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68299" NpcId="1022141" XYZ="558.0072, -19.505777, 423.54468"/>
+      </If>
+    </If>
+	
+	<!-- Stranger Danger -->
+    <If Condition="not IsQuestCompleted(68295)">
+      <If Condition="not HasQuest(68295)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="588.23737, -19.505653, 306.02" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68295)">
+          <PickupQuest QuestId="68295" NpcId="1019362"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68295) == 1 and GetQuestById(68295).QuestI8A == 0">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="643.3859, 12.148879, 281.67865" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1022464" XYZ="640.4668, 10.923207, 275.8678" QuestId="68295" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68295) == 1 and GetQuestById(68295).QuestI8A == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="502.54898, -20.503574, 309.77258" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1022465" XYZ="501.82336, -20.57102, 310.2616" QuestId="68295" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68295) == 1 and GetQuestById(68295).QuestI8A == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="513.6969, -19.511328, 398.8378" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1022466" XYZ="515.80054, -19.512436, 400.22888" QuestId="68295" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68295) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="587.9634, -19.505651, 305.24268" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68295" NpcId="1019362" XYZ="590.692, -19.505655, 305.0736"/>
+      </If>
+    </If>
+	
+	<!-- Silent Banquet -->
+    <If Condition="not IsQuestCompleted(68288)">
+      <If Condition="not HasQuest(68288)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="551.5543, -19.50575, 287.59155" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68288)">
+          <PickupQuest QuestId="68288" NpcId="1023098"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68288) == 1 and GetQuestById(68288).QuestI8A == 0">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="547.2087, -19.505655, 354.77432" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019349" XYZ="543.93823, -19.505642, 354.08557" QuestId="68288" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68288) == 1 and GetQuestById(68288).QuestI8A == 16">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="567.5226, -19.505632, 362.47122" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019352" XYZ="570.00073, -19.505636, 361.01306" QuestId="68288" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68288) == 1 and GetQuestById(68288).QuestI8A == 32">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="557.93475, -19.505636, 399.17773" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019355" XYZ="556.8779, -19.505642, 397.14648" QuestId="68288" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68288) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="549.90125, -19.50575, 287.55215" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68288" NpcId="1023098" XYZ="548.7296, -19.505772, 286.5797"/>
+      </If>
+    </If>
+	
+	<!-- Sacred Sweeping -->
+    <If Condition="not IsQuestCompleted(68306)">
+      <If Condition="not HasQuest(68306)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="510.85037, 39.87625, -471.60422" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68306)">
+          <PickupQuest QuestId="68306" NpcId="1019389"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68306) == 1 and GetQuestById(68306).QuestI8A == 0">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-42.97107, 67.00342, -450.90967" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject Condition="GetQuestById(68306).QuestI8A == 0" NpcId="2008453" XYZ="-43.411987, 66.9718, -450.12592" QuestId="68306" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68306) == 1 and GetQuestById(68306).QuestI8A == 16">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-102.6901, 68.20744, -447.25623" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject Condition="GetQuestById(68306).QuestI8A == 16" NpcId="2008454" XYZ="-101.18262, 68.03992, -446.76892" QuestId="68306" StepId="1" />
+		<WaitWhile Condition="not GetQuestStep(68306) == 255"/>
+      </If>
+      <If Condition="GetQuestStep(68306) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="509.9262, 39.9444, -471.88736" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68306" NpcId="1019389" XYZ="511.95544, 39.812466, -471.33594"/>
+      </If>
+    </If>
+	
+	<!-- Silence of the Lambs -->
+    <If Condition="not IsQuestCompleted(68303)">
+      <If Condition="not HasQuest(68303)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="509.1988, 40.425697, -479.48056" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68303)">
+          <PickupQuest QuestId="68303" NpcId="1019388"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68303) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="345.8494, 26.263521, -326.3159" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019405" XYZ="343.58728, 26.261887, -326.55835" QuestId="68303" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68303) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="0" XYZ="376.33936, 13.640517, -213.83989" Land="True"/> <!-- ZoneId="622" -->
+		<UseInventoryItem ItemId="2002201" QuestId="68303" StepId="2"/>
+		<WaitWhile Condition="not GetQuestStep(68303) == 255"/>
+      </If>
+      <If Condition="GetQuestStep(68303) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="510.01416, 40.4257, -482.24155" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn ItemId="0" QuestId="68303" NpcId="1019388" XYZ="508.04907, 40.4257, -482.7802"/>
+      </If>
+    </If>
+	
+	<!-- Shop till the Warrior of Light Drops -->
+    <If Condition="not IsQuestCompleted(68309)">
+      <If Condition="not HasQuest(68309)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="514.6173, 40.425705, -489.3488" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68309)">
+          <PickupQuest QuestId="68309" NpcId="1022479"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68309) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="545.2862, -19.505648, 316.99576" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1022480" XYZ="543.6636, -19.505642, 316.79248" QuestId="68309" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68309) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="545.05786, -19.505646, 316.82007" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject NpcId="2008528" XYZ="543.20593, -18.936523, 316.18213" QuestId="68309" StepId="2" />
+      </If>
+	  <If Condition="GetQuestStep(68309) == 3">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="566.7226, -19.505653, 386.50375" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1022481" XYZ="567.65076, -19.505653, 386.6178" QuestId="68309" StepId="3"/>
+      </If>
+	  <If Condition="GetQuestStep(68309) == 4">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="566.7226, -19.505653, 386.50375" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject NpcId="2008529" XYZ="567.77295, -19.333252, 387.5332" QuestId="68309" StepId="4" />
+      </If>
+	  <If Condition="GetQuestStep(68309) == 5">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="568.9698, -19.505657, 310.51163" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1022482" XYZ="571.58765, -19.505657, 310.04797" QuestId="68309" StepId="5"/>
+      </If>
+	  <If Condition="GetQuestStep(68309) == 6">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="568.9698, -19.505657, 310.51163" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject NpcId="2008530" XYZ="571.5571, -18.692383, 309.10193" QuestId="68309" StepId="6" />
+      </If>
+      <If Condition="GetQuestStep(68309) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="515.1329, 40.425705, -490.27927" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68309" NpcId="1022479" XYZ="525.9274, 39.88473, -478.65985"/>
+      </If>
+    </If>
+	
+	<!-- Tent That Rocked -->
+    <If Condition="not IsQuestCompleted(68305)">
+      <If Condition="not HasQuest(68305)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="522.0449, 40.407055, -487.43472" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68305)">
+          <PickupQuest QuestId="68305" NpcId="1019402"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68305) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="291.97324, 2.411509, 301.5457" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject NpcId="2008718" XYZ="294.8805, 3.250122, 298.8479" QuestId="68305" StepId="1" />
+      </If>
+      <If Condition="GetQuestStep(68305) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="522.47925, 40.393482, -486.41943" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68305" NpcId="1019402" XYZ="524.4678, 40.39071, -486.25928"/>
+      </If>
+    </If>
+	
+	<!-- Absolute Faith -->
+    <If Condition="not IsQuestCompleted(68302)">
+      <If Condition="not HasQuest(68302)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="523.2566, 40.425705, -491.90872" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68302)">
+          <PickupQuest QuestId="68302" NpcId="1019387"/>
+        </If>
+      </If>
+      <While Condition="GetQuestStep(68302) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="267.41742, 27.73555, -291.13763" Land="True"/> <!-- ZoneId="622" -->
+		<Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68302) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="267.41742, 27.73555, -291.13763" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1022074" XYZ="267.78052, 27.64391, -289.99774" QuestId="68302" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68302) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="528.17523, 40.425697, -492.57687" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68302" NpcId="1019387" XYZ="525.6886, 40.4257, -494.49915"/>
+      </If>
+    </If>
+	
+	<!-- Keeping the Faith -->
+    <If Condition="not IsQuestCompleted(68304)">
+      <If Condition="not HasQuest(68304)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="528.1956, 40.4257, -492.96686" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68304)">
+          <PickupQuest QuestId="68304" NpcId="1019387"/>
+        </If>
+      </If>
+      <While Condition="GetQuestStep(68304) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-72.780624, 76.33573, -539.31287" Land="True"/> <!-- ZoneId="622" -->
+		<Dismount/>
+		<WaitTimer WaitTime="1"/>
+      </While>
+	  <If Condition="GetQuestStep(68304) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-73.58136, 76.31996, -539.20734" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1023401" XYZ="-72.73981, 76.33664, -539.3912" QuestId="68304" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68304) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="523.0109, 40.425705, -493.29108" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68304" NpcId="1019387" XYZ="525.6886, 40.4257, -494.49915"/>
+      </If>
+    </If>
+	
+	<!-- And Dzo It Goes -->
+    <If Condition="not IsQuestCompleted(68308)">
+      <If Condition="not HasQuest(68308)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="523.0109, 40.425705, -493.29108" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68308)">
+          <PickupQuest QuestId="68308" NpcId="1019387"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68308) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="443.12943, -15.924709, 405.5277" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1023402" XYZ="441.062, -16.046766, 405.20325" QuestId="68308" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68308) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="444.47717, -18.98707, 439.23495" Land="True"/> <!-- ZoneId="622" -->
+		<UserDialog DialogText="Use the thick ropes to capture two weakened steppe dzos." QuestRequirementInLog="InLog" QuestId="68308" StepId="2"/>
+	  </If>
+	  <If Condition="GetQuestStep(68308) == 3">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="440.03842, -16.143269, 408.45425" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1023402" XYZ="441.062, -16.046766, 405.20325" QuestId="68308" StepId="3"/>
+      </If>
+      <If Condition="GetQuestStep(68308) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="523.17426, 40.425705, -493.332" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68308" NpcId="1019387" XYZ="525.6886, 40.4257, -494.49915"/>
+      </If>
+    </If>
+	
+	<!-- A Dicey Situation -->
+    <If Condition="not IsQuestCompleted(68301)">
+      <If Condition="not HasQuest(68301)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="522.1368, 40.425697, -494.967" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68301)">
+          <PickupQuest QuestId="68301" NpcId="1019404"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68301) == 1 and GetQuestById(68301).QuestI8A == 0">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="414.15, 115.60415, -510.50333" Land="False"/> <!-- ZoneId="622" -->
+        <MoveTo UseMesh="False" XYZ="360.80417, 89.421814, -533.33704" Distance="0.2"/>
+        <UseObject Condition="GetQuestById(68301).QuestI8A == 0" NpcId="2008692" XYZ="358.35815, 89.28052, -534.3862" QuestId="68301" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68301) == 1 and GetQuestById(68301).QuestI8A == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="352.68597, 99.23334, -578.6959" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject Condition="GetQuestById(68301).QuestI8A == 1" NpcId="2008691" XYZ="352.43762, 99.046265, -581.7197" QuestId="68301" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68301) == 1 and GetQuestById(68301).QuestI8A == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="200.7198, 113.934425, -616.71643" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject Condition="GetQuestById(68301).QuestI8A == 2" NpcId="2008694" XYZ="199.6947, 113.90857, -614.3435" QuestId="68301" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68301) == 1 and GetQuestById(68301).QuestI8A == 3">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="149.46114, 116.712456, -619.8804" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject Condition="GetQuestById(68301).QuestI8A == 3" NpcId="2008693" XYZ="147.93616, 116.77722, -621.14905" QuestId="68301" StepId="1" />
+      </If>
+      <If Condition="GetQuestStep(68301) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="524.3237, 39.886097, -478.22995" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68301" NpcId="1019404" XYZ="521.0498, 40.4757, -497.3068"/>
+      </If>
+    </If>
+	
+	<!-- Oh Matron -->
+    <If Condition="not IsQuestCompleted(68300)">
+      <If Condition="not HasQuest(68300)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="517.48755, 40.4257, -498.55264" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68300)">
+          <PickupQuest QuestId="68300" NpcId="1023254"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68300) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="322.1636, 42.946777, -409.29105" Land="True"/> <!-- ZoneId="622" -->
+		<Grind grindRef="68300" while="not GetQuestStep(68300) == 255"/>
+      </If>
+      <If Condition="GetQuestStep(68300) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="511.14136, 39.898506, -471.81308" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68300" NpcId="1023254" XYZ="514.76306, 40.425705, -501.03"/>
+      </If>
+    </If>
+	
+	<!-- Honor in Victory -->
+    <If Condition="not IsQuestCompleted(68337)">
+      <If Condition="not HasQuest(68337)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="500.25336, 40.868538, -502.53503" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68337)">
+          <PickupQuest QuestId="68337" NpcId="1019386"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68337) == 1 and GetQuestById(68337).QuestI8A == 0">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="570.3382, -19.505655, 311.18427" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1019354" XYZ="573.6323, -19.505655, 311.6654" QuestId="68337" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68337) == 1 and GetQuestById(68337).QuestI8A == 17">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="191.8078, 1.9813046, -12.305294" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject Condition="GetQuestById(68337).QuestI8A == 17" NpcId="2008176" XYZ="192.52307, 1.9073486, -10.147278" QuestId="68337" StepId="1" />
+      </If>
+      <If Condition="GetQuestStep(68337) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-67.945305, 67, -421.4849" Land="True"/> <!-- ZoneId="622" -->
+		<HandOver ItemIds="2002119,2002117,2002118" NpcId="1021348" XYZ="-67.826416, 67, -423.9109" QuestId="68337" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68337) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="500.84378, 40.83606, -504.91476" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68337" NpcId="1019386" XYZ="501.21313, 40.836082, -505.9129"/>
+      </If>
+    </If>
+	
+	<!-- Wouldn't Hurt a Fly -->
+    <If Condition="not IsQuestCompleted(68336)">
+      <If Condition="not HasQuest(68336)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="480.7547, 40.4257, -481.05103" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68336)">
+          <PickupQuest QuestId="68336" NpcId="1022531"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68336) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-53.02933, 3.0802271, 613.9859" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject NpcId="2008540" XYZ="-55.344543, 3.1585693, 615.2284" QuestId="68336" StepId="1" />
+		<WaitWhile Condition="not GetQuestStep(68336) == 255"/>
+      </If>
+      <If Condition="GetQuestStep(68336) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="477.23407, 40.36654, -482.11957" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68336" NpcId="1022531" XYZ="478.26343, 40.398926, -483.32953"/>
+      </If>
+    </If>
+	
+	<!-- A Sheep to Fly For -->
+    <If Condition="not IsQuestCompleted(68338)">
+      <If Condition="not HasQuest(68338)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="463.889, 40.345524, -497.07306" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68338)">
+          <PickupQuest QuestId="68338" NpcId="1019400"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68338) == 1 and GetQuestById(68338).QuestI8A == 0">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="Reunion" AetheryteId="109"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="709.21893, 35.323418, 610.7073" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject Condition="GetQuestById(68338).QuestI8A == 0" NpcId="2008730" XYZ="711.879, 35.538208, 609.9182" QuestId="68338" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68338) == 1 and GetQuestById(68338).QuestI8A == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-151.53275, 138.45416, 268.39853" Land="False"/> <!-- ZoneId="622" -->
+        <MoveTo UseMesh="False" XYZ="-205.72774, 105.57779, 249.99004" Distance="0.2"/>
+        <UseObject Condition="GetQuestById(68338).QuestI8A == 1" NpcId="2008731" XYZ="-203.66223, 106.004395, 252.30786" QuestId="68338" StepId="1" />
+      </If>
+	  <If Condition="GetQuestStep(68338) == 1 and GetQuestById(68338).QuestI8A == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-736.84357, 131.81952, -95.96853" Land="True"/> <!-- ZoneId="622" -->
+        <UseObject Condition="GetQuestById(68338).QuestI8A == 2" NpcId="2008729" XYZ="-737.7584, 132.03625, -98.28339" QuestId="68338" StepId="1" />
+      </If>
+      <If Condition="GetQuestStep(68338) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="464.16193, 40.32786, -497.295" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68338" NpcId="1019400" XYZ="462.72986, 40.406654, -498.64957"/>
+      </If>
+    </If>
+	
+	<!-- Steppe of Hard Knocks -->
+    <If Condition="not IsQuestCompleted(68339)">
+      <If Condition="not HasQuest(68339)">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="435.65784, 59.02368, -456.51843" Land="True"/> <!-- ZoneId="622" -->
+        <If Condition="IsQuestAcceptQualified(68339)">
+          <PickupQuest QuestId="68339" NpcId="1019380"/>
+        </If>
+      </If>
+	  <If Condition="GetQuestStep(68339) == 1">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="20.582527, 191.5984, 59.401913" Land="False"/> <!-- ZoneId="622" -->
+        <MoveTo UseMesh="False" XYZ="-15.2709255, 162.0999, 57.9725" Distance="0.2"/>
+        <TalkTo NpcId="1022681" XYZ="-15.884705, 162.0999, 58.76245" QuestId="68339" StepId="1"/>
+      </If>
+	  <If Condition="GetQuestStep(68339) == 2">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="-389.47644, 31.319265, 38.751156" Land="True"/> <!-- ZoneId="622" -->
+        <TalkTo NpcId="1023318" XYZ="-391.56177, 31.288097, 37.613403" QuestId="68339" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68339) == 255">
+		<If condition="not IsOnMap(622)">
+			<TeleportTo Name="The Dawn Throne" AetheryteId="110"/>
+		</If>
+		<FlyTo AllowedVariance="1" XYZ="435.3692, 59.026474, -456.36917" Land="True"/> <!-- ZoneId="622" -->
+        <TurnIn QuestId="68339" NpcId="1019380" XYZ="436.057, 59.012947, -452.99463"/>
+      </If>
+    </If>
 		
 
 	
 	</Order>
-	<CodeChunks>	
+	<CodeChunks>
+    <CodeChunk Name="68290">
+      <![CDATA[
+		var npcId = GameObjectManager.GetObjectByNPCId(1019347);
+
+		if (!npcId.IsWithinInteractRange)
+		{
+			var _target = npcId.Location;
+			Navigator.PlayerMover.MoveTowards(_target);
+			while (_target.Distance2D(Core.Me.Location) >= 4)
+			{
+				Navigator.PlayerMover.MoveTowards(_target);
+				await Coroutine.Sleep(100);
+			}
+			Navigator.PlayerMover.MoveStop();
+		}
+
+		npcId.Interact();
+				
+		await Coroutine.Wait(5000, () => Talk.DialogOpen);
+        while (Talk.DialogOpen)
+        {
+            Talk.Next();
+            await Coroutine.Sleep(1000);
+					
+			SelectString.ClickSlot(4);
+            await Coroutine.Sleep(1000);
+				
+			SelectString.ClickSlot(1);
+            await Coroutine.Sleep(1000);
+					
+            Talk.Next();
+            await Coroutine.Sleep(1000);
+			
+			SelectString.ClickSlot(0);
+            await Coroutine.Sleep(1000);
+				
+			SelectString.ClickSlot(3);
+            await Coroutine.Sleep(1000);
+					
+            Talk.Next();
+            await Coroutine.Sleep(1000);
+				
+			SelectString.ClickSlot(2);
+            await Coroutine.Sleep(1000);
+				
+			SelectString.ClickSlot(3);
+            await Coroutine.Sleep(1000);
+					
+            Talk.Next();
+            await Coroutine.Sleep(1000);
+				
+			SelectString.ClickSlot(5);
+            await Coroutine.Sleep(1000);
+				
+			SelectString.ClickSlot(2);
+            await Coroutine.Sleep(1000);
+					
+            Talk.Next();
+            await Coroutine.Sleep(1000);
+				
+			SelectString.ClickSlot(3);
+            await Coroutine.Sleep(1000);
+				
+			SelectString.ClickSlot(3);
+            await Coroutine.Sleep(1000);
+					
+            Talk.Next();
+            await Coroutine.Sleep(1000);
+				
+			await Coroutine.Wait(5000, () => Talk.DialogOpen);
+			while (Talk.DialogOpen)
+			{
+				Talk.Next();
+				await Coroutine.Sleep(1000);
+			}
+		}
+      ]]>
+    </CodeChunk>	
 	</CodeChunks>
     <GrindAreas>
+    <GrindArea name="68292">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="456.40506, -25.221565, 491.6139"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="5773" Weight="1"/> <!-- Steppe Dzo -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="68298">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="648.87213, -0.6556846, 159.04189"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="5774" Weight="1"/> <!-- Steppe Gedan -->
+      </TargetMobs>
+    </GrindArea>
+    <GrindArea name="68300">
+      <Hotspots>
+        <Hotspot Radius="200" XYZ="322.1636, 42.946777, -409.29105"/>
+        <Hotspot Radius="200" XYZ="231.01381, 33.942333, -343.0179"/>
+        <Hotspot Radius="200" XYZ="214.90106, 52.84897, -440.6496"/>
+      </Hotspots>
+      <TargetMobs>
+        <TargetMob Id="5775" Weight="1"/> <!-- Matamata -->
+        <TargetMob Id="5929" Weight="1"/> <!-- Matamata Matron -->
+      </TargetMobs>
+    </GrindArea>
     </GrindAreas>
 </Profile>
+	
